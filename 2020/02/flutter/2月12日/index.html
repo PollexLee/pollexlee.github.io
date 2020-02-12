@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>移动端是个大坑 - &lt;Flutter在贝壳的接入实践&gt;学习笔记 | Pollex Lee</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">移动端是个大坑 - &lt;Flutter在贝壳的接入实践&gt;学习笔记</h1><a id="logo" href="/.">Pollex Lee</a><p class="description">给未来的你</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">移动端是个大坑 - &lt;Flutter在贝壳的接入实践&gt;学习笔记</h1><div class="post-meta">Feb 12, 2020</div><div class="post-content"><blockquote>
+<p>很后悔从后端转到移动端，这个大坑。</p>
+</blockquote>
+<p>头发日渐稀疏的贝壳找房移动端资深工程师 <em>张华峰</em> 如是说。</p>
+<a id="more"></a>
+<p>学习<a href="https://time.geekbang.org/dailylesson/detail/100032636" target="_blank" rel="noopener">《Flutter在贝壳的接入实践》</a>的学习笔记。</p>
+<h3 id="Flutter贝壳接入案例"><a href="#Flutter贝壳接入案例" class="headerlink" title="Flutter贝壳接入案例"></a>Flutter贝壳接入案例</h3><ul>
+<li>Android工程师，在不舒服的情况下，Flutter比原生花费1.1 -1.2倍的时间，iOS端同步运行</li>
+<li>“海神”监控Exception率，原生是万分之0.7，Flutter低于万分之0.7</li>
+</ul>
+<h3 id="Flutter工程基础"><a href="#Flutter工程基础" class="headerlink" title="Flutter工程基础"></a>Flutter工程基础</h3><ul>
+<li><p>SDK</p>
+<ul>
+<li>pub_cache</li>
+<li>bin</li>
+<li>packages</li>
+</ul>
+</li>
+<li><p>工程类型</p>
+<ul>
+<li>Flutter Application - Flutter标准应用程序<ul>
+<li>DartLib</li>
+<li>Android子工程</li>
+<li>iOS子工程</li>
+</ul>
+</li>
+<li>Flutter Plugin - 封装Native工程的基础拓展</li>
+<li>Flutter Package - 纯Dart库</li>
+<li>Flutter Module - FLutter作为子Module</li>
+</ul>
+</li>
+<li><p>原生工程接入Flutter</p>
+<ul>
+<li><p>官方方案 - Flutter Module引入原生项目</p>
+<ul>
+<li>耦合度高 - 所有的Flutter代码都在同一个Module里</li>
+<li>编译成本比较高 - 原生编译 + Flutter Module编译</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>闲鱼接入方案</p>
+<ul>
+<li>Flutter产物放入远端，当作Lib引入到原生</li>
+</ul>
+</li>
+<li><p>贝壳接入方案</p>
+<ul>
+<li>原生解偶 - 对原生影响最小</li>
+<li>屏蔽平台 - 工程师会Dart和Flutter UI即可</li>
+<li>业务分离 - 同基础，分散业务</li>
+<li>保证开发效率</li>
+<li>方便继承 - 减少人工干预，少量维护</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://i.loli.net/2020/02/12/9rxXSstUHPVZRGv.png" alt="image-20200212213007352.png"><br><img src="https://i.loli.net/2020/02/12/MRE57HuStAfDJrj.png" alt="image-20200212213557124.png"></p>
+<blockquote>
+<p>开发时，是Flutter Application，各个业务以package存在，运行在原生的壳工程中，速度相对较快。<br><img src="https://i.loli.net/2020/02/12/PkAwmiBU6xZXJ1j.png" alt="image-20200212214251854.png"><br>通过Target文件和透传原生的Flavor实现不同资源/渠道的打包。</p>
+</blockquote>
+<h3 id="Flutter接入方案介绍与理论基础"><a href="#Flutter接入方案介绍与理论基础" class="headerlink" title="Flutter接入方案介绍与理论基础"></a>Flutter接入方案介绍与理论基础</h3><ul>
+<li><p>Flutter编译模式<br><img src="https://i.loli.net/2020/02/12/q7uPfopCrjgYeLx.png" alt="image-20200212220030013.png"></p>
+</li>
+<li><p>Flutter构建流程Debug模式<br><img src="https://i.loli.net/2020/02/12/9FYQHsc5DTb1CMX.png" alt="image-20200212215439490.png"></p>
+</li>
+<li><p>Flutter构建流程Release模式</p>
+</li>
+</ul>
+<p><img src="https://i.loli.net/2020/02/12/NiPx4j9aOtkpqbK.png" alt="image-20200212215654959.png"></p>
+<ul>
+<li>Flutter构建工具链</li>
+</ul>
+<p><img src="https://i.loli.net/2020/02/12/pZ4hGkTDWuClegr.png" alt="image-20200212215012801.png"></p>
+<ul>
+<li>Flutter构建工具</li>
+</ul>
+<p><img src="https://i.loli.net/2020/02/12/zgxC9feZ1aib6T4.png" alt="image-20200212215232993.png"></p>
+<ul>
+<li>Flutter gradle脚本修改</li>
+</ul>
+<p><img src="https://i.loli.net/2020/02/12/6iREbyAhsJzUQ8l.png" alt="image-20200212215345408.png"></p>
+<ul>
+<li>Flutter构建工具flutter_tools修改</li>
+</ul>
+<p><img src="https://i.loli.net/2020/02/12/KlOwzJaRAsCtxX2.png" alt="image-20200212220222248.png"></p>
+<ul>
+<li>Flutter日常开发构建流程（Android）</li>
+</ul>
+<p><img src="https://i.loli.net/2020/02/12/RWmh8cXPbFtvapk.png" alt="image-20200212220422873.png"></p>
+<ul>
+<li>Flutter持续继承构建流程（Android）</li>
+</ul>
+<p><img src="https://i.loli.net/2020/02/12/jvw6aiVMtFZrlBb.png" alt="image-20200212220135011.png"></p>
+<h3 id="Flutter热更新探索"><a href="#Flutter热更新探索" class="headerlink" title="Flutter热更新探索"></a>Flutter热更新探索</h3><ul>
+<li>动态产物下载<ul>
+<li>只支持Android</li>
+<li>实现简单</li>
+</ul>
+</li>
+<li>DSL - 动态语言映射FLutter UI<ul>
+<li>实现复杂</li>
+<li>在Flutter生态中比较危险</li>
+<li>双端都适用</li>
+</ul>
+</li>
+<li>贝壳的热更新方案<ul>
+<li>Android - 使用原生的插件化框架将Flutter业务做成单独插件</li>
+<li>iOS - 避免审核异常，暂不实现热更新</li>
+<li>Flutter for Web - 和app UI几乎完全一致，通过开关控制Flutter和Flutter web的切换</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>干货很多，值得认真学习。</p>
+</blockquote>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Pollex Lee</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2020/02/flutter/2月12日/">http://blog.pollex.me/2020/02/flutter/2月12日/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>内容版权属于 Pollex Lee 所有。未经授权，不得转载。</li></ul></div><br><div class="tags"><a href="/tags/Flutter/">Flutter</a></div><div class="post-nav"><a class="next" href="/2020/02/flutter/2月11日/">好奇心 + 懒惰是「工程师」最大的美德</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="http://blog.pollex.me"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/Android高手进阶视频/" style="font-size: 15px;">Android高手进阶视频</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/service/" style="font-size: 15px;">service</a> <a href="/tags/String/" style="font-size: 15px;">String</a> <a href="/tags/排序/" style="font-size: 15px;">排序</a> <a href="/tags/字符串/" style="font-size: 15px;">字符串</a> <a href="/tags/bug/" style="font-size: 15px;">bug</a> <a href="/tags/Resources-arsc/" style="font-size: 15px;">Resources.arsc</a> <a href="/tags/Application/" style="font-size: 15px;">Application</a> <a href="/tags/Activity/" style="font-size: 15px;">Activity</a> <a href="/tags/label/" style="font-size: 15px;">label</a> <a href="/tags/EditText/" style="font-size: 15px;">EditText</a> <a href="/tags/gradle/" style="font-size: 15px;">gradle</a> <a href="/tags/Windows/" style="font-size: 15px;">Windows</a> <a href="/tags/Android开发艺术探索/" style="font-size: 15px;">Android开发艺术探索</a> <a href="/tags/事件分发/" style="font-size: 15px;">事件分发</a> <a href="/tags/c语言/" style="font-size: 15px;">c语言</a> <a href="/tags/Data-Binding/" style="font-size: 15px;">Data Binding</a> <a href="/tags/翻译/" style="font-size: 15px;">翻译</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/NDK/" style="font-size: 15px;">NDK</a> <a href="/tags/jni/" style="font-size: 15px;">jni</a> <a href="/tags/WebView/" style="font-size: 15px;">WebView</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/scp/" style="font-size: 15px;">scp</a> <a href="/tags/vps/" style="font-size: 15px;">vps</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/Hook/" style="font-size: 15px;">Hook</a> <a href="/tags/反射/" style="font-size: 15px;">反射</a> <a href="/tags/Fiddler/" style="font-size: 15px;">Fiddler</a> <a href="/tags/优化/" style="font-size: 15px;">优化</a> <a href="/tags/Flutter/" style="font-size: 15px;">Flutter</a> <a href="/tags/转载/" style="font-size: 15px;">转载</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/flutter/2月12日/">移动端是个大坑 - <flutter在贝壳的接入实践>学习笔记</flutter在贝壳的接入实践></a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/flutter/2月11日/">好奇心 + 懒惰是「工程师」最大的美德</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/flutter/2月10日/">最好的移动软件开发方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/Android多渠道包生成方案学习记录(V1签名)/">Android多渠道包生成方案学习记录(V1签名)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/Windows查询进程PID，关闭进程/">Windows查询进程PID，关闭进程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/使用scp命令向vps传输文件/">使用scp命令向vps传输文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/c语言学习笔记之执行shell命令/">c语言学习笔记之执行shell命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/undefined reference to `__android_log_print'解决方法/">undefined reference to `__android_log_print'解决方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/绕过Manifest对Activity注册检测启动Activity/">绕过Manifest对Activity注册检测启动</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/Android资源文件混淆思路解析/">Android资源文件混淆思路解析</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">Pollex Lee.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
