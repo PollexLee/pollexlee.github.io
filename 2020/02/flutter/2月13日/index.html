@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Flutter要运行在所有能显示的设备上 | Pollex Lee</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Flutter要运行在所有能显示的设备上</h1><a id="logo" href="/.">Pollex Lee</a><p class="description">给未来的你</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Flutter要运行在所有能显示的设备上</h1><div class="post-meta">Feb 13, 2020</div><div class="post-content"><blockquote>
+<p>Flutter要运行在所有能显示的设备上。</p>
+</blockquote>
+<p>密歇根大学人机交互博士、Google Flutter团队高级研究员 <em>董韬</em> 如是说。</p>
+<p>学习[《Flutter：最新进展和未来展望》][link1]的学习笔记。</p>
+<a id="more"></a>
+<blockquote>
+<p>今天的学习内容，并不高深，都是一些基础知识，但是学到了几个非常实用的语法，也促使我要好的看一下Dart的各个版本更新内容文档了！</p>
+</blockquote>
+<h3 id="Flutter基本介绍和在中国的发展状况"><a href="#Flutter基本介绍和在中国的发展状况" class="headerlink" title="Flutter基本介绍和在中国的发展状况"></a>Flutter基本介绍和在中国的发展状况</h3><ul>
+<li>什么是Flutter<ul>
+<li>18年 Flutter Live 发布1.0版本</li>
+</ul>
+</li>
+<li>特点<ul>
+<li>美观、快速、高效、开放</li>
+<li>非常受开发者欢迎</li>
+</ul>
+</li>
+<li><p>在中国的发展</p>
+<ul>
+<li>闲鱼的一位开发者提交的PR数量超过了Google专职Flutter开发的工程师的个人提交数量 （震惊）</li>
+<li>Flutter多平台：Mobile、Web、Desktop、Enbedded<h3 id="多平台远景：Flutter-for-Web"><a href="#多平台远景：Flutter-for-Web" class="headerlink" title="多平台远景：Flutter for Web"></a>多平台远景：Flutter for Web</h3></li>
+</ul>
+</li>
+<li><p>代码库已合并到Flutter主SDK中</p>
+</li>
+<li>SDK<ul>
+<li>和移动端最大条件的复用 Flutter framework in Dart（widgets, gestures, etc）</li>
+<li>Flutter Web engine 类似原生的 C++ Flutter engine</li>
+</ul>
+</li>
+<li>Flutter Web engine<ul>
+<li>HTML + CSS 来绘制图形<ul>
+<li>利用浏览器自身的性能优化</li>
+<li>不担心尺寸兼容</li>
+</ul>
+</li>
+<li>Canvas 2D 备用绘图选项 <ul>
+<li>性能和缩放问题</li>
+</ul>
+</li>
+<li>未来计划 CSS Paint API 代替 Canvas以提高性能，不过浏览器支持不太好</li>
+<li>依赖Flutter框架</li>
+<li>Dart2js compiler<ul>
+<li>在Google应用广泛 ：Google广告业务体系等</li>
+<li>高效、成熟</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>应用场景<ul>
+<li>作为移动应用的配套程序</li>
+<li>先体验后下载</li>
+<li>覆盖更多用户</li>
+<li>使用桌面端的输入输出需求</li>
+<li>高度交互元素复用</li>
+</ul>
+</li>
+<li>性能<ul>
+<li>桌面浏览器 60FPS以上</li>
+<li>移动浏览器<ul>
+<li>一般手机 60FPS</li>
+<li>差手机 达不到60FPS</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>开发体验<ul>
+<li>Widget API 和移动端一致</li>
+</ul>
+</li>
+<li>局限和后续研发<ul>
+<li>合并到Flutter SDK</li>
+<li>保证所有widgets正确渲染</li>
+<li>性能优化</li>
+<li>完善对浏览器无障碍功能的支持</li>
+<li>添加插件系统来使用现有的JS库</li>
+<li>加强开发调试工具的可用性</li>
+</ul>
+</li>
+</ul>
+<h3 id="生态建设：与社区共建的状态管理解决方案"><a href="#生态建设：与社区共建的状态管理解决方案" class="headerlink" title="生态建设：与社区共建的状态管理解决方案"></a>生态建设：与社区共建的状态管理解决方案</h3><ul>
+<li>社区开发者设计的状态管理解决方案 [地址][state]</li>
+<li>官方推荐 <a href="https://pub.dev/packages/provider" target="_blank" rel="noopener">provider</a><ul>
+<li>ChangeNotifier</li>
+<li>ChangeNotifierProvider</li>
+<li>Consumer</li>
+</ul>
+</li>
+</ul>
+<h3 id="开发体验：“UI-as-Code”-编程语言和IDE的改进"><a href="#开发体验：“UI-as-Code”-编程语言和IDE的改进" class="headerlink" title="开发体验：“UI as Code” - 编程语言和IDE的改进"></a>开发体验：“UI as Code” - 编程语言和IDE的改进</h3><ul>
+<li><p>Dart代码编写Flutter UI的优点和改进空间</p>
+<ul>
+<li><p>声明式UI</p>
+</li>
+<li><p>改进空间</p>
+<ul>
+<li>复杂UI逻辑会使用命令式语法，打破代码结构和UI视觉结构的一致性</li>
+<li>死亡嵌套！</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>新语法</p>
+<ul>
+<li><p>Controll Flow Elements in Collections </p>
+<blockquote>
+<p>在集合中使用<code>if</code> 和<code>for</code>来操作UI</p>
+</blockquote>
+</li>
+<li><p>Spread Operator‘…’ - 展开操作符</p>
+<blockquote>
+<p>构建集合时，可以更方便的将小集合动态组合起来，非常实用</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>IDE优化</p>
+<ul>
+<li>UI Guides</li>
+<li>child 和children的缩写优化探索</li>
+</ul>
+</li>
+<li><p>以往的改进</p>
+<ul>
+<li>new关键字非必须</li>
+<li>UI as Code</li>
+<li>UI Guides</li>
+</ul>
+</li>
+</ul>
+<h3 id="Flutter-Dart近期展望"><a href="#Flutter-Dart近期展望" class="headerlink" title="Flutter/Dart近期展望"></a>Flutter/Dart近期展望</h3><ul>
+<li>改进Flutter和原生混编的机制和开发体验（add-to-app）</li>
+<li>Dart语言演进 non-nullable, extension methods, Dart runtime增加FFI(C/C++ interop)</li>
+<li>更容易理解的报错信息</li>
+<li>Flutter Web性能优化，Flutter Desktop功能完善，<a href="https://github.com/flutter/flutter/wiki/Roadmap" target="_blank" rel="noopener">FLutter路线图</a></li>
+</ul>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Pollex Lee</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2020/02/flutter/2月13日/">http://blog.pollex.me/2020/02/flutter/2月13日/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>内容版权属于 Pollex Lee 所有。未经授权，不得转载。</li></ul></div><br><div class="tags"><a href="/tags/Flutter/">Flutter</a><a href="/tags/30天学习打卡/">30天学习打卡</a></div><div class="post-nav"><a class="next" href="/2020/02/flutter/2月12日/">移动端是个大坑-Flutter在贝壳的接入实践学习笔记</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="http://blog.pollex.me"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/service/" style="font-size: 15px;">service</a> <a href="/tags/Android高手进阶视频/" style="font-size: 15px;">Android高手进阶视频</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/String/" style="font-size: 15px;">String</a> <a href="/tags/排序/" style="font-size: 15px;">排序</a> <a href="/tags/字符串/" style="font-size: 15px;">字符串</a> <a href="/tags/Resources-arsc/" style="font-size: 15px;">Resources.arsc</a> <a href="/tags/bug/" style="font-size: 15px;">bug</a> <a href="/tags/Application/" style="font-size: 15px;">Application</a> <a href="/tags/Activity/" style="font-size: 15px;">Activity</a> <a href="/tags/label/" style="font-size: 15px;">label</a> <a href="/tags/EditText/" style="font-size: 15px;">EditText</a> <a href="/tags/Android开发艺术探索/" style="font-size: 15px;">Android开发艺术探索</a> <a href="/tags/事件分发/" style="font-size: 15px;">事件分发</a> <a href="/tags/gradle/" style="font-size: 15px;">gradle</a> <a href="/tags/Windows/" style="font-size: 15px;">Windows</a> <a href="/tags/c语言/" style="font-size: 15px;">c语言</a> <a href="/tags/Data-Binding/" style="font-size: 15px;">Data Binding</a> <a href="/tags/翻译/" style="font-size: 15px;">翻译</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/NDK/" style="font-size: 15px;">NDK</a> <a href="/tags/jni/" style="font-size: 15px;">jni</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/scp/" style="font-size: 15px;">scp</a> <a href="/tags/vps/" style="font-size: 15px;">vps</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/Fiddler/" style="font-size: 15px;">Fiddler</a> <a href="/tags/Hook/" style="font-size: 15px;">Hook</a> <a href="/tags/反射/" style="font-size: 15px;">反射</a> <a href="/tags/WebView/" style="font-size: 15px;">WebView</a> <a href="/tags/优化/" style="font-size: 15px;">优化</a> <a href="/tags/Flutter/" style="font-size: 15px;">Flutter</a> <a href="/tags/转载/" style="font-size: 15px;">转载</a> <a href="/tags/30天学习打卡/" style="font-size: 15px;">30天学习打卡</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/flutter/2月13日/">Flutter要运行在所有能显示的设备上</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/flutter/2月12日/">移动端是个大坑-Flutter在贝壳的接入实践学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/flutter/2月11日/">好奇心 + 懒惰是「工程师」最大的美德</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/flutter/2月10日/">最好的移动软件开发方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/Android多渠道包生成方案学习记录(V1签名)/">Android多渠道包生成方案学习记录(V1签名)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/Windows查询进程PID，关闭进程/">Windows查询进程PID，关闭进程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/使用scp命令向vps传输文件/">使用scp命令向vps传输文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/c语言学习笔记之执行shell命令/">c语言学习笔记之执行shell命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/undefined reference to `__android_log_print'解决方法/">undefined reference to `__android_log_print'解决方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/绕过Manifest对Activity注册检测启动Activity/">绕过Manifest对Activity注册检测启动</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">Pollex Lee.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
