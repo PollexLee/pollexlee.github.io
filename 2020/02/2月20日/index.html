@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>没有办法一劳永逸，所以我们面面俱到 | Pollex Lee</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">没有办法一劳永逸，所以我们面面俱到</h1><a id="logo" href="/.">Pollex Lee</a><p class="description">给未来的你</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">没有办法一劳永逸，所以我们面面俱到</h1><div class="post-meta">Feb 20, 2020</div><div class="post-content"><blockquote>
+<p>我们确实找不到一套方案来解决所有问题，所以我们都做了。</p>
+</blockquote>
+<p>美团点评资深技术专家 <em>方锦涛</em> 如是说。</p>
+<p><a href="https://time.geekbang.org/dailylesson/detail/100016752" target="_blank" rel="noopener">《美团客户端动态化实践》</a>的学习笔记。</p>
+<a id="more"></a>
+<blockquote>
+<p>除了一些重交互的效率工具，其它的都是JS的天下。</p>
+</blockquote>
+<p>###关于美团业务</p>
+<ul>
+<li>200+个品类</li>
+<li>美团客户端平台<ul>
+<li>众口难调<ul>
+<li>业务发展阶段不一样</li>
+<li>团队技术栈不一样</li>
+<li>历史包袱不一样</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>###移动端开发的痛点</p>
+<ul>
+<li>Native<ul>
+<li>多端开发</li>
+<li>升级慢</li>
+</ul>
+</li>
+<li>H5<ul>
+<li>功能弱</li>
+<li>体验差</li>
+</ul>
+</li>
+<li>Native优化<ul>
+<li>提高迭代效率<ul>
+<li>开发效率</li>
+<li>更新效率</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>H5优化<ul>
+<li>功能问题</li>
+<li>体验问题</li>
+</ul>
+</li>
+<li>已知方案<ul>
+<li>百度 轻应用，小程序，DynamicLoadAPK，ReactNative，HtmlNative</li>
+<li>阿里巴巴 支付宝小程序，Weex，Atlas，Tangram</li>
+<li>腾讯 微信小程序，VasSonic，ReactNative</li>
+<li>Google Android Instant App，Progressive Web App，Flutter</li>
+<li>Facebook ReactNative</li>
+<li>携程 DynamicAPK，Ctrip ReactNative（CRN）</li>
+<li>滴滴 VirtualAPK，DynamicCocoa</li>
+<li>其它 快应用</li>
+</ul>
+</li>
+<li>动态化技术方案总结<ul>
+<li>布局动态化</li>
+<li>虚拟运行环境</li>
+<li>业务插件化</li>
+<li>Web容器增强</li>
+</ul>
+</li>
+</ul>
+<h3 id="美团动态化方案的选择"><a href="#美团动态化方案的选择" class="headerlink" title="美团动态化方案的选择"></a>美团动态化方案的选择</h3><ul>
+<li>特点<ul>
+<li>迁移效率</li>
+<li>开发效率</li>
+<li>更新效率</li>
+<li>稳定性</li>
+<li>流畅度</li>
+</ul>
+</li>
+<li>Web容器增强<ul>
+<li>流畅度太差</li>
+</ul>
+</li>
+<li>业务插件化<ul>
+<li>开发效率稍差</li>
+</ul>
+</li>
+<li>布局动态化<ul>
+<li>方案简单，稳定，用在了美团首页</li>
+</ul>
+</li>
+<li>虚拟运行环境<ul>
+<li>迁移效率低</li>
+<li>开发效率高</li>
+<li>美团“发现”Tab 使用的ReactNative</li>
+</ul>
+</li>
+<li>美团客户端动态化的痛点<ul>
+<li>动态化诉求不一致<ul>
+<li>业务发展阶段不同</li>
+<li>团队技术栈不同</li>
+<li>历史包袱不同</li>
+</ul>
+</li>
+<li>确定 多套解决方案<ul>
+<li>布局动态化<ul>
+<li>MTFlexbox</li>
+<li>美团首页、搜索结果页、外卖首页、美食首页等</li>
+</ul>
+</li>
+<li>业务插件化<ul>
+<li>美团插件化框架 Hydra</li>
+<li>搜索业务，火车票、机票、周边游、到餐旗舰店、金融闪付等</li>
+</ul>
+</li>
+<li>虚拟运行环境<ul>
+<li>MRN</li>
+<li>收藏业务、内容业务、火车票部分页面、外卖退款页等</li>
+</ul>
+</li>
+<li>Web容器增强<ul>
+<li>TitansX</li>
+<li>各种运营活动页面</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="移动端动态化未来之路"><a href="#移动端动态化未来之路" class="headerlink" title="移动端动态化未来之路"></a>移动端动态化未来之路</h3><ul>
+<li><p>PC年代</p>
+<ul>
+<li>CS - 纯客户端开发<ul>
+<li>生产力工具，重交互效率</li>
+</ul>
+</li>
+<li>PS - 网页<ul>
+<li>功能专一</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>移动年代 类似PC</p>
+<ul>
+<li>编辑工具，效率工具<ul>
+<li>还是Native的天下</li>
+</ul>
+</li>
+<li>交易工具<ul>
+<li>BS方向，小程序，快应用，PWA，RN</li>
+</ul>
+</li>
+<li>资讯工具<ul>
+<li>小程序、PWA</li>
+</ul>
+</li>
+<li>通讯工具<ul>
+<li>业务插件化</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Pollex Lee</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2020/02/2月20日/">http://blog.pollex.me/2020/02/2月20日/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>内容版权属于 Pollex Lee 所有。未经授权，不得转载。</li></ul></div><br><div class="tags"><a href="/tags/Android/">Android</a><a href="/tags/30天学习打卡/">30天学习打卡</a></div><div class="post-nav"><a class="next" href="/2020/02/2月19日/">基于AAB的插件化方案：Qigsaw</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="http://blog.pollex.me"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/30天学习打卡/" style="font-size: 15px;">30天学习打卡</a> <a href="/tags/Android高手进阶视频/" style="font-size: 15px;">Android高手进阶视频</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/service/" style="font-size: 15px;">service</a> <a href="/tags/String/" style="font-size: 15px;">String</a> <a href="/tags/排序/" style="font-size: 15px;">排序</a> <a href="/tags/字符串/" style="font-size: 15px;">字符串</a> <a href="/tags/Resources-arsc/" style="font-size: 15px;">Resources.arsc</a> <a href="/tags/bug/" style="font-size: 15px;">bug</a> <a href="/tags/Application/" style="font-size: 15px;">Application</a> <a href="/tags/Activity/" style="font-size: 15px;">Activity</a> <a href="/tags/label/" style="font-size: 15px;">label</a> <a href="/tags/gradle/" style="font-size: 15px;">gradle</a> <a href="/tags/Windows/" style="font-size: 15px;">Windows</a> <a href="/tags/Android开发艺术探索/" style="font-size: 15px;">Android开发艺术探索</a> <a href="/tags/事件分发/" style="font-size: 15px;">事件分发</a> <a href="/tags/EditText/" style="font-size: 15px;">EditText</a> <a href="/tags/c语言/" style="font-size: 15px;">c语言</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/Data-Binding/" style="font-size: 15px;">Data Binding</a> <a href="/tags/翻译/" style="font-size: 15px;">翻译</a> <a href="/tags/WebView/" style="font-size: 15px;">WebView</a> <a href="/tags/NDK/" style="font-size: 15px;">NDK</a> <a href="/tags/jni/" style="font-size: 15px;">jni</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/scp/" style="font-size: 15px;">scp</a> <a href="/tags/vps/" style="font-size: 15px;">vps</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/Hook/" style="font-size: 15px;">Hook</a> <a href="/tags/反射/" style="font-size: 15px;">反射</a> <a href="/tags/Fiddler/" style="font-size: 15px;">Fiddler</a> <a href="/tags/优化/" style="font-size: 15px;">优化</a> <a href="/tags/Flutter/" style="font-size: 15px;">Flutter</a> <a href="/tags/Kotlin/" style="font-size: 15px;">Kotlin</a> <a href="/tags/转载/" style="font-size: 15px;">转载</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月20日/">没有办法一劳永逸，所以我们面面俱到</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月19日/">基于AAB的插件化方案：Qigsaw</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月18日/">秒开秒用，用完即走</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月17日/">Android插件化路在何方</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月16日/">从产品和运营的角度来看待技术转变</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/flutter/2月13日/">Flutter要运行在所有能显示的设备上</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/kotlin/2月15日/">回调地狱就像龟派气功</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/flutter/2月14日/">偷懒是一种美德</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/flutter/2月12日/">移动端是个大坑-Flutter在贝壳的接入实践学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/flutter/2月11日/">好奇心 + 懒惰是「工程师」最大的美德</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">Pollex Lee.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
