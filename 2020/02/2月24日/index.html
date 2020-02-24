@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>AR发展，未来可期 | Pollex Lee</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">AR发展，未来可期</h1><a id="logo" href="/.">Pollex Lee</a><p class="description">给未来的你</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">AR发展，未来可期</h1><div class="post-meta">Feb 24, 2020</div><div class="post-content"><blockquote>
+<p>AR是一个瓶子，这个瓶子可以装天下。</p>
+</blockquote>
+<p>沪江网架构师 <em>李超</em>如是说。</p>
+<p><a href="https://time.geekbang.org/dailylesson/detail/100016421" target="_blank" rel="noopener">《AR在直播系统中的应用》</a>的学习笔记。</p>
+<a id="more"></a>
+<blockquote>
+<p>了解VR/AR/MR的概念和特点，了解当前AR技术的发展阶段。</p>
+</blockquote>
+<h3 id="VR-AR-MR介绍"><a href="#VR-AR-MR介绍" class="headerlink" title="VR/AR/MR介绍"></a>VR/AR/MR介绍</h3><ul>
+<li>VR：虚拟现实，可以完全沉浸到该环境中</li>
+<li>AR：增强现实，将虚拟世界与现实世界结合到一起，并能进行互动</li>
+<li>MR：混合现实技术，虚拟环境中引入真实场景</li>
+</ul>
+<h3 id="AR技术与现状"><a href="#AR技术与现状" class="headerlink" title="AR技术与现状"></a>AR技术与现状</h3><ul>
+<li>2017年6月5日，苹果发布ARKit</li>
+<li>Tango，Google眼镜</li>
+<li>AR应用场景<ul>
+<li>游戏</li>
+<li>电商</li>
+<li>教育</li>
+<li>直播</li>
+</ul>
+</li>
+</ul>
+<h3 id="AR核心概念"><a href="#AR核心概念" class="headerlink" title="AR核心概念"></a>AR核心概念</h3><ul>
+<li>特征点：计算机视觉中的一种关键技术，通常用在人脸识别中。<ul>
+<li>特种点是指图像灰度值发生剧烈变化的点或者在图像边缘上曲率较大的点。像边缘特征点，角点等都是常见的特征点。</li>
+</ul>
+</li>
+<li>运动追踪：ARKit使用视觉惯性测距技术获取手机的姿态<ul>
+<li>通过采集对的图像序列进行计算机视觉分析，找出其<em>特征点</em>在连续的图像帧之间的位置变化，再通过设备的运动传感器，最终得到设备的位置和方向。</li>
+</ul>
+</li>
+<li>场景理解：平面检测，识别地面，桌子等平面。<ul>
+<li>识别的方法，区域中Y值为0的区域</li>
+</ul>
+</li>
+<li>光线评估：估算当前环境的光线强度，使虚拟物更真实。</li>
+</ul>
+<h3 id="ARKit运行机制"><a href="#ARKit运行机制" class="headerlink" title="ARKit运行机制"></a>ARKit运行机制</h3><ul>
+<li>ARKit三个核心类<ul>
+<li>ARCamera：不停的获取手机拍到的图像</li>
+<li>ARSession：三大概念处理</li>
+<li>ARSCNView：展示</li>
+</ul>
+</li>
+<li>ARKit虚拟物品<ul>
+<li>SCNScene：画布</li>
+<li>SCNNode：虚拟物品</li>
+<li>SCNMaterial：纹理，材质</li>
+</ul>
+</li>
+<li>ARKit运行机制<ul>
+<li>ARConfiguration</li>
+<li>ARFrame：AR帧</li>
+<li>ARAnchor：锚点，控制虚拟物品的位置</li>
+</ul>
+</li>
+</ul>
+<h3 id="ARKit-Demo任意门"><a href="#ARKit-Demo任意门" class="headerlink" title="ARKit Demo任意门"></a>ARKit Demo任意门</h3><ul>
+<li>Demo演示</li>
+</ul>
+<h3 id="ARCore运行机制"><a href="#ARCore运行机制" class="headerlink" title="ARCore运行机制"></a>ARCore运行机制</h3><ul>
+<li>ARCore核心Session类<ul>
+<li>运动跟踪、场景理解、光照评估</li>
+</ul>
+</li>
+<li>ARCore运行机制<ul>
+<li>Session</li>
+<li>OpenGL ES</li>
+<li>GLSurfaceView</li>
+</ul>
+</li>
+<li>View组件<ul>
+<li>Surface、SurfaceTexture、SurfaceView、GLSurfaceView、TextureView等组件</li>
+</ul>
+</li>
+<li>OpenGL ES<ul>
+<li>矩阵变化</li>
+<li>什么是EGL</li>
+<li>OpenGL ES API：控制GPU</li>
+</ul>
+</li>
+</ul>
+<h3 id="ARCore与ARKit区别"><a href="#ARCore与ARKit区别" class="headerlink" title="ARCore与ARKit区别"></a>ARCore与ARKit区别</h3><ul>
+<li>核心算法相同</li>
+<li>ARKit API相对完整，ARCore只关注核心算法</li>
+<li>ARKit可以商用，ARCore只能在有限的机型上测试。</li>
+</ul>
+<h3 id="AR在直播系统中的应用"><a href="#AR在直播系统中的应用" class="headerlink" title="AR在直播系统中的应用"></a>AR在直播系统中的应用</h3><ul>
+<li>视频通话与AR<ul>
+<li>音视频通话的基本原理：采集，编码，传输，解码，渲染。AR在视频通话中的实现与本地的AR应用有着本质的区别。</li>
+<li>难点：<ul>
+<li>AR与非AR客户端如何交互，ARKit和ARCore如何互通？</li>
+<li>AR端无法直接从ARCamera获取视频</li>
+<li>帧率过高导致传书码流过大</li>
+</ul>
+</li>
+<li>设置参数及启动Session</li>
+<li>获得锚点及设置虚拟物品</li>
+</ul>
+</li>
+<li>展望<ul>
+<li>裸3D离我们还很遥远，但通过手机我们可以实现部分黑科技，可以将AR认为是一个瓶子，这个瓶子可以装天下</li>
+<li>目前AR才刚刚起步，未来可期</li>
+</ul>
+</li>
+</ul>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Pollex Lee</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2020/02/2月24日/">http://blog.pollex.me/2020/02/2月24日/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>内容版权属于 Pollex Lee 所有。未经授权，不得转载。</li></ul></div><br><div class="tags"><a href="/tags/Android/">Android</a><a href="/tags/30天学习打卡/">30天学习打卡</a></div><div class="post-nav"><a class="next" href="/2020/02/2月23日/">端智能是什么？</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="http://blog.pollex.me"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/30天学习打卡/" style="font-size: 15px;">30天学习打卡</a> <a href="/tags/service/" style="font-size: 15px;">service</a> <a href="/tags/Android高手进阶视频/" style="font-size: 15px;">Android高手进阶视频</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/String/" style="font-size: 15px;">String</a> <a href="/tags/排序/" style="font-size: 15px;">排序</a> <a href="/tags/字符串/" style="font-size: 15px;">字符串</a> <a href="/tags/bug/" style="font-size: 15px;">bug</a> <a href="/tags/Resources-arsc/" style="font-size: 15px;">Resources.arsc</a> <a href="/tags/Application/" style="font-size: 15px;">Application</a> <a href="/tags/Activity/" style="font-size: 15px;">Activity</a> <a href="/tags/label/" style="font-size: 15px;">label</a> <a href="/tags/EditText/" style="font-size: 15px;">EditText</a> <a href="/tags/gradle/" style="font-size: 15px;">gradle</a> <a href="/tags/Windows/" style="font-size: 15px;">Windows</a> <a href="/tags/Android开发艺术探索/" style="font-size: 15px;">Android开发艺术探索</a> <a href="/tags/事件分发/" style="font-size: 15px;">事件分发</a> <a href="/tags/Data-Binding/" style="font-size: 15px;">Data Binding</a> <a href="/tags/翻译/" style="font-size: 15px;">翻译</a> <a href="/tags/c语言/" style="font-size: 15px;">c语言</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/WebView/" style="font-size: 15px;">WebView</a> <a href="/tags/NDK/" style="font-size: 15px;">NDK</a> <a href="/tags/jni/" style="font-size: 15px;">jni</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/scp/" style="font-size: 15px;">scp</a> <a href="/tags/vps/" style="font-size: 15px;">vps</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/Hook/" style="font-size: 15px;">Hook</a> <a href="/tags/反射/" style="font-size: 15px;">反射</a> <a href="/tags/Fiddler/" style="font-size: 15px;">Fiddler</a> <a href="/tags/优化/" style="font-size: 15px;">优化</a> <a href="/tags/Flutter/" style="font-size: 15px;">Flutter</a> <a href="/tags/Kotlin/" style="font-size: 15px;">Kotlin</a> <a href="/tags/转载/" style="font-size: 15px;">转载</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月24日/">AR发展，未来可期</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月23日/">端智能是什么？</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月22日/">无线持续交付平台助力移动端开发</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月21日/">越复杂的需求，就要做越简单的设计</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月20日/">没有办法一劳永逸，所以我们面面俱到</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月19日/">基于AAB的插件化方案：Qigsaw</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月18日/">秒开秒用，用完即走</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月17日/">Android插件化路在何方</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月16日/">从产品和运营的角度来看待技术转变</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/flutter/2月14日/">偷懒是一种美德</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">Pollex Lee.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
