@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>在浏览器上打王者荣耀？ | Pollex Lee</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">在浏览器上打王者荣耀？</h1><a id="logo" href="/.">Pollex Lee</a><p class="description">给未来的你</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">在浏览器上打王者荣耀？</h1><div class="post-meta">Feb 25, 2020</div><div class="post-content"><blockquote>
+<p>在生态链上，完成自己的角色。</p>
+</blockquote>
+<p>上海木鸡网络科技有限公司联合创始人 <em>杨轶</em>如是说。</p>
+<p><a href="https://time.geekbang.org/dailylesson/detail/100032643" target="_blank" rel="noopener">《移动Web上玩转原生游戏》</a>的学习笔记。</p>
+<a id="more"></a>
+<blockquote>
+<p>了解当前移动端Web游戏开发的历程、技术瓶颈和作者产品的功能。</p>
+</blockquote>
+<h3 id="当今移动端浏览器为游戏开发准备了啥"><a href="#当今移动端浏览器为游戏开发准备了啥" class="headerlink" title="当今移动端浏览器为游戏开发准备了啥"></a>当今移动端浏览器为游戏开发准备了啥</h3><ul>
+<li>HTML5，CSS3，JS，WelGL</li>
+<li>Web API：Web Audio API, XHR/Fetch, WebSocket, WebRTC, Web Workder, Touch/Accelerometer</li>
+<li>存储，IndexedDB</li>
+<li>PWA，Service Worker</li>
+<li>JS引擎：V8，SquirrelFish Extrem，JaegerMonkey</li>
+</ul>
+<h3 id="Web上游戏开发之现状"><a href="#Web上游戏开发之现状" class="headerlink" title="Web上游戏开发之现状"></a>Web上游戏开发之现状</h3><ul>
+<li>纯Web游戏引擎<ul>
+<li>COCOS 2DX，Egret，LayaBox，Construct 2，three.js</li>
+</ul>
+</li>
+<li>原生游戏引擎Web版<ul>
+<li>Unity，移动端游戏王者，50%占有率，可用资源多</li>
+<li>Unreal，大，占有率不高</li>
+<li>Emscripten</li>
+</ul>
+</li>
+<li>Web游戏渠道平台<ul>
+<li>小游戏框架，国内环境</li>
+<li>标准HTML5，WebView渠道，海外渠道</li>
+</ul>
+</li>
+</ul>
+<h3 id="移动Web上能玩原生游戏吗"><a href="#移动Web上能玩原生游戏吗" class="headerlink" title="移动Web上能玩原生游戏吗"></a>移动Web上能玩原生游戏吗</h3><ul>
+<li>移动Web环境，Unity<ul>
+<li>WASM模块：函数多，加载慢，编译慢，内存占用高</li>
+<li>Web天生不支持阻塞调用，加载大资源是问题</li>
+<li>使用MultiThreading，BSD Socket的游戏</li>
+</ul>
+</li>
+<li>WEB-IR，Unity引擎游戏通过WEB-IR处理，达到可以在移动Web环境可以运行，轻游戏2.0时代<ul>
+<li>代码动态Profiling，Code Size减直1/3，加载启动提速2X</li>
+<li>编译器支持的阻塞机制，虚拟上下文切换，支持资源渐进式加载，支持TCP/UDP select/poll</li>
+<li>虚拟协程来模拟多线程</li>
+</ul>
+</li>
+<li>软件栈<ul>
+<li>OS Layer</li>
+<li>WebView Client, Browser Client</li>
+<li>Game Engine Core  /  WebAPI  和设备打交道，平台SDK</li>
+<li>Game Logic Native Part   /   Game Logic Web Part    游戏逻辑</li>
+</ul>
+</li>
+<li>内存使用是Web游戏的第一阻碍</li>
+</ul>
+<h3 id="案例分析"><a href="#案例分析" class="headerlink" title="案例分析"></a>案例分析</h3><ul>
+<li>贪吃蛇游戏<ul>
+<li>代码动态Profilling，Code Size缩小到1/3，编译加载时间缩短</li>
+<li>支持阻塞调用，资源文件可以同步读取，仅需要8M内存来做Cache，按需下载的数据很小，加载耗时明显见效</li>
+<li>对原始WASM代码进行重编译，插入控制指令，并奇怪Patch Unity的IL2CPP库以支持虚拟的多线程调用和UDP连接，解决了原生游戏所依赖的网络连接问题</li>
+</ul>
+</li>
+<li>MMO 3D游戏<ul>
+<li>3D游戏，需要更大的计算量和更多的资源，同事也真实了Unity 3D游戏的表现力</li>
+<li>由于原生游戏依赖了很多第三方库，UNity WebGL版执行代码有超过60K个函数</li>
+<li>Demo版的资源有300M，意味着完整游戏会在GB级别，占用内存也就在GB级，在手机浏览器环境是完全不可界首的</li>
+<li>MMO游戏，要用到BSD Socket和MUlti-Threading，不做调整的Unity WebGL版依旧无法运行</li>
+<li>通过我们处理，有效函数控制在20K个，为了满足iOS对编译WASM的限制采取了WASM和JS混搭的Hybrid模式，同事配以IndexedDB来满足资源持续储存并作为Cache加速再次加载的速度</li>
+</ul>
+</li>
+<li>3D 动作游戏<ul>
+<li>中量级，3D单击游戏，内容丰富，移植速度快</li>
+</ul>
+</li>
+<li>解密类游戏<ul>
+<li>适合Web化，操作要求不高</li>
+</ul>
+</li>
+<li>实践中的关键<ul>
+<li>WASM程序所要编译的函数</li>
+<li>游戏首帧启动时间</li>
+<li>游戏运行时内存占用</li>
+</ul>
+</li>
+</ul>
+<h3 id="WEB-IR，这种方案所要解决的关键问题"><a href="#WEB-IR，这种方案所要解决的关键问题" class="headerlink" title="WEB-IR，这种方案所要解决的关键问题"></a>WEB-IR，这种方案所要解决的关键问题</h3><ul>
+<li>WEB-IR解决问题的关键-重构Unity WebGL<ul>
+<li>动态Profilling</li>
+<li>资源渐进加载<ul>
+<li>大块文件切割成若干个Chunks</li>
+<li>Chunks预加载</li>
+<li>Chunks多种方式存储</li>
+<li>解析出来的资源数据会被保存到内存Cache中提高访问速度</li>
+<li>Chunk渐进加载以阻塞I/O为前提</li>
+<li>云端跟踪前端资源的加载情况，为后面的加载做准备</li>
+<li>渐进加载无需开发者修改代码</li>
+</ul>
+</li>
+<li>阻塞I/O<ul>
+<li>阻塞IO是保存文章的调用栈，以做恢复使用</li>
+</ul>
+</li>
+<li>虚拟线程<ul>
+<li>协程方式代替线程</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="WEB-IR工具链"><a href="#WEB-IR工具链" class="headerlink" title="WEB-IR工具链"></a>WEB-IR工具链</h3><ul>
+<li>WEB-IR以一种中间语言的代码格式支持整个技术框架，工具链所BUild产出的任何代码都是基于WEB-IR中间语言之上</li>
+<li>WEB-IR中间语言是和WebAssembly在相同级别的低级语言，基于的是CFG而不是AST</li>
+<li>WEB-IR中间语言以纯文本的形式保存，方便修改调试</li>
+<li>WEB-IR中间语言可以通过源代码（C/C++）和WebAssembly 二进制码生成</li>
+</ul>
+<h3 id="我们的感悟"><a href="#我们的感悟" class="headerlink" title="我们的感悟"></a>我们的感悟</h3><ul>
+<li>用好前人的肩膀，尽量不要重复造轮子，在生态链上，完成自己的角色</li>
+<li>拓展思维，尝试做一些不一样的事情</li>
+<li>很少有火箭科技，更没有黑魔法，在实践中不断地改良</li>
+<li>时刻不要忘记真实环境的适配能力</li>
+</ul>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Pollex Lee</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2020/02/2月25日/">http://blog.pollex.me/2020/02/2月25日/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>内容版权属于 Pollex Lee 所有。未经授权，不得转载。</li></ul></div><br><div class="tags"><a href="/tags/Android/">Android</a><a href="/tags/30天学习打卡/">30天学习打卡</a></div><div class="post-nav"><a class="next" href="/2020/02/2月24日/">AR发展，未来可期</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="http://blog.pollex.me"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/30天学习打卡/" style="font-size: 15px;">30天学习打卡</a> <a href="/tags/service/" style="font-size: 15px;">service</a> <a href="/tags/Android高手进阶视频/" style="font-size: 15px;">Android高手进阶视频</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/String/" style="font-size: 15px;">String</a> <a href="/tags/排序/" style="font-size: 15px;">排序</a> <a href="/tags/字符串/" style="font-size: 15px;">字符串</a> <a href="/tags/bug/" style="font-size: 15px;">bug</a> <a href="/tags/Resources-arsc/" style="font-size: 15px;">Resources.arsc</a> <a href="/tags/Application/" style="font-size: 15px;">Application</a> <a href="/tags/Activity/" style="font-size: 15px;">Activity</a> <a href="/tags/label/" style="font-size: 15px;">label</a> <a href="/tags/EditText/" style="font-size: 15px;">EditText</a> <a href="/tags/gradle/" style="font-size: 15px;">gradle</a> <a href="/tags/Android开发艺术探索/" style="font-size: 15px;">Android开发艺术探索</a> <a href="/tags/事件分发/" style="font-size: 15px;">事件分发</a> <a href="/tags/Windows/" style="font-size: 15px;">Windows</a> <a href="/tags/c语言/" style="font-size: 15px;">c语言</a> <a href="/tags/Data-Binding/" style="font-size: 15px;">Data Binding</a> <a href="/tags/翻译/" style="font-size: 15px;">翻译</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/WebView/" style="font-size: 15px;">WebView</a> <a href="/tags/NDK/" style="font-size: 15px;">NDK</a> <a href="/tags/jni/" style="font-size: 15px;">jni</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/scp/" style="font-size: 15px;">scp</a> <a href="/tags/vps/" style="font-size: 15px;">vps</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/Hook/" style="font-size: 15px;">Hook</a> <a href="/tags/反射/" style="font-size: 15px;">反射</a> <a href="/tags/Fiddler/" style="font-size: 15px;">Fiddler</a> <a href="/tags/优化/" style="font-size: 15px;">优化</a> <a href="/tags/Flutter/" style="font-size: 15px;">Flutter</a> <a href="/tags/Kotlin/" style="font-size: 15px;">Kotlin</a> <a href="/tags/转载/" style="font-size: 15px;">转载</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月25日/">在浏览器上打王者荣耀？</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月24日/">AR发展，未来可期</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月23日/">端智能是什么？</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月22日/">无线持续交付平台助力移动端开发</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月21日/">越复杂的需求，就要做越简单的设计</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月20日/">没有办法一劳永逸，所以我们面面俱到</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月19日/">基于AAB的插件化方案：Qigsaw</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月18日/">秒开秒用，用完即走</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月17日/">Android插件化路在何方</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月16日/">从产品和运营的角度来看待技术转变</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">Pollex Lee.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
