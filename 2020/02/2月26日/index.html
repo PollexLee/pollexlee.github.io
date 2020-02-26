@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Fuchsia - 来自 Google 的全新开源操作系统 | Pollex Lee</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Fuchsia - 来自 Google 的全新开源操作系统</h1><a id="logo" href="/.">Pollex Lee</a><p class="description">给未来的你</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Fuchsia - 来自 Google 的全新开源操作系统</h1><div class="post-meta">Feb 26, 2020</div><div class="post-content"><blockquote>
+<p>在未来Fuchsia会成为一个非常重要的操作系统。</p>
+</blockquote>
+<p>重德智能工程师 <em>许中兴</em>如是说。</p>
+<p><a href="https://time.geekbang.org/dailylesson/detail/100029746" target="_blank" rel="noopener">《世界需要新的操作系统-Fuchsia设计解读》</a>的学习笔记。</p>
+<a id="more"></a>
+<blockquote>
+<p>了解Fuchsia操作系统的基本情况、设计原理和优点，了解市场上各个操作系统的境况。</p>
+</blockquote>
+<h3 id="Fuchsia的基本情况"><a href="#Fuchsia的基本情况" class="headerlink" title="Fuchsia的基本情况"></a>Fuchsia的基本情况</h3><ul>
+<li>全新的操作系统</li>
+<li>Google开发</li>
+<li>微内核，基于能力的访问控制，Vulkan图形接口，3D桌面渲染Scenic，Flutter应用开发框架，目前支持的编程语言：C/C++，Go，Rust，Dart</li>
+<li>2016年，Google放出所有代码，但是没有正式宣布项目目标，一个IRC频道交流</li>
+<li>支持的架构X86-64和ARM 64，支持的设备从IoT到服务器</li>
+</ul>
+<h3 id="Google为什么要从头设计权限的操作系统"><a href="#Google为什么要从头设计权限的操作系统" class="headerlink" title="Google为什么要从头设计权限的操作系统"></a>Google为什么要从头设计权限的操作系统</h3><ul>
+<li>737问题：当系统总体设计出现问题的时候，用再多的技巧去弥补，也只会造成最终的灾难</li>
+</ul>
+<h3 id="现代通用、开放OS需要面对的方面"><a href="#现代通用、开放OS需要面对的方面" class="headerlink" title="现代通用、开放OS需要面对的方面"></a>现代通用、开放OS需要面对的方面</h3><ul>
+<li>上游硬件厂商</li>
+<li>下游应用开发者</li>
+<li>设备友商</li>
+<li>用户</li>
+<li>黑客</li>
+</ul>
+<h3 id="Fuchsia解决现代OS痛点"><a href="#Fuchsia解决现代OS痛点" class="headerlink" title="Fuchsia解决现代OS痛点"></a>Fuchsia解决现代OS痛点</h3><ul>
+<li>原生进程沙箱，解决应用安全和分发问题<ul>
+<li>Linux：Namespace，Control group，Unionfs =&gt; Docker</li>
+</ul>
+</li>
+<li>稳定的驱动接口，硬件厂商可独立维护硬件驱动</li>
+<li>系统模块化，分层，设备厂商可以灵活定制专有系统</li>
+<li>基于Vulkan和物理渲染的纯3D UI，全局光照</li>
+<li>Flutter应用开发框架</li>
+</ul>
+<h3 id="Fuchsia重新思考四个Unix的基础抽象机制"><a href="#Fuchsia重新思考四个Unix的基础抽象机制" class="headerlink" title="Fuchsia重新思考四个Unix的基础抽象机制"></a>Fuchsia重新思考四个Unix的基础抽象机制</h3><ul>
+<li>全局文件系统<ul>
+<li>Unix，存在一个全局的跟文件系统<ul>
+<li>他是每个进程共享的基础资源</li>
+<li>文件系统涵盖了非文件资源：/proc, /sys, …</li>
+</ul>
+</li>
+<li>Fuchsia里，没有全局根文件系统<ul>
+<li>文件和文件系统成为一个局部概念，从而在进程内核数据结构里没有file</li>
+<li>用Namespace来定义一个进程能够访问的资源，每个name对应一个资源进程channel的handle</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>用户<ul>
+<li>Unix中，User本来是用作不同的用户登录，共享服务器的机制<ul>
+<li>User是真正的用户</li>
+<li>后来主要用作权限控制，弱化的沙箱机制</li>
+</ul>
+</li>
+<li>Fuchsia中，在底层（Zircon，Garnet）没有用户的概念<ul>
+<li>用namespace来控制进程能够访问的资源</li>
+<li>Capability-based access control</li>
+<li>从而在进程里没有uid</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>进程的创建<ul>
+<li>Unix中，新的进程由老的进程fork而来<ul>
+<li>新的进程继承父进程的全部资源</li>
+<li>偷懒的设计</li>
+<li>Andrew Baumann, a fork() in the road, ACM Hot Topics in OS, May 2019</li>
+</ul>
+</li>
+<li>Fuchsia中，新进程需要从头开始创建<ul>
+<li>创建process，Thread</li>
+<li>父进程建立初始的namespace到资源channel handle的映射</li>
+<li>调用process_start显式的告诉内核新的进程可以跑了</li>
+<li>在Fuchsia内核的process数据结构中，没有file和uid</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>系统调用<ul>
+<li>Unix中，通过中断调用内核服务：int 0x80，syscall,sysenter 系统调用的方式是确定的，直接的<ul>
+<li>内核接口不能变</li>
+<li>可以被任意注入的代码调用</li>
+</ul>
+</li>
+<li>Zircon里系统调用通过vDSO进行，意图是防止用户代码直接通过固定的中断代码调用system call，达到内核详细接口的隔离，保持C层面的接口稳定：名字 + 参数。而不是内核入口汇编指令层面的稳定<ul>
+<li>注入的代码无法直接调用vDSO里的接口，虽然加载地址固定，但是计算出入口地址很难，如果不是不可能的话</li>
+<li>内核会验证调用指定的地址，而vDSO的加载地址是固定的，并且在编译的时候会验证有限的入口符号，这些符号在编译时位移生成，防止用户进程绕过vDSO</li>
+<li>这里主要的目地是隔离system call的调用方式，不是绝对已以上的不可注入调用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="仿佛是专门针对漏洞利用作出的设计"><a href="#仿佛是专门针对漏洞利用作出的设计" class="headerlink" title="仿佛是专门针对漏洞利用作出的设计"></a>仿佛是专门针对漏洞利用作出的设计</h3><ul>
+<li>典型的漏洞利用步骤<ul>
+<li>通过系统调用fork()/exec()直接创建反向shell</li>
+<li>继承uid获得泛在授权</li>
+<li>访问全局文件系统</li>
+</ul>
+</li>
+<li>在Fuchsia里，以上机制都不存在<ul>
+<li>没有固定的系统调用入口</li>
+<li>船舰进程时显式建立root namespace</li>
+<li>没有user，从而没有ambient authority (DAC/MAC)</li>
+<li>Capability-based access control</li>
+<li>能访问的资源是父进程赋予的namespace，看不到初始namespace之外的任何资源</li>
+</ul>
+</li>
+</ul>
+<h3 id="Kernel的本质是什么？"><a href="#Kernel的本质是什么？" class="headerlink" title="Kernel的本质是什么？"></a>Kernel的本质是什么？</h3><ul>
+<li>不是<ul>
+<li>管理硬件</li>
+<li>执行特权指令</li>
+<li>引导启动过程</li>
+<li>处理中断</li>
+</ul>
+</li>
+<li>作者的理解：地址空间切换<ul>
+<li>不同进程唯一共享内存地址空间的场合</li>
+<li>切换地址空间是进入内核的标志</li>
+<li>不同的进程通过共享内核地址空间来交换信息</li>
+<li>切换地址空间是切换进程的关键步骤</li>
+</ul>
+</li>
+<li>Zircon主要内核态共跟你个<ul>
+<li>虚拟内存和物理内存管理</li>
+<li>进程和线程管理</li>
+<li>进程间通信</li>
+</ul>
+</li>
+<li>以内存为中心的设计<ul>
+<li>VMO代表一个内存对象，懒分配</li>
+<li>VMO通过向channel发送handle在进程之间传递，进程拿到VOM handle，把VMP重新映射到自己的地址空间里</li>
+<li>Unix是以文件为中心的设计</li>
+</ul>
+</li>
+<li>Channel<ul>
+<li>是进程间通信的唯一机制</li>
+<li>一个channel有两个handle，h1，h2，从一头写入ixaoxi，从另一头读出消息</li>
+<li>进程进程，有一些初始channel handle</li>
+<li>要与一个服务建立通信，h1自己拿着，h2发送给响应的服务做监听</li>
+<li>channel_write() 必须是一个系统调用</li>
+</ul>
+</li>
+<li>系统调用vDSO</li>
+<li>微内核<ul>
+<li>性能问题<ul>
+<li>上下文切换</li>
+<li>线程切换</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Fuchsia在各个平台上的可能的优势"><a href="#Fuchsia在各个平台上的可能的优势" class="headerlink" title="Fuchsia在各个平台上的可能的优势"></a>Fuchsia在各个平台上的可能的优势</h3><ul>
+<li>服务器平台，原生进程沙箱机制将带来新的安全特性和容器机制</li>
+<li>桌面平台，无缝兼容Android</li>
+<li>移动平台，系统的模块化方便第三方设备厂商的全面定制</li>
+</ul>
+<h3 id="Fuchsia分层"><a href="#Fuchsia分层" class="headerlink" title="Fuchsia分层"></a>Fuchsia分层</h3><ul>
+<li>四层，后两层可以替换掉，不影响兼容性<ul>
+<li>用户体验层</li>
+<li>应用层</li>
+<li>内核层</li>
+<li>系统服务层</li>
+</ul>
+</li>
+</ul>
+<h3 id="Fuchsia-目前的运行环境"><a href="#Fuchsia-目前的运行环境" class="headerlink" title="Fuchsia 目前的运行环境"></a>Fuchsia 目前的运行环境</h3><ul>
+<li>在Qemu中可以直接运行<ul>
+<li>Booloader加载到0x40080000</li>
+<li>内核加载到0x40090000</li>
+<li>Ramdisk加载到0x48000000</li>
+<li>0x40000000 - 0x40080000之间是FDT flattened device tree</li>
+</ul>
+</li>
+</ul>
+<h3 id="系统软件研发能力的获得"><a href="#系统软件研发能力的获得" class="headerlink" title="系统软件研发能力的获得"></a>系统软件研发能力的获得</h3><ul>
+<li>系统软件与应用软件不同<ul>
+<li>大量缄默知识</li>
+<li>工具链：gcc，Id，as，clang，ELF</li>
+<li>微处理器</li>
+<li>周边设备UEFI，ACPI，APIC，PCIE，USB，STATA，AHCI，GPU…</li>
+<li>知识存在与代码中，硬件标准文档内容太多</li>
+<li>产品级的设计非常困难</li>
+</ul>
+</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>Fuchsia重新思考了操作系统设计的各个方面，是一次男的的从头开始的机会</li>
+<li>在未来Fuchsia会成为一个非常重要的操作系统</li>
+<li>世界需要新的操作系统<ul>
+<li>每一个大型软件系统都值得尊重</li>
+<li>Windows老迈龙钟，历史负担太重，微软自己的创新Midori胎死腹中，因为无法承受在新的框架中重新实现一遍Windows的全部功能，只能在原地进行重构</li>
+<li>Linux里大部分开发人员只关心服务器的世界，就像一个专注与在加班下面锅炉房里干活的锅炉工</li>
+<li>MacOS，iOS封闭在苹果的硬件生态里</li>
+<li>Android微了弥补Linux的缺点打上了一个厚厚的中间层，不断在做着妥协</li>
+<li>GNU Hurd作为GNU项目“最后的组件”一直未能产品化，原因是“微内核消息传递机制debug态困难”？</li>
+<li>Unix的后继者 Plan 9 与2002年发布了最后一个版本，他的余热随着作者融入了Go</li>
+</ul>
+</li>
+</ul>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Pollex Lee</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2020/02/2月26日/">http://blog.pollex.me/2020/02/2月26日/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>内容版权属于 Pollex Lee 所有。未经授权，不得转载。</li></ul></div><br><div class="tags"><a href="/tags/Android/">Android</a><a href="/tags/30天学习打卡/">30天学习打卡</a><a href="/tags/Flutter/">Flutter</a></div><div class="post-nav"><a class="next" href="/2020/02/2月25日/">在浏览器上打王者荣耀？</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="http://blog.pollex.me"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/30天学习打卡/" style="font-size: 15px;">30天学习打卡</a> <a href="/tags/Flutter/" style="font-size: 15px;">Flutter</a> <a href="/tags/service/" style="font-size: 15px;">service</a> <a href="/tags/Android高手进阶视频/" style="font-size: 15px;">Android高手进阶视频</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/String/" style="font-size: 15px;">String</a> <a href="/tags/排序/" style="font-size: 15px;">排序</a> <a href="/tags/字符串/" style="font-size: 15px;">字符串</a> <a href="/tags/bug/" style="font-size: 15px;">bug</a> <a href="/tags/Resources-arsc/" style="font-size: 15px;">Resources.arsc</a> <a href="/tags/Application/" style="font-size: 15px;">Application</a> <a href="/tags/Activity/" style="font-size: 15px;">Activity</a> <a href="/tags/label/" style="font-size: 15px;">label</a> <a href="/tags/EditText/" style="font-size: 15px;">EditText</a> <a href="/tags/gradle/" style="font-size: 15px;">gradle</a> <a href="/tags/Windows/" style="font-size: 15px;">Windows</a> <a href="/tags/Android开发艺术探索/" style="font-size: 15px;">Android开发艺术探索</a> <a href="/tags/事件分发/" style="font-size: 15px;">事件分发</a> <a href="/tags/c语言/" style="font-size: 15px;">c语言</a> <a href="/tags/Data-Binding/" style="font-size: 15px;">Data Binding</a> <a href="/tags/翻译/" style="font-size: 15px;">翻译</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/WebView/" style="font-size: 15px;">WebView</a> <a href="/tags/NDK/" style="font-size: 15px;">NDK</a> <a href="/tags/jni/" style="font-size: 15px;">jni</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/scp/" style="font-size: 15px;">scp</a> <a href="/tags/vps/" style="font-size: 15px;">vps</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/Hook/" style="font-size: 15px;">Hook</a> <a href="/tags/反射/" style="font-size: 15px;">反射</a> <a href="/tags/Fiddler/" style="font-size: 15px;">Fiddler</a> <a href="/tags/优化/" style="font-size: 15px;">优化</a> <a href="/tags/Kotlin/" style="font-size: 15px;">Kotlin</a> <a href="/tags/转载/" style="font-size: 15px;">转载</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月26日/">Fuchsia - 来自 Google 的全新开源操作系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月25日/">在浏览器上打王者荣耀？</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月24日/">AR发展，未来可期</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月23日/">端智能是什么？</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月22日/">无线持续交付平台助力移动端开发</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月21日/">越复杂的需求，就要做越简单的设计</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月20日/">没有办法一劳永逸，所以我们面面俱到</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月19日/">基于AAB的插件化方案：Qigsaw</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月18日/">秒开秒用，用完即走</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月17日/">Android插件化路在何方</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">Pollex Lee.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
