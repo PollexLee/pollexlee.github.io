@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>提高开发效率的秘密武器：结对编程 | Pollex Lee</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">提高开发效率的秘密武器：结对编程</h1><a id="logo" href="/.">Pollex Lee</a><p class="description">给未来的你</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">提高开发效率的秘密武器：结对编程</h1><div class="post-meta">Feb 27, 2020</div><div class="post-content"><blockquote>
+<p>我为我们团队的高效而感到自豪。</p>
+</blockquote>
+<p>触宝研发总监 <em>孟雷</em>如是说。</p>
+<p><a href="https://time.geekbang.org/dailylesson/detail/100033246" target="_blank" rel="noopener">《如何通过结对编程进行高质量的软件开发》</a>的学习笔记。</p>
+<a id="more"></a>
+<blockquote>
+<p>了解结对编程的概念，是否符合我们的团队，具体改如何实施。</p>
+</blockquote>
+<h3 id="软件研发模式的演化"><a href="#软件研发模式的演化" class="headerlink" title="软件研发模式的演化"></a>软件研发模式的演化</h3><ul>
+<li>瀑布模型</li>
+<li>快速原型模型</li>
+<li>螺旋模型</li>
+<li>敏捷开发</li>
+<li>？？？</li>
+</ul>
+<h3 id="开发和测试的困境"><a href="#开发和测试的困境" class="headerlink" title="开发和测试的困境"></a>开发和测试的困境</h3><ul>
+<li>困难<ul>
+<li>在敏捷的短周期里面实现的其实是瀑布模式</li>
+<li>在强调交付速度的过程中，开发飞擦画那个容易急功近利，为完成手头的工作而在架构方面做很多的妥协和折中，从而为日后的维护升级买下很多隐患。</li>
+<li>水平参差不齐，很多地方写的很山寨，后面很多问题都是给前面的疏忽买单，产品一直处于不定加不定的状态</li>
+<li>有质量的code review没空做</li>
+<li>代码量大了，没空仔细review</li>
+<li>研发过程当中的团队分工角色较多，因此从上游到下游的过程中，会有很多沟通方面的损耗，团队管理消耗更多。</li>
+</ul>
+</li>
+<li>正确的方法<ul>
+<li>从源头提高代码质量</li>
+<li>注重代码的框架和设计，杜绝补丁加补丁</li>
+<li>建立标准化的设计模型和代码风格</li>
+<li>培养功能 + 测试 + 监控</li>
+</ul>
+</li>
+<li>关于结对编程<ul>
+<li>两人共用一台电脑</li>
+<li>一起设计，写代码，测试</li>
+<li>没有专门的测试环节，完成即上线</li>
+</ul>
+</li>
+</ul>
+<h3 id="结对编程与传统软件开发流程的主要区别"><a href="#结对编程与传统软件开发流程的主要区别" class="headerlink" title="结对编程与传统软件开发流程的主要区别"></a>结对编程与传统软件开发流程的主要区别</h3><ul>
+<li>利于只是的传递</li>
+<li>避免没有明确文档的潜规则的坑</li>
+<li>强迫接触不熟悉的领域，有利于培养全栈</li>
+<li>代码风格，设计思想，强一致，不存在项目移交的风险</li>
+<li>没有单点瓶颈，不怕人员流失</li>
+</ul>
+<h3 id="结对编程最佳实施方法"><a href="#结对编程最佳实施方法" class="headerlink" title="结对编程最佳实施方法"></a>结对编程最佳实施方法</h3><ul>
+<li>两个人必须使用同一台电脑，不能两台点啊弄，坐在一起</li>
+<li>不准带手机，写程序的人有义务监督观察者使其注意力集中</li>
+<li>每半天或者一天轮换一次（驾驶员、领航员）</li>
+<li>固定时间，中间休息</li>
+<li>搭档定期更换，但必须有梯度</li>
+<li>必须开发测试都做</li>
+</ul>
+<h3 id="使用场景，成功案例"><a href="#使用场景，成功案例" class="headerlink" title="使用场景，成功案例"></a>使用场景，成功案例</h3><ul>
+<li>周日程<ul>
+<li>周一 发布上一个正式版本</li>
+<li>周二 开发测试</li>
+<li>周三 开发测试</li>
+<li>周四 代码冻结，公测</li>
+<li>周五 观察，新需求</li>
+</ul>
+</li>
+<li>天日程<ul>
+<li>10:00 - 10:30 站会讨论</li>
+<li>10:30 - 12:00 结对编程</li>
+<li>1:30 - 3:00 结对编程</li>
+<li>3:30 - 6:00 结对编程</li>
+</ul>
+</li>
+<li>必须遇到的问题<ul>
+<li>执行力！执行力！执行力！</li>
+<li>组员：想做自己的事情，我是不是在浪费时间？</li>
+<li>Leader的顾虑：影响项目进度</li>
+<li>两人会有性格等各方面的问题，会有争议，争吵；Leader介入参与讨论</li>
+<li>没有测试不放心</li>
+</ul>
+</li>
+<li>必然要抓住的重点<ul>
+<li>确保团队成员对于业务目标以及研发流程的理解和认同</li>
+<li>帮助团队成员摆脱固有的研发角色的分工</li>
+<li>重点关注架构设计，模块重用</li>
+<li>增强开发人员的自我测试意识</li>
+</ul>
+</li>
+<li>必须付出的代价<ul>
+<li>组员：很少有私人控件</li>
+<li>leader：需要尽可能的带大家做靠谱的事</li>
+</ul>
+</li>
+<li>适用场景<ul>
+<li>偏极客分为的公司或团队</li>
+<li>公司规模较小，但业务形态相对来说比较稳定</li>
+<li>业务需求较多，迭代较快</li>
+<li>有一定逻辑复杂性，需要较好的基础架构的项目</li>
+<li>人员流动较大，缺乏系统化文档</li>
+</ul>
+</li>
+<li>相关数据<ul>
+<li>线上Crash率下降</li>
+<li>完成任务数 / 人  先降后升</li>
+</ul>
+</li>
+<li>关于测试<ul>
+<li>美欧专门的功能测试不代表没有测试</li>
+<li>跟单纯的功能测试说再见！</li>
+<li>以自动化持续继承测试作为研发的基础</li>
+<li>注重多平台，性能测试，压力测试，耗电量测试等高级测试，以及测试工具和框架的研发</li>
+<li>注重线上实时监控，研发，测试，监控一体化</li>
+</ul>
+</li>
+</ul>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Pollex Lee</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2020/02/2月27日/">http://blog.pollex.me/2020/02/2月27日/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>内容版权属于 Pollex Lee 所有。未经授权，不得转载。</li></ul></div><br><div class="tags"><a href="/tags/Android/">Android</a><a href="/tags/30天学习打卡/">30天学习打卡</a><a href="/tags/Flutter/">Flutter</a></div><div class="post-nav"><a class="next" href="/2020/02/2月26日/">Fuchsia - 来自 Google 的全新开源操作系统</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="http://blog.pollex.me"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/30天学习打卡/" style="font-size: 15px;">30天学习打卡</a> <a href="/tags/Flutter/" style="font-size: 15px;">Flutter</a> <a href="/tags/Android高手进阶视频/" style="font-size: 15px;">Android高手进阶视频</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/service/" style="font-size: 15px;">service</a> <a href="/tags/String/" style="font-size: 15px;">String</a> <a href="/tags/排序/" style="font-size: 15px;">排序</a> <a href="/tags/字符串/" style="font-size: 15px;">字符串</a> <a href="/tags/bug/" style="font-size: 15px;">bug</a> <a href="/tags/Resources-arsc/" style="font-size: 15px;">Resources.arsc</a> <a href="/tags/Application/" style="font-size: 15px;">Application</a> <a href="/tags/Activity/" style="font-size: 15px;">Activity</a> <a href="/tags/label/" style="font-size: 15px;">label</a> <a href="/tags/EditText/" style="font-size: 15px;">EditText</a> <a href="/tags/gradle/" style="font-size: 15px;">gradle</a> <a href="/tags/Android开发艺术探索/" style="font-size: 15px;">Android开发艺术探索</a> <a href="/tags/事件分发/" style="font-size: 15px;">事件分发</a> <a href="/tags/Windows/" style="font-size: 15px;">Windows</a> <a href="/tags/c语言/" style="font-size: 15px;">c语言</a> <a href="/tags/WebView/" style="font-size: 15px;">WebView</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/Data-Binding/" style="font-size: 15px;">Data Binding</a> <a href="/tags/翻译/" style="font-size: 15px;">翻译</a> <a href="/tags/NDK/" style="font-size: 15px;">NDK</a> <a href="/tags/jni/" style="font-size: 15px;">jni</a> <a href="/tags/Hook/" style="font-size: 15px;">Hook</a> <a href="/tags/反射/" style="font-size: 15px;">反射</a> <a href="/tags/Fiddler/" style="font-size: 15px;">Fiddler</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/scp/" style="font-size: 15px;">scp</a> <a href="/tags/vps/" style="font-size: 15px;">vps</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/优化/" style="font-size: 15px;">优化</a> <a href="/tags/Kotlin/" style="font-size: 15px;">Kotlin</a> <a href="/tags/转载/" style="font-size: 15px;">转载</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月27日/">提高开发效率的秘密武器：结对编程</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月26日/">Fuchsia - 来自 Google 的全新开源操作系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月25日/">在浏览器上打王者荣耀？</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月24日/">AR发展，未来可期</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月23日/">端智能是什么？</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月22日/">无线持续交付平台助力移动端开发</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月21日/">越复杂的需求，就要做越简单的设计</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月20日/">没有办法一劳永逸，所以我们面面俱到</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月19日/">基于AAB的插件化方案：Qigsaw</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/2月18日/">秒开秒用，用完即走</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">Pollex Lee.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
