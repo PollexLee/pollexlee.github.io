@@ -147,7 +147,7 @@
         <div class="content">
             <p>在很多情况下，我们都会用到对自定义数据结构的排序，而最多的实际排序依据是对字符串的排序。<br><a id="more"></a></p>
 <h2 id="举个例子："><a href="#举个例子：" class="headerlink" title="举个例子："></a>举个例子：</h2><p>联系人排序，<code>contacts</code>是一个我们自己定义的数据结构，里面有两个参数，<code>name</code>和<code>tel</code>，我们要根据<code>name</code>的拼音排序，首先要把汉字转成拼音，然后根据拼音进行排序。</p>
-<h3 id="第一步：-汉字转拼音"><a href="#第一步：-汉字转拼音" class="headerlink" title="第一步： 汉字转拼音"></a>第一步： 汉字转拼音</h3><p>资料（第二种方法貌似对”亳州”的”亳”识别有误）：<br><a href="http://xsl2007.iteye.com/blog/992985" target="_blank" rel="noopener">java程序将汉字转成拼音的两种方法</a></p>
+<h3 id="第一步：-汉字转拼音"><a href="#第一步：-汉字转拼音" class="headerlink" title="第一步： 汉字转拼音"></a>第一步： 汉字转拼音</h3><p>资料（第二种方法貌似对”亳州”的”亳”识别有误）：<br><a href="http://xsl2007.iteye.com/blog/992985">java程序将汉字转成拼音的两种方法</a></p>
 <h3 id="第二步：-根据拼音对数据结构排序"><a href="#第二步：-根据拼音对数据结构排序" class="headerlink" title="第二步： 根据拼音对数据结构排序"></a>第二步： 根据拼音对数据结构排序</h3><p>首先需要给数据结构制作一个比较的工具类：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class PinyinComparator implements Comparator&lt;ContactsEntry&gt; &#123;</span><br><span class="line"></span><br><span class="line">    public int compare(ContactsEntry o1, ContactsEntry o2) &#123;</span><br><span class="line">        if (o1.getSort_key().equals(&quot;@&quot;)</span><br><span class="line">                || o2.getSort_key().equals(&quot;#&quot;)) &#123;</span><br><span class="line">            return -1;</span><br><span class="line">        &#125; else if (o1.getSort_key().equals(&quot;#&quot;)</span><br><span class="line">                || o2.getSort_key().equals(&quot;@&quot;)) &#123;</span><br><span class="line">            return 1;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return o1.getSort_key().compareTo(o2.getSort_key());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然后通过Collections的sort方法来排序：</p>
@@ -167,29 +167,20 @@
         
         
         
+        <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+        
     </div>
 </div>
 
 
-
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
-            
-                
-<a class="button is-info donate">
-    <span class="icon is-small">
-        <i class="fab fa-alipay"></i>
-    </span>
-    <span>支付宝</span>
-    <div class="qrcode"><img src="/images/zhifubao.jpg" alt="支付宝"></div>
-</a>
-
-                
-        </div>
-    </div>
-</div>
 
 
 

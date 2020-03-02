@@ -152,7 +152,7 @@
 <p>用下面的代码配置Data Binding:</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    ....</span><br><span class="line">    dataBinding &#123;</span><br><span class="line">        enabled = true</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>如果你的Module中已经有一个library引用了Data Binding，你的主项目的build.gradle中仍然需要配置一下。</code></p>
-<p>然后确认一下Android Studio版本是否支持，Android Studio 1.3及以上都支持data binding，<a href="https://developer.android.com/tools/data-binding/guide.html#studio_support" target="_blank" rel="noopener">描述文档</a>。</p>
+<p>然后确认一下Android Studio版本是否支持，Android Studio 1.3及以上都支持data binding，<a href="https://developer.android.com/tools/data-binding/guide.html#studio_support">描述文档</a>。</p>
 <h2 id="二、Data-Binding-布局文件"><a href="#二、Data-Binding-布局文件" class="headerlink" title="二、Data Binding 布局文件"></a>二、Data Binding 布局文件</h2><h3 id="马上来编写你的第一个data-binding程序吧！"><a href="#马上来编写你的第一个data-binding程序吧！" class="headerlink" title="马上来编写你的第一个data binding程序吧！"></a>马上来编写你的第一个data binding程序吧！</h3><p>data binding的布局文件和原先xml写的布局文件有略微不同，首先要在根布局下面绑定一个data元素，这个视图元素是在非绑定布局文件中的基本元素(好拗口~)。例子如下：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">layout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">data</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">variable</span> <span class="attr">name</span>=<span class="string">"user"</span> <span class="attr">type</span>=<span class="string">"com.example.User"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">data</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">LinearLayout</span></span></span><br><span class="line"><span class="tag">       <span class="attr">android:orientation</span>=<span class="string">"vertical"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">TextView</span> <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">android:text</span>=<span class="string">"@&#123;user.firstName&#125;"</span>/&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">TextView</span> <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">android:text</span>=<span class="string">"@&#123;user.lastName&#125;"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">layout</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>user变量是在数据中描述了，可以用在布局文件中。</p>
@@ -180,29 +180,20 @@
         
         
         
+        <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+        
     </div>
 </div>
 
 
-
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
-            
-                
-<a class="button is-info donate">
-    <span class="icon is-small">
-        <i class="fab fa-alipay"></i>
-    </span>
-    <span>支付宝</span>
-    <div class="qrcode"><img src="/images/zhifubao.jpg" alt="支付宝"></div>
-</a>
-
-                
-        </div>
-    </div>
-</div>
 
 
 

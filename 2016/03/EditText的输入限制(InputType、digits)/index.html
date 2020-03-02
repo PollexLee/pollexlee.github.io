@@ -148,7 +148,7 @@
             <p>最近做了不少输入框，有储蓄卡卡号、信用卡卡号、验证码、用户名等，需要对每个输入框都做不同的输入限制，下面记录了常用的几种输入限制方式，以供以后参考。<br><a id="more"></a></p>
 <h2 id="方法一：InputType"><a href="#方法一：InputType" class="headerlink" title="方法一：InputType"></a>方法一：InputType</h2><p>InputType属性可以限制输入框需要显示何种键盘模式，可以输入哪些字符，下面是各个参数对应的类型：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">android:inputType=<span class="string">"none"</span>--输入普通字符</span><br><span class="line">android:inputType=<span class="string">"text"</span>--输入普通字符 </span><br><span class="line">android:inputType=<span class="string">"textCapCharacters"</span>--输入普通字符 </span><br><span class="line">android:inputType=<span class="string">"textCapWords"</span>--单词首字母大小 </span><br><span class="line">android:inputType=<span class="string">"textCapSentences"</span>--仅第一个字母大小 </span><br><span class="line">android:inputType=<span class="string">"textAutoCorrect"</span>--前两个自动完成 </span><br><span class="line">android:inputType=<span class="string">"textAutoComplete"</span>--前两个自动完成 </span><br><span class="line">android:inputType=<span class="string">"textMultiLine"</span>--多行输入 </span><br><span class="line">android:inputType=<span class="string">"textImeMultiLine"</span>--输入法多行（不一定支持） </span><br><span class="line">android:inputType=<span class="string">"textNoSuggestions"</span>--不提示 </span><br><span class="line">android:inputType=<span class="string">"textUri"</span>--URI格式</span><br><span class="line">android:inputType=<span class="string">"textEmailAddress"</span>--电子邮件地址格式</span><br><span class="line">android:inputType=<span class="string">"textEmailSubject"</span>--邮件主题格式</span><br><span class="line">android:inputType=<span class="string">"textShortMessage"</span>--短消息格式</span><br><span class="line">android:inputType=<span class="string">"textLongMessage"</span>--长消息格式</span><br><span class="line">android:inputType=<span class="string">"textPersonName"</span>--人名格式</span><br><span class="line">android:inputType=<span class="string">"textPostalAddress"</span>--邮政格式</span><br><span class="line">android:inputType=<span class="string">"textPassword"</span>--密码格式</span><br><span class="line">android:inputType=<span class="string">"textVisiblePassword"</span>--密码可见格式</span><br><span class="line">android:inputType=<span class="string">"textWebEditText"</span>--作为网页表单的文本格式</span><br><span class="line">android:inputType=<span class="string">"textFilter"</span>--文本筛选格式</span><br><span class="line">android:inputType=<span class="string">"textPhonetic"</span>--拼音输入格式</span><br><span class="line">android:inputType=<span class="string">"number"</span>--数字格式 数字键盘</span><br><span class="line">android:inputType=<span class="string">"numberSigned"</span>--有符号数字格式 数字键盘</span><br><span class="line">android:inputType=<span class="string">"numberDecimal"</span>--可以带小数点的浮点格式 数字键盘</span><br><span class="line">android:inputType=<span class="string">"phone"</span>--拨号键盘 </span><br><span class="line">android:inputType=<span class="string">"datetime"</span></span><br><span class="line">android:inputType=<span class="string">"date"</span>--日期键盘</span><br><span class="line">android:inputType=<span class="string">"time"</span>--时间键盘</span><br></pre></td></tr></table></figure>
-<p>摘自<a href="http://blog.csdn.net/chaod5659/article/details/17117193" target="_blank" rel="noopener">android:inputType参数类型说明</a></p>
+<p>摘自<a href="http://blog.csdn.net/chaod5659/article/details/17117193">android:inputType参数类型说明</a></p>
 <h2 id="方法二：digits"><a href="#方法二：digits" class="headerlink" title="方法二：digits"></a>方法二：digits</h2><p>使用方法：<br>1.在xml文件中设置digits参数：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:digits=<span class="string">"0123456789 "</span></span><br></pre></td></tr></table></figure>
 <p>通过xml文件设置digits的参数来控制这个EditText可以输入那些字符，但是无法控制键盘模式。<br>2.代码中动态设置KeyListener：</p>
@@ -171,29 +171,20 @@
         
         
         
+        <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+        
     </div>
 </div>
 
 
-
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
-            
-                
-<a class="button is-info donate">
-    <span class="icon is-small">
-        <i class="fab fa-alipay"></i>
-    </span>
-    <span>支付宝</span>
-    <div class="qrcode"><img src="/images/zhifubao.jpg" alt="支付宝"></div>
-</a>
-
-                
-        </div>
-    </div>
-</div>
 
 
 

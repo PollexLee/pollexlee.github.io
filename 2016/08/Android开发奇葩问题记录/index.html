@@ -146,7 +146,7 @@
         </h1>
         <div class="content">
             <p>记录一些平时开发中遇到的奇葩问题。😄<br><a id="more"></a></p>
-<h3 id="1-字符串空格替换问题"><a href="#1-字符串空格替换问题" class="headerlink" title="1.字符串空格替换问题"></a>1.字符串空格替换问题</h3><p>今天遇到一个替换空格的问题，但是无论怎么替换都替换不掉，一打印log，还是在。<br>后来看了一下这个字符串的组成，原来这不是空格啊，竟然是”<code>&amp;#160;</code>“，查了一下，虽然这个符号会显示成空格，但是直接<code>replaceAll(&quot; &quot;,&quot;&quot;);</code>是无法去掉的，如果位置固定，可以根据位置去掉。<br><a href="http://blog.csdn.net/tmeteor/article/details/8959835" target="_blank" rel="noopener">资料</a></p>
+<h3 id="1-字符串空格替换问题"><a href="#1-字符串空格替换问题" class="headerlink" title="1.字符串空格替换问题"></a>1.字符串空格替换问题</h3><p>今天遇到一个替换空格的问题，但是无论怎么替换都替换不掉，一打印log，还是在。<br>后来看了一下这个字符串的组成，原来这不是空格啊，竟然是”<code>&amp;#160;</code>“，查了一下，虽然这个符号会显示成空格，但是直接<code>replaceAll(&quot; &quot;,&quot;&quot;);</code>是无法去掉的，如果位置固定，可以根据位置去掉。<br><a href="http://blog.csdn.net/tmeteor/article/details/8959835">资料</a></p>
 <h3 id="2-back-stack拼接问题"><a href="#2-back-stack拼接问题" class="headerlink" title="2.back stack拼接问题"></a>2.back stack拼接问题</h3><p>singleTask和singleInstance启动的activity，尽管可能不在同一个task，但是仍然会回到原来的activity；但是singleTask可能会存在back stack“拼接”的情况。<br>如图所示：<br><img src="https://raw.githubusercontent.com/xiaohongmaosimida/xiaohongmaosimida.github.io/master/img/diagram_backstack_singletask_multiactivity.png" alt="back stack"></p>
 <h3 id="3-singleLine弃用了，用什么代替呢？"><a href="#3-singleLine弃用了，用什么代替呢？" class="headerlink" title="3.singleLine弃用了，用什么代替呢？"></a>3.singleLine弃用了，用什么代替呢？</h3><p>1，singleLine弃用了，但是setSingleLine()方法并没有弃用。<br>2，可以看一下setSingleLine()方法都做了什么，可以看出用下面两个属性也能完成singleLine同样的效果：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">android:lines="1"</span><br><span class="line">android:scrollHorizontally="true"</span><br></pre></td></tr></table></figure></p>
 <h3 id="4，”-“反斜杠替换问题-2016年04月26日"><a href="#4，”-“反斜杠替换问题-2016年04月26日" class="headerlink" title="4，”/“反斜杠替换问题-2016年04月26日"></a>4，”/“反斜杠替换问题-2016年04月26日</h3><p>需求：在一段内容中，把输入框中用户输入的字符，按照全部匹配的原则，替换成红色。<br>我的处理方式是：</p>
@@ -154,7 +154,7 @@
 <p>但是当用户输入的有”/“的时候，就出现了错误：<code>java.util.regex.PatternSyntaxException: Unrecognized backslash escape sequence in pattern near index 1:\^</code>。<br>原因是：在java中”\”（反斜杠）是转义符号，所以反斜杠后面没有东西的话是不对的，所以，在java中反斜杠要表示成”\\“;<br>另外，replaceAll方法实现原理使用了”regex”（正则表达式），在regex中同样要用”\\“来代表”\”，所以上面的代码应该写成这样：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String re = mKeys.replaceAll(<span class="string">"\\\\"</span>,<span class="string">"\\\\\\\\"</span>);</span><br><span class="line">String title = content.replaceAll(re, <span class="string">"&lt;font color=\"#f84746\"&gt;"</span> + mKeys + <span class="string">"&lt;/font&gt;"</span>);</span><br></pre></td></tr></table></figure>
 <p>这样就没问题了，特此记录。</p>
-<p><a href="http://www.cnblogs.com/xdp-gacl/p/3912784.html" target="_blank" rel="noopener">参考资料</a></p>
+<p><a href="http://www.cnblogs.com/xdp-gacl/p/3912784.html">参考资料</a></p>
 <h3 id="5，tab切换后界面自动上跳是什么鬼？-2016年06月13日"><a href="#5，tab切换后界面自动上跳是什么鬼？-2016年06月13日" class="headerlink" title="5，tab切换后界面自动上跳是什么鬼？-2016年06月13日"></a>5，tab切换后界面自动上跳是什么鬼？-2016年06月13日</h3><p>初始化第一个tab之后是这样的：<br><img src="https://raw.githubusercontent.com/xiaohongmaosimida/xiaohongmaosimida.github.io/master/img/布局上跳1.png" alt="back stack"><br>但是切换到第二个再切回来，就变成这样婶儿的了：<br><img src="https://raw.githubusercontent.com/xiaohongmaosimida/xiaohongmaosimida.github.io/master/img/布局上跳2.png" alt="back stack"><br>是焦点问题，但是具体原理还没搞懂,解决方法是在最外层布局文件中增加如下两行代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">android:focusableInTouchMode=<span class="string">"true"</span></span><br><span class="line">android:focusable=<span class="string">"true"</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="6，TextView自带上下Padding导致高度计算不准确的问题-2016年06月29日"><a href="#6，TextView自带上下Padding导致高度计算不准确的问题-2016年06月29日" class="headerlink" title="6，TextView自带上下Padding导致高度计算不准确的问题-2016年06月29日"></a>6，TextView自带上下Padding导致高度计算不准确的问题-2016年06月29日</h3><p>TextView默认上下自带Padding的，所以根据TextView的sp计算文字高度是不准确的，所以要计算TextView高度需要去掉上下的Padding,方式就是在TextView中添加如下属性：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:includeFontPadding="false"</span><br></pre></td></tr></table></figure></p>
 <p>或者：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">textview.setIncludeFontPadding(<span class="keyword">false</span>);</span><br></pre></td></tr></table></figure></p>
@@ -180,29 +180,20 @@
         
         
         
+        <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+        
     </div>
 </div>
 
 
-
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
-            
-                
-<a class="button is-info donate">
-    <span class="icon is-small">
-        <i class="fab fa-alipay"></i>
-    </span>
-    <span>支付宝</span>
-    <div class="qrcode"><img src="/images/zhifubao.jpg" alt="支付宝"></div>
-</a>
-
-                
-        </div>
-    </div>
-</div>
 
 
 

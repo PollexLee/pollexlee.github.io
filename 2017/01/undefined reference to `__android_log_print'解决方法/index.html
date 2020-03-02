@@ -149,7 +149,7 @@
 <a id="more"></a>
 <p>这个.c文件的代码看起来是没有任何问题的，但是大多数人，一运行，就会爆出如下错误：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/Users/lipeng/android_workspace/hello_jni/app/src/main/jni/hello-jni.c</span><br><span class="line">Error:(<span class="number">20</span>) undefined reference to `__android_log_print<span class="string">'</span></span><br><span class="line"><span class="string">Error:error: ld returned 1 exit status</span></span><br></pre></td></tr></table></figure></p>
 <p>网上查到的资料绝大部分都是让在Android.mk文件中增加<code>LOCAL_LDLIBS := -lm -llog</code>类似的解决方案，而且很多人也确实用这种方式解决了这个问题，但是我用了这个方式，并没有效果。</p>
-<p>最终在<a href="http://stackoverflow.com/questions/4455941/undefined-reference-to-android-log-print" target="_blank" rel="noopener">StackOverFlow</a>查到了另外一种解决方法：<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ndk &#123;</span><br><span class="line">	moduleName <span class="string">"hello-jni"</span></span><br><span class="line">	ldLibs <span class="string">"log"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>最终在<a href="http://stackoverflow.com/questions/4455941/undefined-reference-to-android-log-print">StackOverFlow</a>查到了另外一种解决方法：<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ndk &#123;</span><br><span class="line">	moduleName <span class="string">"hello-jni"</span></span><br><span class="line">	ldLibs <span class="string">"log"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>这种方法解决了我这边的问题，看代码解决方式是引入<code>log</code>库，但是.c文件中已经引入了<code>android/log.h</code>，不知道为什么还要在Android.mk文件或者gradle配置文件中再引入的lib。</p>
 
         </div>
@@ -165,29 +165,20 @@
         
         
         
+        <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+        
     </div>
 </div>
 
 
-
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
-            
-                
-<a class="button is-info donate">
-    <span class="icon is-small">
-        <i class="fab fa-alipay"></i>
-    </span>
-    <span>支付宝</span>
-    <div class="qrcode"><img src="/images/zhifubao.jpg" alt="支付宝"></div>
-</a>
-
-                
-        </div>
-    </div>
-</div>
 
 
 

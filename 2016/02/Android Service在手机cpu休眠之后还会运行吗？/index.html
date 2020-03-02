@@ -154,7 +154,7 @@
 <h3 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h3><p>测试1结果：服务运行正常；<br>测试2结果：网络运行异常，每1s发送一次的网络请求，在手机休眠后，变成了每5s左右发送一次。</p>
 <h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><p>手机休眠后，后台服务仍然在运行，但是网络CPU进入休眠状态，应用无法访问网络，网络CPU每隔一段时间被Baseband Processor（BP）唤醒一次，应用可以访问网络，然后继续进入休眠状态，依次循环。</p>
 <h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>手机插着数据线调试的时候，是不会进入休眠状态的。</p>
-<h4 id="更多资料"><a href="#更多资料" class="headerlink" title="更多资料"></a>更多资料</h4><p><a href="http://www.cnblogs.com/kobe8/p/3819305.html" target="_blank" rel="noopener">android设备休眠</a><br><a href="https://developer.android.com/reference/android/os/PowerManager.html" target="_blank" rel="noopener">PowerManager</a><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 创建一个Service
+<h4 id="更多资料"><a href="#更多资料" class="headerlink" title="更多资料"></a>更多资料</h4><p><a href="http://www.cnblogs.com/kobe8/p/3819305.html">android设备休眠</a><br><a href="https://developer.android.com/reference/android/os/PowerManager.html">PowerManager</a><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 创建一个Service
 logout=>operation: 每隔1s写入一个Timestamp到日志文件
 delay=>operation: 锁屏静置手机10分钟
 showlog=>condition: 检查日志是否正常
@@ -186,29 +186,20 @@ showlog(no)->ServiceisWrong</textarea><textarea id="flowchart-1-options" style="
         
         
         
+        <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+        
     </div>
 </div>
 
 
-
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
-            
-                
-<a class="button is-info donate">
-    <span class="icon is-small">
-        <i class="fab fa-alipay"></i>
-    </span>
-    <span>支付宝</span>
-    <div class="qrcode"><img src="/images/zhifubao.jpg" alt="支付宝"></div>
-</a>
-
-                
-        </div>
-    </div>
-</div>
 
 
 
