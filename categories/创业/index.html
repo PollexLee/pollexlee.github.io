@@ -7,22 +7,17 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>基于AAB的插件化方案：Qigsaw - Pollex Lee</title>
+<title>分类: 创业 - Pollex Lee</title>
 
 
-    <meta name="description" content="AAB的开发套件太爽了，不想就这样暴殄天物。  爱奇艺资深工程师 陈家威 如是说。 《基于Android App Bundle动态化方案探索》的学习笔记。">
-<meta name="keywords" content="Android,30天学习打卡">
-<meta property="og:type" content="article">
-<meta property="og:title" content="基于AAB的插件化方案：Qigsaw">
-<meta property="og:url" content="http://blog.pollex.me/2020/02/2月19日/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Pollex Lee">
+<meta property="og:url" content="http://blog.pollex.me/categories/创业/index.html">
 <meta property="og:site_name" content="Pollex Lee">
-<meta property="og:description" content="AAB的开发套件太爽了，不想就这样暴殄天物。  爱奇艺资深工程师 陈家威 如是说。 《基于Android App Bundle动态化方案探索》的学习笔记。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://blog.pollex.me/images/og_image.png">
-<meta property="og:updated_time" content="2020-03-02T15:23:02.952Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于AAB的插件化方案：Qigsaw">
-<meta name="twitter:description" content="AAB的开发套件太爽了，不想就这样暴殄天物。  爱奇艺资深工程师 陈家威 如是说。 《基于Android App Bundle动态化方案探索》的学习笔记。">
+<meta name="twitter:title" content="Pollex Lee">
 <meta name="twitter:image" content="http://blog.pollex.me/images/og_image.png">
 
 
@@ -81,7 +76,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/avatar.jpg" alt="基于AAB的插件化方案：Qigsaw" height="28">
+                <img src="/images/avatar.jpg" alt="Pollex Lee" height="28">
             
             </a>
         </div>
@@ -119,24 +114,36 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">分类</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">创业</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    
 <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-19T14:33:34.396Z">2020-02-19</time>
+                <time class="level-item has-text-grey" datetime="2020-03-05T14:03:22.101Z">2020-03-05</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Android/">Android</a>
+                <a class="has-link-grey -link" href="/categories/创业/">创业</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    7 分钟 读完 (大约 1120 个字)
+                    4 分钟 读完 (大约 624 个字)
                 </span>
                 
                 
@@ -145,251 +152,27 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                基于AAB的插件化方案：Qigsaw
+                <a class="has-link-black-ter" href="/2020/03/3月5日/">创业要耐得住寂寞</a>
             
         </h1>
         <div class="content">
             <blockquote>
-<p>AAB的开发套件太爽了，不想就这样暴殄天物。</p>
+<p>事多的麻烦客户，才是最能帮助你打磨产品的客户。</p>
 </blockquote>
-<p>爱奇艺资深工程师 <em>陈家威</em> 如是说。</p>
-<p><a href="https://time.geekbang.org/dailylesson/detail/100032605">《基于Android App Bundle动态化方案探索》</a>的学习笔记。</p>
-<a id="more"></a>
-<blockquote>
-<p>爱奇艺的<a href="https://github.com/iqiyi/Qigsaw">Qigsaw</a>方案脱胎于AAB，紧跟Google的脚步又适应国内环境，高大上又接地气。</p>
-</blockquote>
-<h3 id="Google减少APK体积的发展历程"><a href="#Google减少APK体积的发展历程" class="headerlink" title="Google减少APK体积的发展历程"></a>Google减少APK体积的发展历程</h3><ul>
-<li>以前的发布过程，周期长，占用更多空间<ul>
-<li>包含所有so库</li>
-<li>包含所有资源</li>
-</ul>
-</li>
-<li>包体积和安装成功率呈反比</li>
-<li>Multiple APK<ul>
-<li>Google Play支持</li>
-<li>通过不同配置，下发不同apk</li>
-<li>通过Gradle 的split配置打包<ul>
-<li>像素配置</li>
-<li>架构配置</li>
-</ul>
-</li>
-<li>推广使用并不好</li>
-</ul>
-</li>
-<li>Android App Bundle<ul>
-<li>apk转换为 aab</li>
-<li>上传aab到Google Play</li>
-<li>Google Play将aab拆分成多个apk<ul>
-<li>Base APK</li>
-<li>Configuration APK</li>
-<li>下载是根据配置下载：Base APK + Configuration APK + xxhdpi APK + arm64 APK</li>
-<li>Dynamic Feature 根据设备配置继续拆分</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="国内插件化发展回顾及原理分析"><a href="#国内插件化发展回顾及原理分析" class="headerlink" title="国内插件化发展回顾及原理分析"></a>国内插件化发展回顾及原理分析</h3><ul>
-<li>国内插件化<ul>
-<li>AndroidDynamicLoad</li>
-<li>DynamicLoadAPK</li>
-<li>Neptune</li>
-<li>OpenAtlas</li>
-<li>DroidPlugin</li>
-</ul>
-</li>
-<li><p>原理</p>
-<ul>
-<li>BaseDexClassLoader加载class</li>
-<li>Resources</li>
-<li>AssetManager</li>
-<li>BaseDexLassLoader加载lib中的so</li>
-<li>AndroidManifest记录四大组件</li>
-</ul>
-</li>
-<li><p>单类加载器</p>
-<ul>
-<li>Element 对应 DexFile，加载Dex</li>
-<li>NativeLibraryElement 对应 File 记录so目录</li>
-</ul>
-</li>
-<li><p>多类加载器 </p>
-<ul>
-<li>替换系统ClassLoader</li>
-<li>每个插件，独立的ClassLoader加载</li>
-</ul>
-</li>
-<li><p>资源加载</p>
-<ul>
-<li>资源文件ID PP（系统应用还是第三方 7F）TT（资源类型）EEEE（顺序）</li>
-<li>AAPT|AAPT2生成资源ID</li>
-<li>调用AssetManager#addAssetPath(String) 加载Asset资源<ul>
-<li>系统资源  PP01 PP02  PP03</li>
-<li>App资源  PP7F   插件 PP7E</li>
-</ul>
-</li>
-<li>资源隔离</li>
-<li>资源分区</li>
-<li>启动未在宿主AndroidManifest文件注册的Activity<ul>
-<li>插状预埋方式<ul>
-<li>startActivity后，execStartActivity时替换Class信息，newActivity时还原Class信息</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Android-App-Bundle原理介绍"><a href="#Android-App-Bundle原理介绍" class="headerlink" title="Android App Bundle原理介绍"></a>Android App Bundle原理介绍</h3><ul>
-<li>Split APK<ul>
-<li>Android 5.0提供</li>
-<li>减少包体积</li>
-<li>签名相同</li>
-<li>同一个应用</li>
-<li>如何安装？<ul>
-<li>adb 安装：adb install-multiple [base-apk,split1-apk]</li>
-<li>PackageInstaller安装<ul>
-<li>在运行期间，安装Split APKs</li>
-<li>安装后，宿主应用进程会被杀死</li>
-</ul>
-</li>
-<li>系统应用可以静默安装Split APKs</li>
-</ul>
-</li>
-<li>如何加载的 - LoadedAPK 用于保存当前已加载APK的本地状态<ul>
-<li>mClassLoader<ul>
-<li>创建PathClassLoader ：createOrUpdateClassLoaderLocked(List<String> addedPaths)</li>
-<li>增加Split APks路径</li>
-</ul>
-</li>
-<li>mResources<ul>
-<li>getSplitRources</li>
-</ul>
-</li>
-<li>mApplication</li>
-</ul>
-</li>
-<li>AAB如何加载插件<ul>
-<li>Play Core Library，Google Play支持</li>
-<li>SplitCompat 为了可以及时插件生效，与国内插件化很类似</li>
-</ul>
-</li>
-<li>国内无法使用Google Play</li>
-</ul>
-</li>
-</ul>
-<h3 id="Qigsaw简介及原理分析"><a href="#Qigsaw简介及原理分析" class="headerlink" title="Qigsaw简介及原理分析"></a>Qigsaw简介及原理分析</h3><ul>
-<li><p>利用AAB开发套件，爱奇艺自研的动态组件化方案</p>
-</li>
-<li><p>设计原因</p>
-<ul>
-<li>开发者希望插件和基线能在同一工程写作开发<ul>
-<li>体验好</li>
-<li>共同学习</li>
-</ul>
-</li>
-<li>Android P对私有API访问限制</li>
-<li>利用AAB强大的开发套件</li>
-<li>便于国际化</li>
-</ul>
-</li>
-<li><p>开发初体验</p>
-<ul>
-<li>全新的打包插件 dynamic-feature</li>
-<li>插件和Base 可以同一开发调试</li>
-<li>部分插件可以和主apk打包在一起，部分插件apk上传到cdn</li>
-</ul>
-</li>
-<li><p>核心优势</p>
-<ul>
-<li>“山寨”Play Core Library公开接口实现，开发者阅读官方文档即可开发</li>
-<li>Hook，少量私有API访问（Grey list）</li>
-<li>利用AAB开发工具</li>
-<li>支持Android4.0及以上</li>
-<li>任何进程均可加载插件</li>
-<li>国际化和AAB无缝切换</li>
-</ul>
-</li>
-<li><p>对比其它插件化框架</p>
-<ul>
-<li>接入方便</li>
-<li>无需关心插件上传，分发</li>
-</ul>
-</li>
-<li><p>插件安装加载过程</p>
-<ul>
-<li>与AAB过程类似 </li>
-</ul>
-</li>
-<li><p>如何工作的</p>
-<ul>
-<li><p>单类加载器</p>
-</li>
-<li><p>资源加载使用Qigsaw独有方式，插件提供代码插入</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Resources <span class="title">getResources</span><span class="params">()</span></span>&#123;</span><br><span class="line">	SplitInstallHelper.loadResources(<span class="keyword">this</span>,<span class="keyword">super</span>.getResources());</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">super</span>.getResources();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>扩展功能</p>
-<ul>
-<li>多进程支持<ul>
-<li>解决“那个进程发起插件请求，插件就加载到哪个进程里”问题<ul>
-<li>捕获ClassNotFoundException异常然后在game进程中加载已安装单未加载的插件</li>
-</ul>
-</li>
-<li>Hook PathClassLoader</li>
-</ul>
-</li>
-<li>支持插件的Application，在插件启动时创建Application实例，并调用生命周期方法</li>
-<li>支持插件的Provider<ul>
-<li>进程启动时移除插件Provider</li>
-<li>插件启动时再进行Provider安装</li>
-</ul>
-</li>
-<li>与Tinker融合<ul>
-<li>通过Tinker Patch下发插件更新<ul>
-<li>assets文件中的文件记录版本号</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>在爱奇艺的应用场景<ul>
-<li>爱奇艺小游戏和小程序框架，是通过Qigsaw加载的</li>
-<li>19年初上线，经受数亿用户考研</li>
-<li>崩溃率接近于0%</li>
-</ul>
-</li>
-<li>开源计划<ul>
-<li>已开源 地址：<a href="https://github.com/iqiyi/Qigsaw">https://github.com/iqiyi/Qigsaw</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
+<p>经纬创投董事总经理 <em>熊飞</em>如是说。</p>
+<p><a href="https://time.geekbang.org/dailylesson/detail/100015402">《技术方向创业的战略选择和执行经验》</a>的学习笔记。</p>
         </div>
         
-        <div class="level is-size-7 is-uppercase">
+        
+        <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/30天学习打卡/">30天学习打卡</a>, <a class="has-link-grey -link" href="/tags/Android/">Android</a>
+                <a class="button is-size-7 is-light" href="/2020/03/3月5日/#more">阅读更多</a>
                 </div>
             </div>
         </div>
         
         
-        
-        <div class="bdsharebuttonbox">
-    <a href="#" class="bds_more" data-cmd="more"></a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
-    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-</div>
-<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
-        
     </div>
 </div>
 
@@ -397,26 +180,7 @@
 
 
 
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/2月20日/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">没有办法一劳永逸，所以我们面面俱到</span>
-            </a>
-        </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/2月18日/">
-                <span class="level-item">秒开秒用，用完即走</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
-    </div>
-</div>
+
 
 
 </div>
@@ -1525,7 +1289,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/avatar.jpg" alt="基于AAB的插件化方案：Qigsaw" height="28">
+                    <img src="/images/avatar.jpg" alt="Pollex Lee" height="28">
                 
                 </a>
                 <p class="is-size-7">
