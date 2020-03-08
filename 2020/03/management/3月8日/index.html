@@ -7,22 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>BaseActivity封装技巧 - Pollex Lee</title>
+<title>996并不是坏事情，它确实是个福报 - Pollex Lee</title>
 
 
-    <meta name="description" content="在项目的开发中，一般都是要封装一个BaseActivity来做一些常用的动作的，下面就是我在项目中用到的一些简单封装。">
-<meta name="keywords" content="Android">
+    <meta name="description" content="学习是被逼出来的。  吉刻联盟 CTO  王潇俊如是说。 《从“996ICU”引发的技术团队建设问题》的学习笔记。">
+<meta name="keywords" content="30天学习打卡">
 <meta property="og:type" content="article">
-<meta property="og:title" content="BaseActivity封装技巧">
-<meta property="og:url" content="http://blog.pollex.me/2016/08/BaseActivity封装技巧/index.html">
+<meta property="og:title" content="996并不是坏事情，它确实是个福报">
+<meta property="og:url" content="http://blog.pollex.me/2020/03/management/3月8日/index.html">
 <meta property="og:site_name" content="Pollex Lee">
-<meta property="og:description" content="在项目的开发中，一般都是要封装一个BaseActivity来做一些常用的动作的，下面就是我在项目中用到的一些简单封装。">
+<meta property="og:description" content="学习是被逼出来的。  吉刻联盟 CTO  王潇俊如是说。 《从“996ICU”引发的技术团队建设问题》的学习笔记。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://blog.pollex.me/images/og_image.png">
-<meta property="og:updated_time" content="2016-08-23T06:44:04.000Z">
+<meta property="og:updated_time" content="2020-03-08T16:58:41.825Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BaseActivity封装技巧">
-<meta name="twitter:description" content="在项目的开发中，一般都是要封装一个BaseActivity来做一些常用的动作的，下面就是我在项目中用到的一些简单封装。">
+<meta name="twitter:title" content="996并不是坏事情，它确实是个福报">
+<meta name="twitter:description" content="学习是被逼出来的。  吉刻联盟 CTO  王潇俊如是说。 《从“996ICU”引发的技术团队建设问题》的学习笔记。">
 <meta name="twitter:image" content="http://blog.pollex.me/images/og_image.png">
 
 
@@ -81,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/avatar.jpg" alt="BaseActivity封装技巧" height="28">
+                <img src="/images/avatar.jpg" alt="996并不是坏事情，它确实是个福报" height="28">
             
             </a>
         </div>
@@ -126,13 +126,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2016-08-23T06:44:04.000Z">2016-08-23</time>
+                <time class="level-item has-text-grey" datetime="2020-03-08T10:22:22.600Z">2020-03-08</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/管理/">管理</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 373 个字)
+                    4 分钟 读完 (大约 588 个字)
                 </span>
                 
                 
@@ -141,24 +145,162 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                BaseActivity封装技巧
+                996并不是坏事情，它确实是个福报
             
         </h1>
         <div class="content">
-            <p>在项目的开发中，一般都是要封装一个BaseActivity来做一些常用的动作的，下面就是我在项目中用到的一些简单封装。<br><a id="more"></a></p>
-<h3 id="1，统计"><a href="#1，统计" class="headerlink" title="1，统计"></a>1，统计</h3><p>在BaseActivity的生命周期中调用统计部分的代码，这样可以省去在不同的界面重复编写统计代码的工作。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResume</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>.onResume();</span><br><span class="line">    AnalyticsHelper.getInstance().onResume(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onPause</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>.onPause();</span><br><span class="line">    AnalyticsHelper.getInstance().onPause(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2，ProgressDialog"><a href="#2，ProgressDialog" class="headerlink" title="2，ProgressDialog"></a>2，ProgressDialog</h3><p>配置一个通用的ProgressDialog是非常有用的，这样在接口请求的时候，直接调用显示，数据返回后调用消失，超级爽！！！</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//显示ProgressDialog</span></span><br><span class="line">   <span class="keyword">public</span> ProgressDialog progressDialog;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showProgressDialog</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (progressDialog == <span class="keyword">null</span>) &#123;</span><br><span class="line">           progressDialog = <span class="keyword">new</span> ProgressDialog(<span class="keyword">this</span>);</span><br><span class="line">           progressDialog.show();</span><br><span class="line">       &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">           <span class="keyword">if</span> (!progressDialog.isShowing()) &#123;</span><br><span class="line">               progressDialog.show();</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   <span class="comment">//隐藏ProgressDialog</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cancelProgressDialog</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (progressDialog != <span class="keyword">null</span> &amp;&amp; progressDialog.isShowing()) &#123;</span><br><span class="line">           progressDialog.dismiss();</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意：<br>要在<code>OnDestory()</code>中调用cancelProgressDialog()一下，防止<code>Activity has leaked window</code>错误。</p>
+            <blockquote>
+<p>学习是被逼出来的。</p>
 </blockquote>
-<h3 id="4，全局handler"><a href="#4，全局handler" class="headerlink" title="4，全局handler"></a>4，全局handler</h3><p>如果习惯用Thread+Handler来异步操作数据并刷新界面的话，每个界面都定义一遍Handler对象是非常烦人的，所以可以在BaseActivity中定义一个Handler对象，快捷又方便。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Handler mHandler = <span class="keyword">new</span> Handler()&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span> </span>&#123;</span><br><span class="line">        HandleMessage(msg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 复写来处理mHandler发来的消息</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> msg</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">HandleMessage</span><span class="params">(Message msg)</span></span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onDestroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    mHandler.removeCallbacksAndMessages(<span class="keyword">null</span>);</span><br><span class="line">    <span class="keyword">super</span>.onDestroy();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>吉刻联盟 CTO  <em>王潇俊</em>如是说。</p>
+<p><a href="https://time.geekbang.org/dailylesson/detail/100032813">《从“996ICU”引发的技术团队建设问题》</a>的学习笔记。</p>
+<a id="more"></a>
 <blockquote>
-<p>注意：<br>要在<code>OnDestory()</code>中调用mHandler.removeCallbacksAndMessages()方法，否则会出现handler内存泄露问题。</p>
+<p>开放的心态来分析企业加班的原因和解决方法。</p>
 </blockquote>
-<h3 id="5，全局的观察者模式"><a href="#5，全局的观察者模式" class="headerlink" title="5，全局的观察者模式"></a>5，全局的观察者模式</h3><p>未完待续</p>
+<h3 id="关于996ICU"><a href="#关于996ICU" class="headerlink" title="关于996ICU"></a>关于996ICU</h3><ul>
+<li>没有996的公司存在吗？</li>
+<li>谁在鼓励996？</li>
+<li>谁在批判996？</li>
+<li>你对996是什么态度？</li>
+<li>给996定个性<ul>
+<li>996并不是坏事情，它确实是个福报</li>
+<li>open心态</li>
+</ul>
+</li>
+<li>669！</li>
+</ul>
+<h3 id="996是什么"><a href="#996是什么" class="headerlink" title="996是什么"></a>996是什么</h3><ul>
+<li><h3 id="996是怎么产生的"><a href="#996是怎么产生的" class="headerlink" title="996是怎么产生的"></a>996是怎么产生的</h3></li>
+<li><p>996的原罪</p>
+<ul>
+<li><p>马克思：《资本论》</p>
+<blockquote>
+<p>劳动价值量是由劳动量来决定的</p>
+</blockquote>
+<blockquote>
+<p>劳动量由劳动时间来决定？没有证明</p>
+</blockquote>
+</li>
+<li><p>脑力劳动的劳动价值度量问题</p>
+<ul>
+<li>很难，暂时没有办法量化</li>
+</ul>
+</li>
+<li><p>程序员预估工作时间时，经常蜜汁自信</p>
+<blockquote>
+<p>造成工作量和已定时间不符合</p>
+</blockquote>
+</li>
+<li><p>民族文化：“努力才有成功的机会”</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="该如何处理996的问题"><a href="#该如何处理996的问题" class="headerlink" title="该如何处理996的问题"></a>该如何处理996的问题</h3><ul>
+<li><p>通过技术来解决工作时间过长的问题</p>
+</li>
+<li><p>我们不排斥加班，但我们唾弃无意义加班</p>
+</li>
+<li><p>企业的生命周期</p>
+<ul>
+<li><p>孕育期</p>
+<ul>
+<li>技术创业 vs 技术入股</li>
+<li>现在战略上的懒惰会造成以后战术上的加班</li>
+</ul>
+</li>
+<li><p>婴儿期</p>
+<ul>
+<li>996有成就感</li>
+<li>团队简单，彼此支撑</li>
+<li>目标活下去</li>
+<li>一流人才招一流人才，二流人才招三流人才</li>
+</ul>
+</li>
+<li><p>学步期 - 有一定成绩</p>
+<ul>
+<li><p>质量问题严重</p>
+</li>
+<li><p>人员分工模糊</p>
+</li>
+<li><p>盲目的做减法</p>
+<blockquote>
+<p>减法的精髓是做聚焦</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>青春期</p>
+<ul>
+<li>冲突<ul>
+<li>新团队 VS 老团队</li>
+<li>新制度 VS 老制度</li>
+<li>新业务 VS 老业务</li>
+<li>新架构 VS 老代码</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>盛年期</p>
+<ul>
+<li><p>不平衡</p>
+<blockquote>
+<p>忙得忙死，闲的闲死</p>
+</blockquote>
+</li>
+<li><p>四种员工</p>
+<ul>
+<li><p>象龟</p>
+<blockquote>
+<p>老员工，积极不激进</p>
+</blockquote>
+</li>
+<li><p>鲶鱼</p>
+<blockquote>
+<p>新员工，积极又激进</p>
+</blockquote>
+</li>
+<li><p>蜗牛/小白兔</p>
+<blockquote>
+<p>混日子，</p>
+</blockquote>
+</li>
+<li><p>蠢驴</p>
+<blockquote>
+<p>态度不对还很激进</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>把员工像鲶鱼转换</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>稳定期</p>
+<ul>
+<li>号召二次创业，意味着要加班</li>
+<li>研发开销缩减</li>
+</ul>
+</li>
+<li><p>贵族期</p>
+<ul>
+<li>虚<ul>
+<li>对表面形式的重视远远多过实际的价值</li>
+<li>996变成了最好的表象</li>
+<li>内部创新</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>了解员工的期望，使工作富有成效，使其有成就感</li>
+<li>利用智慧解决996</li>
+</ul>
 
         </div>
         
@@ -166,7 +308,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Android/">Android</a>
+                    <a class="has-link-grey -link" href="/tags/30天学习打卡/">30天学习打卡</a>
                 </div>
             </div>
         </div>
@@ -193,17 +335,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2016/08/WebView优化技巧/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">WebView的优化总结</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2016/08/关于安卓的时间获取和转换/">
-                <span class="level-item">关于安卓的时间获取和转换</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/management/3月7日/">
+                <span class="level-item">技术管理者的经验分享</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -1318,7 +1453,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/avatar.jpg" alt="BaseActivity封装技巧" height="28">
+                    <img src="/images/avatar.jpg" alt="996并不是坏事情，它确实是个福报" height="28">
                 
                 </a>
                 <p class="is-size-7">
