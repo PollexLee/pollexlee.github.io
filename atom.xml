@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Pollex&#39;s blog</title>
     <subtitle type="html">Pollex&#39;s blog</subtitle>
-    <updated>2021-04-28T11:02:07&#43;08:00</updated>
+    <updated>2021-04-28T11:54:30&#43;08:00</updated>
     <id>https://blog.pollex.me/</id>
     <link rel="alternate" type="text/html" href="https://blog.pollex.me/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.pollex.me/atom.xml" />
@@ -4949,8 +4949,8 @@
     
         <entry>
             <title type="text">偷懒是一种美德</title>
-            <link rel="alternate" type="text/html" href="https://blog.pollex.me/posts/flutter/2%E6%9C%8814%E6%97%A5/" />
-            <id>https://blog.pollex.me/posts/flutter/2%E6%9C%8814%E6%97%A5/</id>
+            <link rel="alternate" type="text/html" href="https://blog.pollex.me/posts/2%E6%9C%8814%E6%97%A5/" />
+            <id>https://blog.pollex.me/posts/2%E6%9C%8814%E6%97%A5/</id>
             <updated>2021-04-27T00:23:09&#43;08:00</updated>
             <published>2020-02-14T22:00:00&#43;08:00</published>
             <author>
@@ -5123,8 +5123,8 @@
     
         <entry>
             <title type="text">Flutter要运行在所有能显示的设备上</title>
-            <link rel="alternate" type="text/html" href="https://blog.pollex.me/posts/flutter/2%E6%9C%8813%E6%97%A5/" />
-            <id>https://blog.pollex.me/posts/flutter/2%E6%9C%8813%E6%97%A5/</id>
+            <link rel="alternate" type="text/html" href="https://blog.pollex.me/posts/2%E6%9C%8813%E6%97%A5/" />
+            <id>https://blog.pollex.me/posts/2%E6%9C%8813%E6%97%A5/</id>
             <updated>2021-04-27T00:23:03&#43;08:00</updated>
             <published>2020-02-13T22:00:00&#43;08:00</published>
             <author>
@@ -5317,8 +5317,8 @@
     
         <entry>
             <title type="text">移动端是个大坑-Flutter在贝壳的接入实践学习笔记</title>
-            <link rel="alternate" type="text/html" href="https://blog.pollex.me/posts/flutter/2%E6%9C%8812%E6%97%A5/" />
-            <id>https://blog.pollex.me/posts/flutter/2%E6%9C%8812%E6%97%A5/</id>
+            <link rel="alternate" type="text/html" href="https://blog.pollex.me/posts/2%E6%9C%8812%E6%97%A5/" />
+            <id>https://blog.pollex.me/posts/2%E6%9C%8812%E6%97%A5/</id>
             <updated>2021-04-27T00:22:58&#43;08:00</updated>
             <published>2020-02-12T22:00:00&#43;08:00</published>
             <author>
@@ -5483,8 +5483,8 @@
     
         <entry>
             <title type="text">好奇心 &#43; 懒惰是「工程师」最大的美德</title>
-            <link rel="alternate" type="text/html" href="https://blog.pollex.me/posts/flutter/2%E6%9C%8811%E6%97%A5/" />
-            <id>https://blog.pollex.me/posts/flutter/2%E6%9C%8811%E6%97%A5/</id>
+            <link rel="alternate" type="text/html" href="https://blog.pollex.me/posts/2%E6%9C%8811%E6%97%A5/" />
+            <id>https://blog.pollex.me/posts/2%E6%9C%8811%E6%97%A5/</id>
             <updated>2021-04-27T00:22:53&#43;08:00</updated>
             <published>2020-02-11T22:00:00&#43;08:00</published>
             <author>
@@ -5587,8 +5587,8 @@
     
         <entry>
             <title type="text">最好的移动软件开发方案</title>
-            <link rel="alternate" type="text/html" href="https://blog.pollex.me/posts/flutter/2%E6%9C%8810%E6%97%A5/" />
-            <id>https://blog.pollex.me/posts/flutter/2%E6%9C%8810%E6%97%A5/</id>
+            <link rel="alternate" type="text/html" href="https://blog.pollex.me/posts/2%E6%9C%8810%E6%97%A5/" />
+            <id>https://blog.pollex.me/posts/2%E6%9C%8810%E6%97%A5/</id>
             <updated>2021-04-27T00:22:48&#43;08:00</updated>
             <published>2020-02-10T22:00:00&#43;08:00</published>
             <author>
