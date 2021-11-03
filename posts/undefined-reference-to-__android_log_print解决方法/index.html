@@ -14,7 +14,7 @@
 
     <title>undefined reference to `__android_log_print&#39;解决方法 | Pollex&#39;s blog</title>
 
-    <link rel="stylesheet" href="/css/meme.min.e81542b35a45cd71785aeae7f4a7aa112d650390e16d9d38ea2faf5a5ff21034.css"/>
+    <link rel="stylesheet" href="/css/meme.min.8764b118f61346bef455ea07ce57c5c19713a5396c16d50daea16df540daf290.css"/>
 
     
     
@@ -60,17 +60,17 @@
         "description": "……",
         "inLanguage" : "zh-CN",
         "articleSection": "posts",
-        "wordCount":  434 ,
+        "wordCount":  409 ,
         "image": "https://blog.pollex.me/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
             "description": "Be a better man.",
             "email": "l6376751@gmail.com",
             "image": "https://blog.pollex.me/icons/apple-touch-icon.png",
-            "url": "https://io-oi.me/",
+            "url": "https://blog.pollex.me/",
             "name": "PollexLee"
         },
-        "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)",
+        "license": "在保留本文作者及本文链接的前提下，非商业用途随意转载分享。",
         "publisher": {
             "@type": "Organization",
             "name": "Pollex's blog",
@@ -210,63 +210,10 @@
             
 
             
-                
-
-<div class="post-meta">
-    
-    
-    
-    
-        
-        
-        
-            
-        
-    
-    
-        
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;434</span>
-    
-    
-        
-        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;1&nbsp;分钟</span>
-    
-    
-        
-            
-            <span class="post-meta-item busuanzi-page-pv" id="busuanzi_container_page_pv"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon post-meta-icon"><path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"/></svg>&nbsp;<span id="busuanzi_value_page_pv"></span></span>
-        
-    
-    
-</div>
-
-            
 
             <div class="post-body e-content">
-              <p>大家最初学习NDK开发的时候，写过的第一个.c文件内容应该都非常类似，如下：</p>
-<div class="highlight"><div class="chroma">
-<div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&#34;hello-jni.h&#34;</span><span class="cp">
+                <p>大家最初学习NDK开发的时候，写过的第一个.c文件内容应该都非常类似，如下：</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&#34;hello-jni.h&#34;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;jni.h&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;android/log.h&gt;</span><span class="cp">
@@ -284,46 +231,25 @@
 
     <span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="n">env</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">NewStringUTF</span><span class="p">(</span><span class="n">env</span><span class="p">,</span><span class="s">&#34;hello jni&#34;</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></td></tr></table></div>
-</div>
-</div><!--more-->
+</code></pre></div><!--more-->
 <p>这个.c文件的代码看起来是没有任何问题的，但是大多数人，一运行，就会爆出如下错误：</p>
-<div class="highlight"><div class="chroma">
-<div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">lipeng</span><span class="o">/</span><span class="n">android_workspace</span><span class="o">/</span><span class="n">hello_jni</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">jni</span><span class="o">/</span><span class="n">hello</span><span class="o">-</span><span class="n">jni</span><span class="o">.</span><span class="na">c</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">lipeng</span><span class="o">/</span><span class="n">android_workspace</span><span class="o">/</span><span class="n">hello_jni</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">jni</span><span class="o">/</span><span class="n">hello</span><span class="o">-</span><span class="n">jni</span><span class="o">.</span><span class="na">c</span>
 <span class="nl">Error:</span><span class="o">(</span><span class="n">20</span><span class="o">)</span> <span class="n">undefined</span> <span class="n">reference</span> <span class="n">to</span> <span class="err">`</span><span class="n">__android_log_print</span><span class="err">&#39;</span>
 <span class="nl">Error:</span><span class="n">error</span><span class="o">:</span> <span class="n">ld</span> <span class="n">returned</span> <span class="n">1</span> <span class="n">exit</span> <span class="n">status</span>
-</code></pre></td></tr></table></div>
-</div>
-</div><p>网上查到的资料绝大部分都是让在Android.mk文件中增加<code>LOCAL_LDLIBS := -lm -llog</code>类似的解决方案，而且很多人也确实用这种方式解决了这个问题，但是我用了这个方式，并没有效果。</p>
+</code></pre></div><p>网上查到的资料绝大部分都是让在Android.mk文件中增加<code>LOCAL_LDLIBS := -lm -llog</code>类似的解决方案，而且很多人也确实用这种方式解决了这个问题，但是我用了这个方式，并没有效果。</p>
 <p>最终在<a href="http://stackoverflow.com/questions/4455941/undefined-reference-to-android-log-print" target="_blank" rel="noopener">StackOverFlow</a>查到了另外一种解决方法：</p>
-<div class="highlight"><div class="chroma">
-<div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">ndk</span> <span class="o">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">ndk</span> <span class="o">{</span>
 	<span class="n">moduleName</span> <span class="s2">&#34;hello-jni&#34;</span>
 	<span class="n">ldLibs</span> <span class="s2">&#34;log&#34;</span>
 <span class="o">}</span>
-</code></pre></td></tr></table></div>
-</div>
-</div><p>这种方法解决了我这边的问题，看代码解决方式是引入<code>log</code>库，但是.c文件中已经引入了<code>android/log.h</code>，不知道为什么还要在Android.mk文件或者gradle配置文件中再引入的lib。</p>
+</code></pre></div><p>这种方法解决了我这边的问题，看代码解决方式是引入<code>log</code>库，但是.c文件中已经引入了<code>android/log.h</code>，不知道为什么还要在Android.mk文件或者gradle配置文件中再引入的lib。</p>
             </div>
 
             
     
     
         <ul class="post-copyright">
-            <li class="copyright-item author"><span class="copyright-item-text">作者</span>：<a href="https://io-oi.me/" class="p-author h-card" target="_blank" rel="noopener">PollexLee</a></li>
+            <li class="copyright-item author"><span class="copyright-item-text">作者</span>：<a href="https://blog.pollex.me/" class="p-author h-card" target="_blank" rel="noopener">PollexLee</a></li>
             
                 
                 
@@ -331,7 +257,7 @@
                 
                 <li class="copyright-item link"><span class="copyright-item-text">链接</span>：<a href="/posts/undefined-reference-to-__android_log_print%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" target="_blank" rel="noopener">https://blog.pollex.me/posts/undefined-reference-to-__android_log_print解决方法/</a></li>
             
-            <li class="copyright-item license"><span class="copyright-item-text">许可</span>：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></li>
+            <li class="copyright-item license"><span class="copyright-item-text">许可</span>：在保留本文作者及本文链接的前提下，非商业用途随意转载分享。</li>
             
         </ul>
     
@@ -443,23 +369,23 @@
             <ul class="related-list">
                 
                     <li class="related-item">
+                        <a href="/posts/3%E6%9C%881%E6%97%A5/" class="related-link">工程师的个人成长离不开心理学</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/posts/2%E6%9C%8820%E6%97%A5/" class="related-link">没有办法一劳永逸，所以我们面面俱到</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/posts/2%E6%9C%8819%E6%97%A5/" class="related-link">基于AAB的插件化方案：Qigsaw</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/posts/2%E6%9C%8817%E6%97%A5/" class="related-link">Android插件化路在何方</a>
+                    </li>
+                
+                    <li class="related-item">
                         <a href="/posts/android%E5%A4%9A%E6%B8%A0%E9%81%93%E5%8C%85%E7%94%9F%E6%88%90%E6%96%B9%E6%A1%88%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95v1%E7%AD%BE%E5%90%8D/" class="related-link">Android多渠道包生成方案学习记录(V1签名)</a>
-                    </li>
-                
-                    <li class="related-item">
-                        <a href="/posts/android-service%E5%9C%A8%E6%89%8B%E6%9C%BAcpu%E4%BC%91%E7%9C%A0%E4%B9%8B%E5%90%8E%E8%BF%98%E4%BC%9A%E8%BF%90%E8%A1%8C%E5%90%97/" class="related-link">Android Service在手机cpu休眠之后还会运行吗？</a>
-                    </li>
-                
-                    <li class="related-item">
-                        <a href="/posts/activity%E7%9A%84%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%A0%87%E5%BF%97%E4%BD%8D/" class="related-link">Activity的启动模式和标志位</a>
-                    </li>
-                
-                    <li class="related-item">
-                        <a href="/posts/android-n-for-developers/" class="related-link">Android N for Developers</a>
-                    </li>
-                
-                    <li class="related-item">
-                        <a href="/posts/android-studio%E4%BF%AE%E6%94%B9%E5%8C%85%E5%90%8D/" class="related-link">Android Studio修改包名</a>
                     </li>
                 
             </ul>
@@ -562,7 +488,7 @@
             
     <footer id="footer" class="footer">
         <div class="footer-inner">
-            <div class="site-info">©&nbsp;2016–2021&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;PollexLee</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+            <div class="site-info">©&nbsp;2016–2021&nbsp;&nbsp;PollexLee</div><div class="site-copyright">在保留本文作者及本文链接的前提下，非商业用途随意转载分享。</div>
 
             
     
@@ -660,7 +586,10 @@
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>
