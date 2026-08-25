@@ -13,7 +13,7 @@ tags: ['bug', 'Android', '笔记']
 
 ### 2.back stack拼接问题
 
-singleTask和singleInstance启动的activity，尽管可能不在同一个task，但是仍然会回到原来的activity；但是singleTask可能会存在back stack“拼接”的情况。 如图所示： ![back stack](https://raw.githubusercontent.com/xiaohongmaosimida/xiaohongmaosimida.github.io/master/img/diagram_backstack_singletask_multiactivity.png)
+singleTask和singleInstance启动的activity，尽管可能不在同一个task，但是仍然会回到原来的activity；但是singleTask可能会存在back stack“拼接”的情况。 如图所示： ![back stack](/images/diagram_backstack_singletask_multiactivity.png)
 
 ### 3.singleLine弃用了，用什么代替呢？
 
