@@ -33,10 +33,10 @@ cat ~/.ssh/loanByWeex.osc.pub
 
 我的公钥截图如下：
 
-![我的公钥截图.png](https://raw.githubusercontent.com/xiaohongmaosimida/xiaohongmaosimida.github.io/master/img/%E6%88%91%E7%9A%84%E5%85%AC%E9%92%A5%E6%88%AA%E5%9B%BE.png)
+*（图已丢失：本机 id_rsa.pub 的内容）*
 
 复制公钥内容到OSChina的SSH公钥添加界面：
 
-![粘贴公钥到这里.png](https://raw.githubusercontent.com/xiaohongmaosimida/xiaohongmaosimida.github.io/master/img/%E7%B2%98%E8%B4%B4%E5%85%AC%E9%92%A5%E5%88%B0%E8%BF%99%E9%87%8C.png)
+*（图已丢失：OSChina 添加 SSH 公钥的界面）*
 
 添加成功后，即可在自己的电脑上使`·git clone`命令克隆咱们的代码仓库了~O(∩\_∩)O~

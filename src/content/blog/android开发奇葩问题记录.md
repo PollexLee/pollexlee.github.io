@@ -45,7 +45,7 @@ String title = content.replaceAll(mKeys, "<font color=\"#f84746\">" + mKeys + "<
 
 ### 5，tab切换后界面自动上跳是什么鬼？-2016年06月13日
 
-初始化第一个tab之后是这样的： ![back stack](https://raw.githubusercontent.com/xiaohongmaosimida/xiaohongmaosimida.github.io/master/img/%E5%B8%83%E5%B1%80%E4%B8%8A%E8%B7%B31.png) 但是切换到第二个再切回来，就变成这样婶儿的了： ![back stack](https://raw.githubusercontent.com/xiaohongmaosimida/xiaohongmaosimida.github.io/master/img/%E5%B8%83%E5%B1%80%E4%B8%8A%E8%B7%B32.png) 是焦点问题，但是具体原理还没搞懂,解决方法是在最外层布局文件中增加如下两行代码：
+初始化第一个tab之后是这样的： *（图已丢失：初始化第一个 tab 后的正常界面）* 但是切换到第二个再切回来，就变成这样婶儿的了： *（图已丢失：切回第一个 tab 后整体上跳的界面）* 是焦点问题，但是具体原理还没搞懂,解决方法是在最外层布局文件中增加如下两行代码：
 
 ```java
 android:focusableInTouchMode="true"

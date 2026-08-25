@@ -7,6 +7,6 @@ tags: ['Android']
 
 Android Studio修改包需要两步（资源文件访问路径一并修改）：
 
-第一步： 右击要修改的包名，Refactor>Rename，点击 ![图片1](https://raw.githubusercontent.com/xiaohongmaosimida/xiaohongmaosimida.github.io/master/img/change_package_name_1.png) 点击Rename package： ![图片2](https://raw.githubusercontent.com/xiaohongmaosimida/xiaohongmaosimida.github.io/master/img/change_package_name_2.png) 然后修改，点击Refactor，然后等： ﻿![图片3](https://raw.githubusercontent.com/xiaohongmaosimida/xiaohongmaosimida.github.io/master/img/change_package_name_3.png)
+第一步： 右击要修改的包名，Refactor>Rename，点击 *（图已丢失：右击包名后的 Refactor > Rename 菜单）* 点击Rename package： *（图已丢失：Rename package 选项）* 然后修改，点击Refactor，然后等： ﻿*（图已丢失：Refactor 执行过程）*
 
 第二步： 手动修改Manifest里面的package。

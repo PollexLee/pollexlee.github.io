@@ -41,7 +41,7 @@ public boolean dispatchTouchEvent(MotionEvent e){
 }
 ```
 
-配合下图食用。 ![流程图](http://xiaohongmaosimida.github.io/img/view_dispatchEvent_%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+配合下图食用。 *（图已丢失：dispatchTouchEvent 的分发流程图）*
 
 > 由于最底层的View没有`onInterceptTouchEvent()`方法，所以View的dispatchTouchEvent()方法中会直接执行onTouchEvent()方法，默认返回值false，如果这个View对象没有重写ontouchEvent()方法，也没有设置一些点击事件，那么这个View的dispatchTouchEvent()方法就会返回false。
 
