@@ -8,7 +8,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Pollex&#39;s blog</title>
-        <link>https://blog.pollex.me/</link>
+        <link>https://pollexlee.github.io/</link>
         <description>Pollex&#39;s blog</description>
         <generator>Hugo 0.82.0 https://gohugo.io/</generator>
         
@@ -25,13 +25,13 @@
         
         <lastBuildDate>Thu, 04 Nov 2021 23:51:23 &#43;0800</lastBuildDate>
         
-            <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.pollex.me/rss.xml" />
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://pollexlee.github.io/rss.xml" />
         
         
             <item>
                 <title>Flutter中的键盘操作</title>
-                <link>https://blog.pollex.me/posts/flutter/flutter%E4%B8%AD%E7%9A%84%E9%94%AE%E7%9B%98%E6%93%8D%E4%BD%9C/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/flutter/flutter%E4%B8%AD%E7%9A%84%E9%94%AE%E7%9B%98%E6%93%8D%E4%BD%9C/</guid>
+                <link>https://pollexlee.github.io/posts/flutter/flutter%E4%B8%AD%E7%9A%84%E9%94%AE%E7%9B%98%E6%93%8D%E4%BD%9C/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/flutter/flutter%E4%B8%AD%E7%9A%84%E9%94%AE%E7%9B%98%E6%93%8D%E4%BD%9C/</guid>
                 <pubDate>Tue, 29 Jun 2021 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -53,13 +53,13 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/flutter/">Flutter</category>
+                                    <category domain="https://pollexlee.github.io/tags/flutter/">Flutter</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/platformview/">PlatformView</category>
+                                    <category domain="https://pollexlee.github.io/tags/platformview/">PlatformView</category>
                                 
                             
                         
@@ -69,8 +69,8 @@
         
             <item>
                 <title>PlatformView学习记录</title>
-                <link>https://blog.pollex.me/posts/flutter/platformview%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/flutter/platformview%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
+                <link>https://pollexlee.github.io/posts/flutter/platformview%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/flutter/platformview%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
                 <pubDate>Tue, 29 Jun 2021 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -102,13 +102,13 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/flutter/">Flutter</category>
+                                    <category domain="https://pollexlee.github.io/tags/flutter/">Flutter</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/platformview/">PlatformView</category>
+                                    <category domain="https://pollexlee.github.io/tags/platformview/">PlatformView</category>
                                 
                             
                         
@@ -118,8 +118,8 @@
         
             <item>
                 <title>记一次 Google play 的「Play App Signing」服务导致的线上问题。</title>
-                <link>https://blog.pollex.me/posts/%E5%BA%94%E7%94%A8%E4%B8%8A%E6%9E%B6/play-app-signing%E9%87%8D%E7%AD%BE%E5%90%8D%E9%97%AE%E9%A2%98/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/%E5%BA%94%E7%94%A8%E4%B8%8A%E6%9E%B6/play-app-signing%E9%87%8D%E7%AD%BE%E5%90%8D%E9%97%AE%E9%A2%98/</guid>
+                <link>https://pollexlee.github.io/posts/%E5%BA%94%E7%94%A8%E4%B8%8A%E6%9E%B6/play-app-signing%E9%87%8D%E7%AD%BE%E5%90%8D%E9%97%AE%E9%A2%98/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/%E5%BA%94%E7%94%A8%E4%B8%8A%E6%9E%B6/play-app-signing%E9%87%8D%E7%AD%BE%E5%90%8D%E9%97%AE%E9%A2%98/</guid>
                 <pubDate>Thu, 06 May 2021 21:54:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -127,7 +127,7 @@
                 <copyright>在保留本文作者及本文链接的前提下，非商业用途随意转载分享。</copyright>
                 
                     <description>&lt;p&gt;近期运营反映了一个问题，&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.pollex.me/images/image-20210506195742236.png&#34; alt=&#34;image-20210506195742236&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pollexlee.github.io/images/image-20210506195742236.png&#34; alt=&#34;image-20210506195742236&#34;&gt;&lt;/p&gt;
 </description>
                 
                 
@@ -142,19 +142,19 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/google-play/">Google play</category>
+                                    <category domain="https://pollexlee.github.io/tags/google-play/">Google play</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/apk%E7%AD%BE%E5%90%8D/">apk签名</category>
+                                    <category domain="https://pollexlee.github.io/tags/apk%E7%AD%BE%E5%90%8D/">apk签名</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/%E7%BA%BF%E4%B8%8A%E9%97%AE%E9%A2%98/">线上问题</category>
+                                    <category domain="https://pollexlee.github.io/tags/%E7%BA%BF%E4%B8%8A%E9%97%AE%E9%A2%98/">线上问题</category>
                                 
                             
                         
@@ -164,8 +164,8 @@
         
             <item>
                 <title>Title_of_the_post</title>
-                <link>https://blog.pollex.me/posts/title_of_the_post/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/title_of_the_post/</guid>
+                <link>https://pollexlee.github.io/posts/title_of_the_post/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/title_of_the_post/</guid>
                 <pubDate>Sat, 24 Apr 2021 22:42:09 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -188,8 +188,8 @@
         
             <item>
                 <title>996并不是坏事情，它确实是个福报</title>
-                <link>https://blog.pollex.me/posts/management/3%E6%9C%888%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/management/3%E6%9C%888%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/management/3%E6%9C%888%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/management/3%E6%9C%888%E6%97%A5/</guid>
                 <pubDate>Sun, 08 Mar 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -394,7 +394,7 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -404,8 +404,8 @@
         
             <item>
                 <title>技术管理者的经验分享</title>
-                <link>https://blog.pollex.me/posts/management/3%E6%9C%887%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/management/3%E6%9C%887%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/management/3%E6%9C%887%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/management/3%E6%9C%887%E6%97%A5/</guid>
                 <pubDate>Sat, 07 Mar 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -622,7 +622,7 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -632,8 +632,8 @@
         
             <item>
                 <title>技术创新VS商业创新，中国下一个10年的创业机会</title>
-                <link>https://blog.pollex.me/posts/3%E6%9C%886%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/3%E6%9C%886%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/3%E6%9C%886%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/3%E6%9C%886%E6%97%A5/</guid>
                 <pubDate>Fri, 06 Mar 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -732,7 +732,7 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -742,8 +742,8 @@
         
             <item>
                 <title>创业要耐得住寂寞</title>
-                <link>https://blog.pollex.me/posts/3%E6%9C%885%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/3%E6%9C%885%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/3%E6%9C%885%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/3%E6%9C%885%E6%97%A5/</guid>
                 <pubDate>Thu, 05 Mar 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -903,7 +903,7 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -913,8 +913,8 @@
         
             <item>
                 <title>好的产品，要让用户感觉到优越感</title>
-                <link>https://blog.pollex.me/posts/management/3%E6%9C%884%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/management/3%E6%9C%884%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/management/3%E6%9C%884%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/management/3%E6%9C%884%E6%97%A5/</guid>
                 <pubDate>Wed, 04 Mar 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -1046,7 +1046,7 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -1056,8 +1056,8 @@
         
             <item>
                 <title>程序员思维在运营中的价值体现</title>
-                <link>https://blog.pollex.me/posts/management/3%E6%9C%883%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/management/3%E6%9C%883%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/management/3%E6%9C%883%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/management/3%E6%9C%883%E6%97%A5/</guid>
                 <pubDate>Tue, 03 Mar 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -1156,7 +1156,7 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -1166,8 +1166,8 @@
         
             <item>
                 <title>对得起好的人，跟不好的人说对不起</title>
-                <link>https://blog.pollex.me/posts/management/3%E6%9C%882%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/management/3%E6%9C%882%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/management/3%E6%9C%882%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/management/3%E6%9C%882%E6%97%A5/</guid>
                 <pubDate>Mon, 02 Mar 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -1434,7 +1434,7 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -1444,8 +1444,8 @@
         
             <item>
                 <title>工程师的个人成长离不开心理学</title>
-                <link>https://blog.pollex.me/posts/3%E6%9C%881%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/3%E6%9C%881%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/3%E6%9C%881%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/3%E6%9C%881%E6%97%A5/</guid>
                 <pubDate>Sun, 01 Mar 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -1578,13 +1578,13 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -1594,8 +1594,8 @@
         
             <item>
                 <title>团队领导的必修课</title>
-                <link>https://blog.pollex.me/posts/team_construction/2%E6%9C%8829%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/team_construction/2%E6%9C%8829%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/team_construction/2%E6%9C%8829%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/team_construction/2%E6%9C%8829%E6%97%A5/</guid>
                 <pubDate>Sat, 29 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -1859,7 +1859,7 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -1869,8 +1869,8 @@
         
             <item>
                 <title>怎样做好 Tech Leader</title>
-                <link>https://blog.pollex.me/posts/team_construction/2%E6%9C%8828%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/team_construction/2%E6%9C%8828%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/team_construction/2%E6%9C%8828%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/team_construction/2%E6%9C%8828%E6%97%A5/</guid>
                 <pubDate>Fri, 28 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -2153,7 +2153,7 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -2163,8 +2163,8 @@
         
             <item>
                 <title>提高开发效率的秘密武器：结对编程</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8827%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8827%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8827%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8827%E6%97%A5/</guid>
                 <pubDate>Thu, 27 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -2312,7 +2312,7 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -2322,8 +2322,8 @@
         
             <item>
                 <title>Fuchsia - 来自 Google 的全新开源操作系统</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8826%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8826%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8826%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8826%E6%97%A5/</guid>
                 <pubDate>Wed, 26 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -2584,7 +2584,7 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -2594,8 +2594,8 @@
         
             <item>
                 <title>在浏览器上打王者荣耀？</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8825%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8825%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8825%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8825%E6%97%A5/</guid>
                 <pubDate>Tue, 25 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -2757,7 +2757,7 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -2767,8 +2767,8 @@
         
             <item>
                 <title>AR发展，未来可期</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8824%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8824%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8824%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8824%E6%97%A5/</guid>
                 <pubDate>Mon, 24 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -2918,7 +2918,7 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -2928,8 +2928,8 @@
         
             <item>
                 <title>端智能是什么？</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8823%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8823%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8823%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8823%E6%97%A5/</guid>
                 <pubDate>Sun, 23 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -3254,7 +3254,7 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -3264,8 +3264,8 @@
         
             <item>
                 <title>无线持续交付平台助力移动端开发</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8822%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8822%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8822%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8822%E6%97%A5/</guid>
                 <pubDate>Sat, 22 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -3630,13 +3630,13 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98%E5%B9%B3%E5%8F%B0/">持续交付平台</category>
+                                    <category domain="https://pollexlee.github.io/tags/%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98%E5%B9%B3%E5%8F%B0/">持续交付平台</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -3646,8 +3646,8 @@
         
             <item>
                 <title>越复杂的需求，就要做越简单的设计</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8821%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8821%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8821%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8821%E6%97%A5/</guid>
                 <pubDate>Fri, 21 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -3776,13 +3776,13 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/%E8%BF%90%E8%90%A5%E9%85%8D%E7%BD%AE%E5%B9%B3%E5%8F%B0/">运营配置平台</category>
+                                    <category domain="https://pollexlee.github.io/tags/%E8%BF%90%E8%90%A5%E9%85%8D%E7%BD%AE%E5%B9%B3%E5%8F%B0/">运营配置平台</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -3792,8 +3792,8 @@
         
             <item>
                 <title>没有办法一劳永逸，所以我们面面俱到</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8820%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8820%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8820%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8820%E6%97%A5/</guid>
                 <pubDate>Thu, 20 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -4003,13 +4003,13 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -4019,8 +4019,8 @@
         
             <item>
                 <title>基于AAB的插件化方案：Qigsaw</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8819%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8819%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8819%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8819%E6%97%A5/</guid>
                 <pubDate>Wed, 19 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -4313,13 +4313,13 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -4329,8 +4329,8 @@
         
             <item>
                 <title>秒开秒用，用完即走</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8818%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8818%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8818%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8818%E6%97%A5/</guid>
                 <pubDate>Tue, 18 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -4577,13 +4577,13 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/">快应用</category>
+                                    <category domain="https://pollexlee.github.io/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/">快应用</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -4593,8 +4593,8 @@
         
             <item>
                 <title>Android插件化路在何方</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8817%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8817%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8817%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8817%E6%97%A5/</guid>
                 <pubDate>Mon, 17 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -4804,13 +4804,13 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -4820,8 +4820,8 @@
         
             <item>
                 <title>回调地狱就像龟派气功</title>
-                <link>https://blog.pollex.me/posts/kotlin/2%E6%9C%8815%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/kotlin/2%E6%9C%8815%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/kotlin/2%E6%9C%8815%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/kotlin/2%E6%9C%8815%E6%97%A5/</guid>
                 <pubDate>Sat, 15 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -5005,13 +5005,13 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/kotlin/">Kotlin</category>
+                                    <category domain="https://pollexlee.github.io/tags/kotlin/">Kotlin</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -5021,8 +5021,8 @@
         
             <item>
                 <title>偷懒是一种美德</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8814%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8814%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8814%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8814%E6%97%A5/</guid>
                 <pubDate>Fri, 14 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -5186,13 +5186,13 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/flutter/">Flutter</category>
+                                    <category domain="https://pollexlee.github.io/tags/flutter/">Flutter</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -5202,8 +5202,8 @@
         
             <item>
                 <title>Flutter要运行在所有能显示的设备上</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8813%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8813%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8813%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8813%E6%97%A5/</guid>
                 <pubDate>Thu, 13 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -5387,13 +5387,13 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/flutter/">Flutter</category>
+                                    <category domain="https://pollexlee.github.io/tags/flutter/">Flutter</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -5403,8 +5403,8 @@
         
             <item>
                 <title>移动端是个大坑-Flutter在贝壳的接入实践学习笔记</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8812%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8812%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8812%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8812%E6%97%A5/</guid>
                 <pubDate>Wed, 12 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -5560,13 +5560,13 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/flutter/">Flutter</category>
+                                    <category domain="https://pollexlee.github.io/tags/flutter/">Flutter</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -5576,8 +5576,8 @@
         
             <item>
                 <title>好奇心 &#43; 懒惰是「工程师」最大的美德</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8811%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8811%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8811%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8811%E6%97%A5/</guid>
                 <pubDate>Tue, 11 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -5671,13 +5671,13 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/flutter/">Flutter</category>
+                                    <category domain="https://pollexlee.github.io/tags/flutter/">Flutter</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -5687,8 +5687,8 @@
         
             <item>
                 <title>最好的移动软件开发方案</title>
-                <link>https://blog.pollex.me/posts/2%E6%9C%8810%E6%97%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/2%E6%9C%8810%E6%97%A5/</guid>
+                <link>https://pollexlee.github.io/posts/2%E6%9C%8810%E6%97%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/2%E6%9C%8810%E6%97%A5/</guid>
                 <pubDate>Mon, 10 Feb 2020 22:00:00 &#43;0800</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -5791,13 +5791,13 @@
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/flutter/">Flutter</category>
+                                    <category domain="https://pollexlee.github.io/tags/flutter/">Flutter</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
+                                    <category domain="https://pollexlee.github.io/tags/30%E5%A4%A9%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">30天学习打卡</category>
                                 
                             
                         
@@ -5807,8 +5807,8 @@
         
             <item>
                 <title>Android多渠道包生成方案学习记录(V1签名)</title>
-                <link>https://blog.pollex.me/posts/android%E5%A4%9A%E6%B8%A0%E9%81%93%E5%8C%85%E7%94%9F%E6%88%90%E6%96%B9%E6%A1%88%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95v1%E7%AD%BE%E5%90%8D/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/android%E5%A4%9A%E6%B8%A0%E9%81%93%E5%8C%85%E7%94%9F%E6%88%90%E6%96%B9%E6%A1%88%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95v1%E7%AD%BE%E5%90%8D/</guid>
+                <link>https://pollexlee.github.io/posts/android%E5%A4%9A%E6%B8%A0%E9%81%93%E5%8C%85%E7%94%9F%E6%88%90%E6%96%B9%E6%A1%88%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95v1%E7%AD%BE%E5%90%8D/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/android%E5%A4%9A%E6%B8%A0%E9%81%93%E5%8C%85%E7%94%9F%E6%88%90%E6%96%B9%E6%A1%88%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95v1%E7%AD%BE%E5%90%8D/</guid>
                 <pubDate>Tue, 20 Jun 2017 20:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -5854,7 +5854,7 @@ APK是zip压缩包，末尾是zip压缩包的注释，向其中添加渠道信�
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                         
@@ -5864,8 +5864,8 @@ APK是zip压缩包，末尾是zip压缩包的注释，向其中添加渠道信�
         
             <item>
                 <title>Windows查询进程PID，关闭进程</title>
-                <link>https://blog.pollex.me/posts/windows%E6%9F%A5%E8%AF%A2%E8%BF%9B%E7%A8%8Bpid%E5%85%B3%E9%97%AD%E8%BF%9B%E7%A8%8B/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/windows%E6%9F%A5%E8%AF%A2%E8%BF%9B%E7%A8%8Bpid%E5%85%B3%E9%97%AD%E8%BF%9B%E7%A8%8B/</guid>
+                <link>https://pollexlee.github.io/posts/windows%E6%9F%A5%E8%AF%A2%E8%BF%9B%E7%A8%8Bpid%E5%85%B3%E9%97%AD%E8%BF%9B%E7%A8%8B/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/windows%E6%9F%A5%E8%AF%A2%E8%BF%9B%E7%A8%8Bpid%E5%85%B3%E9%97%AD%E8%BF%9B%E7%A8%8B/</guid>
                 <pubDate>Wed, 08 Mar 2017 20:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -5896,7 +5896,7 @@ taskkill /F /PID &amp;lt;taskPid&amp;gt;
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/windows/">Windows</category>
+                                    <category domain="https://pollexlee.github.io/tags/windows/">Windows</category>
                                 
                             
                         
@@ -5906,8 +5906,8 @@ taskkill /F /PID &amp;lt;taskPid&amp;gt;
         
             <item>
                 <title>Android Service在手机cpu休眠之后还会运行吗？</title>
-                <link>https://blog.pollex.me/posts/android-service%E5%9C%A8%E6%89%8B%E6%9C%BAcpu%E4%BC%91%E7%9C%A0%E4%B9%8B%E5%90%8E%E8%BF%98%E4%BC%9A%E8%BF%90%E8%A1%8C%E5%90%97/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/android-service%E5%9C%A8%E6%89%8B%E6%9C%BAcpu%E4%BC%91%E7%9C%A0%E4%B9%8B%E5%90%8E%E8%BF%98%E4%BC%9A%E8%BF%90%E8%A1%8C%E5%90%97/</guid>
+                <link>https://pollexlee.github.io/posts/android-service%E5%9C%A8%E6%89%8B%E6%9C%BAcpu%E4%BC%91%E7%9C%A0%E4%B9%8B%E5%90%8E%E8%BF%98%E4%BC%9A%E8%BF%90%E8%A1%8C%E5%90%97/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/android-service%E5%9C%A8%E6%89%8B%E6%9C%BAcpu%E4%BC%91%E7%9C%A0%E4%B9%8B%E5%90%8E%E8%BF%98%E4%BC%9A%E8%BF%90%E8%A1%8C%E5%90%97/</guid>
                 <pubDate>Wed, 03 Feb 2016 20:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -5966,13 +5966,13 @@ showlog(no)-&amp;gt;ServiceisWrong
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/service/">service</category>
+                                    <category domain="https://pollexlee.github.io/tags/service/">service</category>
                                 
                             
                         
@@ -5982,8 +5982,8 @@ showlog(no)-&amp;gt;ServiceisWrong
         
             <item>
                 <title>Activity的启动模式和标志位</title>
-                <link>https://blog.pollex.me/posts/activity%E7%9A%84%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%A0%87%E5%BF%97%E4%BD%8D/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/activity%E7%9A%84%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%A0%87%E5%BF%97%E4%BD%8D/</guid>
+                <link>https://pollexlee.github.io/posts/activity%E7%9A%84%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%A0%87%E5%BF%97%E4%BD%8D/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/activity%E7%9A%84%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%A0%87%E5%BF%97%E4%BD%8D/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -6031,19 +6031,19 @@ ABCD-&amp;gt;D调用singleTask属性的B-&amp;gt;AB&lt;/p&gt;
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android%E9%AB%98%E6%89%8B%E8%BF%9B%E9%98%B6%E8%A7%86%E9%A2%91/">Android高手进阶视频</category>
+                                    <category domain="https://pollexlee.github.io/tags/android%E9%AB%98%E6%89%8B%E8%BF%9B%E9%98%B6%E8%A7%86%E9%A2%91/">Android高手进阶视频</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/%E7%AC%94%E8%AE%B0/">笔记</category>
+                                    <category domain="https://pollexlee.github.io/tags/%E7%AC%94%E8%AE%B0/">笔记</category>
                                 
                             
                         
@@ -6053,8 +6053,8 @@ ABCD-&amp;gt;D调用singleTask属性的B-&amp;gt;AB&lt;/p&gt;
         
             <item>
                 <title>Android N for Developers</title>
-                <link>https://blog.pollex.me/posts/android-n-for-developers/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/android-n-for-developers/</guid>
+                <link>https://pollexlee.github.io/posts/android-n-for-developers/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/android-n-for-developers/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -6209,13 +6209,13 @@ Android N 上适用于 OpenGL ES 3.2 的框架 API 与 GLES32 类一起提供。
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/%E7%BF%BB%E8%AF%91/">翻译</category>
+                                    <category domain="https://pollexlee.github.io/tags/%E7%BF%BB%E8%AF%91/">翻译</category>
                                 
                             
                         
@@ -6225,8 +6225,8 @@ Android N 上适用于 OpenGL ES 3.2 的框架 API 与 GLES32 类一起提供。
         
             <item>
                 <title>Android Studio修改包名</title>
-                <link>https://blog.pollex.me/posts/android-studio%E4%BF%AE%E6%94%B9%E5%8C%85%E5%90%8D/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/android-studio%E4%BF%AE%E6%94%B9%E5%8C%85%E5%90%8D/</guid>
+                <link>https://pollexlee.github.io/posts/android-studio%E4%BF%AE%E6%94%B9%E5%8C%85%E5%90%8D/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/android-studio%E4%BF%AE%E6%94%B9%E5%8C%85%E5%90%8D/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -6256,7 +6256,7 @@ Android N 上适用于 OpenGL ES 3.2 的框架 API 与 GLES32 类一起提供。
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                         
@@ -6266,8 +6266,8 @@ Android N 上适用于 OpenGL ES 3.2 的框架 API 与 GLES32 类一起提供。
         
             <item>
                 <title>Android资源文件混淆思路解析</title>
-                <link>https://blog.pollex.me/posts/android%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E6%B7%B7%E6%B7%86%E6%80%9D%E8%B7%AF%E8%A7%A3%E6%9E%90/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/android%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E6%B7%B7%E6%B7%86%E6%80%9D%E8%B7%AF%E8%A7%A3%E6%9E%90/</guid>
+                <link>https://pollexlee.github.io/posts/android%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E6%B7%B7%E6%B7%86%E6%80%9D%E8%B7%AF%E8%A7%A3%E6%9E%90/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/android%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E6%B7%B7%E6%B7%86%E6%80%9D%E8%B7%AF%E8%A7%A3%E6%9E%90/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -6291,8 +6291,8 @@ Android N 上适用于 OpenGL ES 3.2 的框架 API 与 GLES32 类一起提供。
         
             <item>
                 <title>Android通过包名启动任意APP</title>
-                <link>https://blog.pollex.me/posts/android%E9%80%9A%E8%BF%87%E5%8C%85%E5%90%8D%E5%90%AF%E5%8A%A8%E4%BB%BB%E6%84%8Fapp/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/android%E9%80%9A%E8%BF%87%E5%8C%85%E5%90%8D%E5%90%AF%E5%8A%A8%E4%BB%BB%E6%84%8Fapp/</guid>
+                <link>https://pollexlee.github.io/posts/android%E9%80%9A%E8%BF%87%E5%8C%85%E5%90%8D%E5%90%AF%E5%8A%A8%E4%BB%BB%E6%84%8Fapp/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/android%E9%80%9A%E8%BF%87%E5%8C%85%E5%90%8D%E5%90%AF%E5%8A%A8%E4%BB%BB%E6%84%8Fapp/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -6351,8 +6351,8 @@ Android N 上适用于 OpenGL ES 3.2 的框架 API 与 GLES32 类一起提供。
         
             <item>
                 <title>Application的label和Activity的label</title>
-                <link>https://blog.pollex.me/posts/application%E7%9A%84label%E5%92%8Cactivity%E7%9A%84label/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/application%E7%9A%84label%E5%92%8Cactivity%E7%9A%84label/</guid>
+                <link>https://pollexlee.github.io/posts/application%E7%9A%84label%E5%92%8Cactivity%E7%9A%84label/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/application%E7%9A%84label%E5%92%8Cactivity%E7%9A%84label/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -6375,25 +6375,25 @@ Android N 上适用于 OpenGL ES 3.2 的框架 API 与 GLES32 类一起提供。
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/application/">Application</category>
+                                    <category domain="https://pollexlee.github.io/tags/application/">Application</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/activity/">Activity</category>
+                                    <category domain="https://pollexlee.github.io/tags/activity/">Activity</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/label/">label</category>
+                                    <category domain="https://pollexlee.github.io/tags/label/">label</category>
                                 
                             
                         
@@ -6403,8 +6403,8 @@ Android N 上适用于 OpenGL ES 3.2 的框架 API 与 GLES32 类一起提供。
         
             <item>
                 <title>BaseActivity封装技巧</title>
-                <link>https://blog.pollex.me/posts/baseactivity%E5%B0%81%E8%A3%85%E6%8A%80%E5%B7%A7/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/baseactivity%E5%B0%81%E8%A3%85%E6%8A%80%E5%B7%A7/</guid>
+                <link>https://pollexlee.github.io/posts/baseactivity%E5%B0%81%E8%A3%85%E6%8A%80%E5%B7%A7/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/baseactivity%E5%B0%81%E8%A3%85%E6%8A%80%E5%B7%A7/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -6559,7 +6559,7 @@ Android N 上适用于 OpenGL ES 3.2 的框架 API 与 GLES32 类一起提供。
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                         
@@ -6569,8 +6569,8 @@ Android N 上适用于 OpenGL ES 3.2 的框架 API 与 GLES32 类一起提供。
         
             <item>
                 <title>Compilation is not supported for following modules:app</title>
-                <link>https://blog.pollex.me/posts/unsupported-modules-detected/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/unsupported-modules-detected/</guid>
+                <link>https://pollexlee.github.io/posts/unsupported-modules-detected/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/unsupported-modules-detected/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -6595,19 +6595,19 @@ Android N 上适用于 OpenGL ES 3.2 的框架 API 与 GLES32 类一起提供。
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/bug/">bug</category>
+                                    <category domain="https://pollexlee.github.io/tags/bug/">bug</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/gradle/">gradle</category>
+                                    <category domain="https://pollexlee.github.io/tags/gradle/">gradle</category>
                                 
                             
                         
@@ -6617,8 +6617,8 @@ Android N 上适用于 OpenGL ES 3.2 的框架 API 与 GLES32 类一起提供。
         
             <item>
                 <title>c语言学习笔记之执行shell命令</title>
-                <link>https://blog.pollex.me/posts/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E6%89%A7%E8%A1%8Cshell%E5%91%BD%E4%BB%A4/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E6%89%A7%E8%A1%8Cshell%E5%91%BD%E4%BB%A4/</guid>
+                <link>https://pollexlee.github.io/posts/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E6%89%A7%E8%A1%8Cshell%E5%91%BD%E4%BB%A4/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E6%89%A7%E8%A1%8Cshell%E5%91%BD%E4%BB%A4/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -6671,7 +6671,7 @@ hexo g -d
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/c%E8%AF%AD%E8%A8%80/">c语言</category>
+                                    <category domain="https://pollexlee.github.io/tags/c%E8%AF%AD%E8%A8%80/">c语言</category>
                                 
                             
                         
@@ -6681,8 +6681,8 @@ hexo g -d
         
             <item>
                 <title>Data Binding Library官方文档</title>
-                <link>https://blog.pollex.me/posts/data-binding-library/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/data-binding-library/</guid>
+                <link>https://pollexlee.github.io/posts/data-binding-library/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/data-binding-library/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -8155,19 +8155,19 @@ For example, an expression associated with TextView&#39;s attribute android:text
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/data-binding/">Data Binding</category>
+                                    <category domain="https://pollexlee.github.io/tags/data-binding/">Data Binding</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/%E8%BD%AC%E8%BD%BD/">转载</category>
+                                    <category domain="https://pollexlee.github.io/tags/%E8%BD%AC%E8%BD%BD/">转载</category>
                                 
                             
                         
@@ -8177,8 +8177,8 @@ For example, an expression associated with TextView&#39;s attribute android:text
         
             <item>
                 <title>Data Binding文档翻译</title>
-                <link>https://blog.pollex.me/posts/data_binding%E6%96%87%E6%A1%A3/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/data_binding%E6%96%87%E6%A1%A3/</guid>
+                <link>https://pollexlee.github.io/posts/data_binding%E6%96%87%E6%A1%A3/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/data_binding%E6%96%87%E6%A1%A3/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -8303,19 +8303,19 @@ For example, an expression associated with TextView&#39;s attribute android:text
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/data-binding/">Data Binding</category>
+                                    <category domain="https://pollexlee.github.io/tags/data-binding/">Data Binding</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/%E7%BF%BB%E8%AF%91/">翻译</category>
+                                    <category domain="https://pollexlee.github.io/tags/%E7%BF%BB%E8%AF%91/">翻译</category>
                                 
                             
                         
@@ -8325,8 +8325,8 @@ For example, an expression associated with TextView&#39;s attribute android:text
         
             <item>
                 <title>EditText的输入限制(InputType、digits)</title>
-                <link>https://blog.pollex.me/posts/edittext%E7%9A%84%E8%BE%93%E5%85%A5%E9%99%90%E5%88%B6inputtypedigits/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/edittext%E7%9A%84%E8%BE%93%E5%85%A5%E9%99%90%E5%88%B6inputtypedigits/</guid>
+                <link>https://pollexlee.github.io/posts/edittext%E7%9A%84%E8%BE%93%E5%85%A5%E9%99%90%E5%88%B6inputtypedigits/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/edittext%E7%9A%84%E8%BE%93%E5%85%A5%E9%99%90%E5%88%B6inputtypedigits/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -8461,13 +8461,13 @@ For example, an expression associated with TextView&#39;s attribute android:text
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/edittext/">EditText</category>
+                                    <category domain="https://pollexlee.github.io/tags/edittext/">EditText</category>
                                 
                             
                         
@@ -8477,8 +8477,8 @@ For example, an expression associated with TextView&#39;s attribute android:text
         
             <item>
                 <title>H5调用原生APP拍照</title>
-                <link>https://blog.pollex.me/posts/h5%E8%B0%83%E7%94%A8%E5%8E%9F%E7%94%9Fapp%E6%8B%8D%E7%85%A7/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/h5%E8%B0%83%E7%94%A8%E5%8E%9F%E7%94%9Fapp%E6%8B%8D%E7%85%A7/</guid>
+                <link>https://pollexlee.github.io/posts/h5%E8%B0%83%E7%94%A8%E5%8E%9F%E7%94%9Fapp%E6%8B%8D%E7%85%A7/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/h5%E8%B0%83%E7%94%A8%E5%8E%9F%E7%94%9Fapp%E6%8B%8D%E7%85%A7/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -8508,8 +8508,8 @@ Android的话，自定义&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;标签的
         
             <item>
                 <title>OSChina绑定公钥—MAC</title>
-                <link>https://blog.pollex.me/posts/oschina%E7%BB%91%E5%AE%9A%E5%85%AC%E9%92%A5/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/oschina%E7%BB%91%E5%AE%9A%E5%85%AC%E9%92%A5/</guid>
+                <link>https://pollexlee.github.io/posts/oschina%E7%BB%91%E5%AE%9A%E5%85%AC%E9%92%A5/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/oschina%E7%BB%91%E5%AE%9A%E5%85%AC%E9%92%A5/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -8561,7 +8561,7 @@ Android的话，自定义&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;标签的
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/git/">git</category>
+                                    <category domain="https://pollexlee.github.io/tags/git/">git</category>
                                 
                             
                         
@@ -8571,8 +8571,8 @@ Android的话，自定义&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;标签的
         
             <item>
                 <title>undefined reference to `__android_log_print&#39;解决方法</title>
-                <link>https://blog.pollex.me/posts/undefined-reference-to-__android_log_print%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/undefined-reference-to-__android_log_print%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
+                <link>https://pollexlee.github.io/posts/undefined-reference-to-__android_log_print%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/undefined-reference-to-__android_log_print%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -8666,19 +8666,19 @@ Android的话，自定义&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;标签的
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/ndk/">NDK</category>
+                                    <category domain="https://pollexlee.github.io/tags/ndk/">NDK</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/jni/">jni</category>
+                                    <category domain="https://pollexlee.github.io/tags/jni/">jni</category>
                                 
                             
                         
@@ -8688,8 +8688,8 @@ Android的话，自定义&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;标签的
         
             <item>
                 <title>View的事件分发机制</title>
-                <link>https://blog.pollex.me/posts/view%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/view%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6/</guid>
+                <link>https://pollexlee.github.io/posts/view%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/view%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -8697,8 +8697,8 @@ Android的话，自定义&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;标签的
                 <copyright>在保留本文作者及本文链接的前提下，非商业用途随意转载分享。</copyright>
                 
                     <description>&lt;p&gt;View的事件分发机制是非常核心的一个知识点，可以解决滑动冲突等很多棘手的问题，所以在这里梳理一下。
-&lt;a href=&#34;https://blog.pollex.me/posts/view%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6/#jump1&#34;&gt;1. View的事件分发机制&lt;/a&gt;
-&lt;a href=&#34;https://blog.pollex.me/posts/view%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6/#jump2&#34;&gt;2. 一些Listener的优先级&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://pollexlee.github.io/posts/view%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6/#jump1&#34;&gt;1. View的事件分发机制&lt;/a&gt;
+&lt;a href=&#34;https://pollexlee.github.io/posts/view%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6/#jump2&#34;&gt;2. 一些Listener的优先级&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;jump1&#34;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&#34;1-view的事件分发机制&#34;&gt;1. View的事件分发机制&lt;/h2&gt;
 &lt;p&gt;1）处理触摸事件会涉及到的三个类：Activity、ViewGroup、View，这三个类之间的事件传递顺序是：
@@ -8780,25 +8780,25 @@ Android的话，自定义&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;标签的
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/%E7%AC%94%E8%AE%B0/">笔记</category>
+                                    <category domain="https://pollexlee.github.io/tags/%E7%AC%94%E8%AE%B0/">笔记</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android%E5%BC%80%E5%8F%91%E8%89%BA%E6%9C%AF%E6%8E%A2%E7%B4%A2/">Android开发艺术探索</category>
+                                    <category domain="https://pollexlee.github.io/tags/android%E5%BC%80%E5%8F%91%E8%89%BA%E6%9C%AF%E6%8E%A2%E7%B4%A2/">Android开发艺术探索</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91/">事件分发</category>
+                                    <category domain="https://pollexlee.github.io/tags/%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91/">事件分发</category>
                                 
                             
                         
@@ -8808,8 +8808,8 @@ Android的话，自定义&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;标签的
         
             <item>
                 <title>WebView的优化总结</title>
-                <link>https://blog.pollex.me/posts/webview%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/webview%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/</guid>
+                <link>https://pollexlee.github.io/posts/webview%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/webview%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -8818,11 +8818,11 @@ Android的话，自定义&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;标签的
                 
                     <description>&lt;p&gt;在工作中很多地方都使用到了WebView，尤其是现在这个hybird app盛行的时代，所以WebView的优化也显得尤为重要了。&lt;/p&gt;
 &lt;h2 id=&#34;目录&#34;&gt;目录&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.pollex.me/posts/webview%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/#jump1&#34;&gt;性能优化&lt;/a&gt;
-&lt;a href=&#34;https://blog.pollex.me/posts/webview%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/#jump2&#34;&gt;界面优化&lt;/a&gt;
-&lt;a href=&#34;https://blog.pollex.me/posts/webview%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/#jump3&#34;&gt;业务逻辑优化&lt;/a&gt;
-&lt;a href=&#34;https://blog.pollex.me/posts/webview%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/#jump4&#34;&gt;bug总结&lt;/a&gt;
-&lt;a href=&#34;https://blog.pollex.me/posts/webview%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/#jump5&#34;&gt;相关扩展&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://pollexlee.github.io/posts/webview%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/#jump1&#34;&gt;性能优化&lt;/a&gt;
+&lt;a href=&#34;https://pollexlee.github.io/posts/webview%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/#jump2&#34;&gt;界面优化&lt;/a&gt;
+&lt;a href=&#34;https://pollexlee.github.io/posts/webview%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/#jump3&#34;&gt;业务逻辑优化&lt;/a&gt;
+&lt;a href=&#34;https://pollexlee.github.io/posts/webview%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/#jump4&#34;&gt;bug总结&lt;/a&gt;
+&lt;a href=&#34;https://pollexlee.github.io/posts/webview%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7/#jump5&#34;&gt;相关扩展&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;&lt;span id=&#34;jump1&#34;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;h3 id=&#34;一-性能优化&#34;&gt;一 性能优化&lt;/h3&gt;
@@ -9224,19 +9224,19 @@ Marquee不要用，有四个以上页面会好卡，如果的确需要使用可�
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/webview/">WebView</category>
+                                    <category domain="https://pollexlee.github.io/tags/webview/">WebView</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/%E4%BC%98%E5%8C%96/">优化</category>
+                                    <category domain="https://pollexlee.github.io/tags/%E4%BC%98%E5%8C%96/">优化</category>
                                 
                             
                         
@@ -9246,8 +9246,8 @@ Marquee不要用，有四个以上页面会好卡，如果的确需要使用可�
         
             <item>
                 <title>WebView的奇怪现象</title>
-                <link>https://blog.pollex.me/posts/%E4%B8%8D%E5%90%8Candroid%E7%89%88%E6%9C%AC%E7%9A%84webview%E7%9A%84%E5%A5%87%E6%80%AA%E7%8E%B0%E8%B1%A1/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/%E4%B8%8D%E5%90%8Candroid%E7%89%88%E6%9C%AC%E7%9A%84webview%E7%9A%84%E5%A5%87%E6%80%AA%E7%8E%B0%E8%B1%A1/</guid>
+                <link>https://pollexlee.github.io/posts/%E4%B8%8D%E5%90%8Candroid%E7%89%88%E6%9C%AC%E7%9A%84webview%E7%9A%84%E5%A5%87%E6%80%AA%E7%8E%B0%E8%B1%A1/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/%E4%B8%8D%E5%90%8Candroid%E7%89%88%E6%9C%AC%E7%9A%84webview%E7%9A%84%E5%A5%87%E6%80%AA%E7%8E%B0%E8%B1%A1/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -9332,8 +9332,8 @@ Marquee不要用，有四个以上页面会好卡，如果的确需要使用可�
         
             <item>
                 <title>习惯性妥协</title>
-                <link>https://blog.pollex.me/posts/%E4%B9%A0%E6%83%AF%E6%80%A7%E5%A6%A5%E5%8D%8F/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/%E4%B9%A0%E6%83%AF%E6%80%A7%E5%A6%A5%E5%8D%8F/</guid>
+                <link>https://pollexlee.github.io/posts/%E4%B9%A0%E6%83%AF%E6%80%A7%E5%A6%A5%E5%8D%8F/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/%E4%B9%A0%E6%83%AF%E6%80%A7%E5%A6%A5%E5%8D%8F/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -9357,8 +9357,8 @@ Marquee不要用，有四个以上页面会好卡，如果的确需要使用可�
         
             <item>
                 <title>使用scp命令向vps传输文件</title>
-                <link>https://blog.pollex.me/posts/%E4%BD%BF%E7%94%A8scp%E5%91%BD%E4%BB%A4%E5%90%91vps%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/%E4%BD%BF%E7%94%A8scp%E5%91%BD%E4%BB%A4%E5%90%91vps%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/</guid>
+                <link>https://pollexlee.github.io/posts/%E4%BD%BF%E7%94%A8scp%E5%91%BD%E4%BB%A4%E5%90%91vps%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/%E4%BD%BF%E7%94%A8scp%E5%91%BD%E4%BB%A4%E5%90%91vps%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -9384,25 +9384,25 @@ scp -P port &lt;code&gt;-C&lt;/code&gt; filepath vps_username@vps_ip:vps_filepat
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/ssh/">ssh</category>
+                                    <category domain="https://pollexlee.github.io/tags/ssh/">ssh</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/scp/">scp</category>
+                                    <category domain="https://pollexlee.github.io/tags/scp/">scp</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/vps/">vps</category>
+                                    <category domain="https://pollexlee.github.io/tags/vps/">vps</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/linux/">linux</category>
+                                    <category domain="https://pollexlee.github.io/tags/linux/">linux</category>
                                 
                             
                         
@@ -9412,8 +9412,8 @@ scp -P port &lt;code&gt;-C&lt;/code&gt; filepath vps_username@vps_ip:vps_filepat
         
             <item>
                 <title>关于安卓的时间获取和转换</title>
-                <link>https://blog.pollex.me/posts/%E5%85%B3%E4%BA%8E%E5%AE%89%E5%8D%93%E7%9A%84%E6%97%B6%E9%97%B4%E8%8E%B7%E5%8F%96%E5%92%8C%E8%BD%AC%E6%8D%A2/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/%E5%85%B3%E4%BA%8E%E5%AE%89%E5%8D%93%E7%9A%84%E6%97%B6%E9%97%B4%E8%8E%B7%E5%8F%96%E5%92%8C%E8%BD%AC%E6%8D%A2/</guid>
+                <link>https://pollexlee.github.io/posts/%E5%85%B3%E4%BA%8E%E5%AE%89%E5%8D%93%E7%9A%84%E6%97%B6%E9%97%B4%E8%8E%B7%E5%8F%96%E5%92%8C%E8%BD%AC%E6%8D%A2/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/%E5%85%B3%E4%BA%8E%E5%AE%89%E5%8D%93%E7%9A%84%E6%97%B6%E9%97%B4%E8%8E%B7%E5%8F%96%E5%92%8C%E8%BD%AC%E6%8D%A2/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -9422,9 +9422,9 @@ scp -P port &lt;code&gt;-C&lt;/code&gt; filepath vps_username@vps_ip:vps_filepat
                 
                     <description>&lt;p&gt;最近做了个日历相关的需求，发现了不少关于时间获取和转换的问题，特此记录。&lt;/p&gt;
 &lt;h3 id=&#34;目录&#34;&gt;目录&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.pollex.me/posts/%E5%85%B3%E4%BA%8E%E5%AE%89%E5%8D%93%E7%9A%84%E6%97%B6%E9%97%B4%E8%8E%B7%E5%8F%96%E5%92%8C%E8%BD%AC%E6%8D%A2/#jump0&#34;&gt;根据年月日获取时间戳&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;​	&lt;a href=&#34;https://blog.pollex.me/posts/%E5%85%B3%E4%BA%8E%E5%AE%89%E5%8D%93%E7%9A%84%E6%97%B6%E9%97%B4%E8%8E%B7%E5%8F%96%E5%92%8C%E8%BD%AC%E6%8D%A2/#jump1&#34;&gt;Time&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;​	&lt;a href=&#34;https://blog.pollex.me/posts/%E5%85%B3%E4%BA%8E%E5%AE%89%E5%8D%93%E7%9A%84%E6%97%B6%E9%97%B4%E8%8E%B7%E5%8F%96%E5%92%8C%E8%BD%AC%E6%8D%A2/#jump2&#34;&gt;Calendar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://pollexlee.github.io/posts/%E5%85%B3%E4%BA%8E%E5%AE%89%E5%8D%93%E7%9A%84%E6%97%B6%E9%97%B4%E8%8E%B7%E5%8F%96%E5%92%8C%E8%BD%AC%E6%8D%A2/#jump0&#34;&gt;根据年月日获取时间戳&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;​	&lt;a href=&#34;https://pollexlee.github.io/posts/%E5%85%B3%E4%BA%8E%E5%AE%89%E5%8D%93%E7%9A%84%E6%97%B6%E9%97%B4%E8%8E%B7%E5%8F%96%E5%92%8C%E8%BD%AC%E6%8D%A2/#jump1&#34;&gt;Time&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;​	&lt;a href=&#34;https://pollexlee.github.io/posts/%E5%85%B3%E4%BA%8E%E5%AE%89%E5%8D%93%E7%9A%84%E6%97%B6%E9%97%B4%E8%8E%B7%E5%8F%96%E5%92%8C%E8%BD%AC%E6%8D%A2/#jump2&#34;&gt;Calendar&lt;/a&gt;&lt;/p&gt;
 &lt;!-- Comment Heading--&gt;
 &lt;p&gt;&lt;span id=&#34;jump0&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h3 id=&#34;一根据年月日获取时间戳&#34;&gt;一：根据&lt;code&gt;年月日&lt;/code&gt;获取&lt;code&gt;时间戳&lt;/code&gt;&lt;/h3&gt;
@@ -9485,7 +9485,7 @@ scp -P port &lt;code&gt;-C&lt;/code&gt; filepath vps_username@vps_ip:vps_filepat
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                         
@@ -9495,8 +9495,8 @@ scp -P port &lt;code&gt;-C&lt;/code&gt; filepath vps_username@vps_ip:vps_filepat
         
             <item>
                 <title>奇葩问题的记录</title>
-                <link>https://blog.pollex.me/posts/android%E5%BC%80%E5%8F%91%E5%A5%87%E8%91%A9%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/android%E5%BC%80%E5%8F%91%E5%A5%87%E8%91%A9%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</guid>
+                <link>https://pollexlee.github.io/posts/android%E5%BC%80%E5%8F%91%E5%A5%87%E8%91%A9%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/android%E5%BC%80%E5%8F%91%E5%A5%87%E8%91%A9%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -9613,19 +9613,19 @@ android:scrollHorizontally=&amp;#34;true&amp;#34;
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/bug/">bug</category>
+                                    <category domain="https://pollexlee.github.io/tags/bug/">bug</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/%E7%AC%94%E8%AE%B0/">笔记</category>
+                                    <category domain="https://pollexlee.github.io/tags/%E7%AC%94%E8%AE%B0/">笔记</category>
                                 
                             
                         
@@ -9635,8 +9635,8 @@ android:scrollHorizontally=&amp;#34;true&amp;#34;
         
             <item>
                 <title>我有特殊的开发技巧</title>
-                <link>https://blog.pollex.me/posts/%E6%88%91%E6%9C%89%E7%89%B9%E6%AE%8A%E7%9A%84%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/%E6%88%91%E6%9C%89%E7%89%B9%E6%AE%8A%E7%9A%84%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/</guid>
+                <link>https://pollexlee.github.io/posts/%E6%88%91%E6%9C%89%E7%89%B9%E6%AE%8A%E7%9A%84%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/%E6%88%91%E6%9C%89%E7%89%B9%E6%AE%8A%E7%9A%84%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -9667,13 +9667,13 @@ bpv/bpm在特定请求method时中断。（没有测试）
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/fiddler/">Fiddler</category>
+                                    <category domain="https://pollexlee.github.io/tags/fiddler/">Fiddler</category>
                                 
                             
                         
@@ -9683,8 +9683,8 @@ bpv/bpm在特定请求method时中断。（没有测试）
         
             <item>
                 <title>绕过Manifest对Activity注册检测启动</title>
-                <link>https://blog.pollex.me/posts/%E7%BB%95%E8%BF%87manifest%E5%AF%B9activity%E6%B3%A8%E5%86%8C%E6%A3%80%E6%B5%8B%E5%90%AF%E5%8A%A8activity/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/%E7%BB%95%E8%BF%87manifest%E5%AF%B9activity%E6%B3%A8%E5%86%8C%E6%A3%80%E6%B5%8B%E5%90%AF%E5%8A%A8activity/</guid>
+                <link>https://pollexlee.github.io/posts/%E7%BB%95%E8%BF%87manifest%E5%AF%B9activity%E6%B3%A8%E5%86%8C%E6%A3%80%E6%B5%8B%E5%90%AF%E5%8A%A8activity/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/%E7%BB%95%E8%BF%87manifest%E5%AF%B9activity%E6%B3%A8%E5%86%8C%E6%A3%80%E6%B5%8B%E5%90%AF%E5%8A%A8activity/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -9706,19 +9706,19 @@ bpv/bpm在特定请求method时中断。（没有测试）
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/hook/">Hook</category>
+                                    <category domain="https://pollexlee.github.io/tags/hook/">Hook</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/%E5%8F%8D%E5%B0%84/">反射</category>
+                                    <category domain="https://pollexlee.github.io/tags/%E5%8F%8D%E5%B0%84/">反射</category>
                                 
                             
                         
@@ -9728,8 +9728,8 @@ bpv/bpm在特定请求method时中断。（没有测试）
         
             <item>
                 <title>自定义数据结构排序（字符串排序）</title>
-                <link>https://blog.pollex.me/posts/android%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8E%92%E5%BA%8F/</link>
-                <guid isPermaLink="true">https://blog.pollex.me/posts/android%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8E%92%E5%BA%8F/</guid>
+                <link>https://pollexlee.github.io/posts/android%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8E%92%E5%BA%8F/</link>
+                <guid isPermaLink="true">https://pollexlee.github.io/posts/android%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8E%92%E5%BA%8F/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>l6376751@gmail.com (PollexLee)</author>
@@ -9774,25 +9774,25 @@ bpv/bpm在特定请求method时中断。（没有测试）
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/string/">String</category>
+                                    <category domain="https://pollexlee.github.io/tags/string/">String</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/%E6%8E%92%E5%BA%8F/">排序</category>
+                                    <category domain="https://pollexlee.github.io/tags/%E6%8E%92%E5%BA%8F/">排序</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</category>
+                                    <category domain="https://pollexlee.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://blog.pollex.me/tags/android/">Android</category>
+                                    <category domain="https://pollexlee.github.io/tags/android/">Android</category>
                                 
                             
                         
