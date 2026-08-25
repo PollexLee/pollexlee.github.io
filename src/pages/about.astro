@@ -1,0 +1,30 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_EMAIL, SITE_GITHUB, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<BaseHead title={`关于 | ${SITE_TITLE}`} description="关于 Pollex" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>关于</h1>
+			<p>你好，我是 Pollex，欢迎访问我的博客。</p>
+			<p>这里记录移动端开发、工程实践与技术管理相关的内容。</p>
+			<ul>
+				<li>
+					GitHub：<a href={SITE_GITHUB} target="_blank" rel="noopener">
+						{SITE_GITHUB.replace('https://', '')}
+					</a>
+				</li>
+				<li>Email：<a href={`mailto:${SITE_EMAIL}`}>{SITE_EMAIL}</a></li>
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>

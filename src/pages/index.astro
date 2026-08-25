@@ -1,0 +1,77 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { publicPosts } from '../utils/taxonomy';
+
+const RECENT = 10;
+const all = await publicPosts();
+const posts = all.slice(0, RECENT);
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<ul class="post-list">
+				{
+					posts.map((post) => (
+						<li>
+							<h2><a href={`/posts/${post.id}/`}>{post.data.title}</a></h2>
+							<p class="meta">
+								<FormattedDate date={post.data.pubDate} />
+								{post.data.tags.map((t) => (
+									<span class="tag">#{t}</span>
+								))}
+							</p>
+							<p class="excerpt">{post.data.description}</p>
+						</li>
+					))
+				}
+			</ul>
+			<p class="more"><a href="/posts/">查看全部 {all.length} 篇文章 →</a></p>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.post-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.post-list li {
+		margin-bottom: 2.5em;
+	}
+	.post-list h2 {
+		margin: 0 0 0.2em;
+		font-size: 1.5em;
+		line-height: 1.3;
+	}
+	.post-list h2 a {
+		text-decoration: none;
+	}
+	.meta {
+		margin: 0 0 0.4em;
+		color: rgb(var(--gray));
+		font-size: 0.9em;
+	}
+	.tag {
+		margin-left: 0.5em;
+	}
+	.excerpt {
+		margin: 0;
+		color: rgb(var(--gray-dark));
+	}
+	.more {
+		margin-top: 3em;
+		text-align: center;
+	}
+</style>

@@ -1,0 +1,44 @@
+---
+import { SITE_AUTHOR, SITE_EMAIL, SITE_GITHUB } from '../consts';
+
+// 站点第一篇文章发表于 2016 年。
+const SINCE = 2016;
+const year = new Date().getFullYear();
+---
+
+<footer>
+	<p>&copy; {SINCE}–{year} {SITE_AUTHOR}</p>
+	<p class="license">在保留本文作者及本文链接的前提下，非商业用途随意转载分享。</p>
+	<div class="social-links">
+		<a href={SITE_GITHUB} target="_blank" rel="noopener">GitHub</a>
+		<a href={`mailto:${SITE_EMAIL}`}>Email</a>
+		<a href="/rss.xml">RSS</a>
+	</div>
+</footer>
+<style>
+	footer {
+		padding: 2em 1em 6em 1em;
+		background: linear-gradient(var(--gray-gradient)) no-repeat;
+		color: rgb(var(--gray));
+		text-align: center;
+	}
+	footer p {
+		margin: 0.25em 0;
+	}
+	.license {
+		font-size: 0.9em;
+	}
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1.25em;
+		margin-top: 1em;
+	}
+	.social-links a {
+		text-decoration: none;
+		color: rgb(var(--gray));
+	}
+	.social-links a:hover {
+		color: rgb(var(--gray-dark));
+	}
+</style>
