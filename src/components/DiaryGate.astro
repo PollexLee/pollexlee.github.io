@@ -35,8 +35,8 @@ const { payload, format = "html" } = Astro.props;
 >
   <form class="diary-gate__form border-border rounded-lg border p-6">
     <p class="diary-gate__question mb-1 font-mono font-semibold break-all">{DIARY_QUESTION}</p>
-    <p class="text-muted-foreground mb-4 text-sm">
-      {DIARY_HINT}。这里是写给家人的私人记录，答对才能解密。
+    <p class="text-muted-foreground mb-4 font-mono text-sm break-all">
+      {DIARY_HINT}
     </p>
     <div class="flex flex-wrap items-center gap-3">
       <label class="sr-only" for="diary-answer">答案</label>
@@ -48,7 +48,7 @@ const { payload, format = "html" } = Astro.props;
         autocorrect="off"
         spellcheck="false"
         class="border-border bg-background focus:border-accent min-w-48 flex-1 rounded border px-3 py-2 focus:outline-none"
-        placeholder="Base64 字符串"
+        placeholder="请输入答案"
       />
       <button
         type="submit"

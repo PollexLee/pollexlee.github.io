@@ -67,8 +67,9 @@ npm run build
 **验证 = 解密**：答对才能在浏览器里解出来，答错就是 GCM 完整性校验失败。页面上
 没有答案、也没有答案的哈希，因此没有任何可反推答案的东西。
 
-问题和答案都以 Base64 形式呈现：页面上直接显示 `5oiR5aWz5YS/55qE5ZCN5a2X77yf`，
-输入框里填的也是答案的 Base64。这层门槛是刻意的 —— 得先自己认出这是 Base64。
+页面上的**问题与提示都以 Base64 原样显示**（`5oiR5aWz5YS/55qE5ZCN5a2X77yf`），
+想进来的人得先自己认出这是 Base64 并解开它。**答案则用明文输入**。
+两者都在 `src/diary.config.ts` 里。
 
 因为密文是本地生成后提交的，**构建过程不需要知道答案，CI 也不用配任何 secret**。
 
@@ -98,7 +99,7 @@ sessionStorage，关掉标签页即失效。
 | --- | --- |
 | `src/utils/slugify.ts` | 整体替换为旧站 Hugo 的 urlize 规则。上游对非拉丁字符用 `lodash.kebabcase`，会把 `30天学习打卡` 变成 `30-天学习打卡`，打断旧标签地址 |
 | `src/utils/getSortedPosts.ts` | 改为按 `pubDatetime` 排序。上游按「最后更新」排序，而本站文章的修改时间全是旧站的批量构建时间戳 |
-| `src/utils/postFilter.ts` | 增加 `isPublicPost`，把 `/daily/` 下的私人日记排除在列表、RSS、搜索之外 |
+| `src/pages/diary/`、`src/components/DiaryGate.astro` | 新增，加密的私人日记（见上一节） |
 | `src/content.config.ts` | 加 `categories` 字段（上游只有 tags）；`tags` 默认值由 `["others"]` 改为空数组，避免凭空多出 `/tags/others/` |
 | `src/components/Datetime.astro` | 日期格式由 `D MMM, YYYY` 改为中文 |
 | `src/components/TableOfContents.astro` | 新增。上游的 remark-toc 要求每篇文章手写 `## Table of contents` 标题，侵入正文；改为从 headings 自动生成 |
@@ -114,7 +115,7 @@ sessionStorage，关掉标签页即失效。
 - 旧站 **131 个 URL 全部可达**，无法直接复原的重复地址走 `astro.config.ts` 的重定向表
 - `/tags/`、`/categories/` 的地址规则与旧站 Hugo 的 urlize 一致（42 + 8 个地址逐一核对）
 - 25 篇在 Hexo→Hugo 迁移中丢失日期的文章，发布时间从 git 历史里的 Hexo 产物快照逐篇比对恢复
-- `/daily/` 下的私人日记保持旧站行为：页面可访问，但不进首页、归档、搜索和 RSS
+- 旧站 `/daily/` 下的两篇私人日记已移到 `/diary/` 并加密，旧地址重定向过去
 
 `scripts/import-from-hugo.mjs` 是当时的一次性导入脚本，已完成使命，仅作存档。
 
