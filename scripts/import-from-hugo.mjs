@@ -1,5 +1,11 @@
 // 从旧 Hugo 构建产物反解出 Markdown 源文件。
 // 用法: node scripts/import-from-hugo.mjs <产物目录> [--dry]
+//
+// 一次性迁移脚本，已完成使命，仅作存档。注意它产出的是迁移当时的结构
+// （src/content/blog/ + pubDate/updatedDate 字段）；本站后来换成了 AstroPaper
+// 主题，现行结构是 src/content/posts/ + pubDatetime 字段。若要重跑需先改 OUT
+// 和 front matter 字段名。它还依赖迁移时生成的 /tmp/meta*.json 与
+// /tmp/date_fix.json，那些临时文件已不存在。
 import fs from 'node:fs';
 import path from 'node:path';
 import TurndownService from 'turndown';
@@ -19,9 +25,9 @@ td.use(gfm);
 
 // chroma 的代码块已在预处理阶段还原成 <pre><code class="language-x">，
 // turndown 默认规则能正确处理，这里只补上它认不出的裸 <pre>。
-td.addRule('bareP re', {
+td.addRule('barePre', {
 	filter: (node) => node.nodeName === 'PRE' && !node.querySelector('code'),
-	replacement: (content, node) => '\n```\n' + node.textContent.replace(/\n$/, '') + '\n```\n',
+	replacement: (_content, node) => '\n```\n' + node.textContent.replace(/\n$/, '') + '\n```\n',
 });
 
 const unescape = (s) =>

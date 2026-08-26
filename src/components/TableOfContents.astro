@@ -1,0 +1,42 @@
+---
+import type { MarkdownHeading } from "astro";
+
+/**
+ * 由文章自身的标题结构自动生成目录。
+ *
+ * 主题自带的 remark-toc 需要在每篇 Markdown 里手写一个「Table of contents」
+ * 标题才会插入目录，会侵入正文内容；这里改用 render() 返回的 headings 自动生成，
+ * 文章无需任何改动。
+ */
+type Props = {
+  headings: MarkdownHeading[];
+};
+
+const { headings } = Astro.props;
+
+// 只收 h2/h3：h1 是文章标题，h4 以下层级过深，列出来反而噪音
+const items = headings.filter(h => h.depth === 2 || h.depth === 3);
+const minDepth = Math.min(...items.map(h => h.depth));
+---
+
+{
+  items.length >= 3 && (
+    <details open class="border-border mt-8 rounded-lg border px-4 py-3">
+      <summary class="cursor-pointer font-semibold select-none">目录</summary>
+      <nav aria-label="文章目录">
+        <ul class="mt-2 space-y-1 text-sm">
+          {items.map(h => (
+            <li style={`padding-inline-start:${(h.depth - minDepth) * 1.25}rem`}>
+              <a
+                href={`#${h.slug}`}
+                class="hover:text-accent focus-visible:text-accent underline decoration-dashed underline-offset-4"
+              >
+                {h.text.replace(/#$/, "")}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </details>
+  )
+}

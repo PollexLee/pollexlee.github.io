@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# pagefind 搜索索引由 npm run build 生成，不入库
+public/pagefind/
