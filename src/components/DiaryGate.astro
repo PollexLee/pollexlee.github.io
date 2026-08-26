@@ -1,0 +1,202 @@
+---
+import { DIARY_HINT, DIARY_QUESTION } from "@/diary.config";
+
+/** 由 scripts/encrypt-diary.mjs 生成的密文载荷 */
+export type EncryptedPayload = {
+  salt: string;
+  iv: string;
+  data: string;
+  iterations: number;
+};
+
+/**
+ * 私人内容的验证门。
+ *
+ * 页面上只有密文，没有答案、也没有答案的哈希——解密成功即验证通过。
+ * 答案不会离开浏览器。通过后把答案存进 sessionStorage，关掉标签页即失效。
+ */
+type Props = {
+  payload: EncryptedPayload;
+  /** 解出来的内容是 HTML 还是 JSON（列表页用 JSON） */
+  format?: "html" | "list";
+};
+
+const { payload, format = "html" } = Astro.props;
+---
+
+<div
+  class="diary-gate"
+  data-salt={payload.salt}
+  data-iv={payload.iv}
+  data-cipher={payload.data}
+  data-iterations={payload.iterations}
+  data-format={format}
+  data-pagefind-ignore
+>
+  <form class="diary-gate__form border-border rounded-lg border p-6">
+    <p class="diary-gate__question mb-1 font-mono font-semibold break-all">{DIARY_QUESTION}</p>
+    <p class="text-muted-foreground mb-4 text-sm">
+      {DIARY_HINT}。这里是写给家人的私人记录，答对才能解密。
+    </p>
+    <div class="flex flex-wrap items-center gap-3">
+      <label class="sr-only" for="diary-answer">答案</label>
+      <input
+        id="diary-answer"
+        type="password"
+        autocomplete="off"
+        autocapitalize="off"
+        autocorrect="off"
+        spellcheck="false"
+        class="border-border bg-background focus:border-accent min-w-48 flex-1 rounded border px-3 py-2 focus:outline-none"
+        placeholder="Base64 字符串"
+      />
+      <button
+        type="submit"
+        class="diary-gate__submit bg-accent text-background rounded px-4 py-2 font-medium disabled:opacity-60"
+      >
+        解锁
+      </button>
+    </div>
+    <p class="diary-gate__error text-accent mt-3 hidden text-sm" role="alert"></p>
+  </form>
+
+  <div class="diary-gate__content hidden"></div>
+</div>
+
+<script>
+  const B64 = (s: string) =>
+    Uint8Array.from(atob(s), c => c.charCodeAt(0)) as unknown as BufferSource;
+
+  // 与 scripts/encrypt-diary.mjs 的 normalizeAnswer 必须完全一致
+  const normalize = (s: string) => s.replace(/[\s　]/g, "");
+
+  const STORAGE_KEY = "diary-answer";
+
+  async function decrypt(gate: HTMLElement, answer: string) {
+    const salt = B64(gate.dataset.salt!);
+    const iv = B64(gate.dataset.iv!);
+    const cipher = B64(gate.dataset.cipher!);
+    const iterations = Number(gate.dataset.iterations);
+
+    const baseKey = await crypto.subtle.importKey(
+      "raw",
+      new TextEncoder().encode(normalize(answer)),
+      "PBKDF2",
+      false,
+      ["deriveKey"]
+    );
+    const key = await crypto.subtle.deriveKey(
+      { name: "PBKDF2", salt, iterations, hash: "SHA-256" },
+      baseKey,
+      { name: "AES-GCM", length: 256 },
+      false,
+      ["decrypt"]
+    );
+    // 答案不对时 GCM 的完整性校验会失败并抛错，这正是我们要的验证
+    const plain = await crypto.subtle.decrypt({ name: "AES-GCM", iv }, key, cipher);
+    return new TextDecoder().decode(plain);
+  }
+
+  function renderList(container: HTMLElement, json: string) {
+    const items = JSON.parse(json) as { url: string; title: string; date: string }[];
+    container.innerHTML = `<ul class="diary-list">${items
+      .map(
+        i =>
+          `<li class="flex items-baseline justify-between gap-4 py-2">
+             <a class="text-accent underline decoration-dashed underline-offset-4" href="${i.url}">${i.title}</a>
+             <time class="text-muted-foreground text-sm">${i.date}</time>
+           </li>`
+      )
+      .join("")}</ul>`;
+  }
+
+  function reveal(gate: HTMLElement, plaintext: string) {
+    const form = gate.querySelector<HTMLElement>(".diary-gate__form")!;
+    const content = gate.querySelector<HTMLElement>(".diary-gate__content")!;
+    if (gate.dataset.format === "list") {
+      renderList(content, plaintext);
+    } else {
+      content.innerHTML = plaintext;
+    }
+    form.classList.add("hidden");
+    content.classList.remove("hidden");
+  }
+
+  async function initGate(gate: HTMLElement) {
+    // 本次会话里已经答对过，直接解开
+    const saved = sessionStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      try {
+        reveal(gate, await decrypt(gate, saved));
+        return;
+      } catch {
+        sessionStorage.removeItem(STORAGE_KEY);
+      }
+    }
+
+    const form = gate.querySelector<HTMLFormElement>(".diary-gate__form")!;
+    const input = gate.querySelector<HTMLInputElement>("#diary-answer")!;
+    const error = gate.querySelector<HTMLElement>(".diary-gate__error")!;
+    const submit = gate.querySelector<HTMLButtonElement>(".diary-gate__submit")!;
+
+    const showError = (msg: string) => {
+      error.textContent = msg;
+      error.classList.remove("hidden");
+    };
+
+    // 中文输入法组合中（拼音还没上屏）不要提交，否则会拿着半截拼音去解密
+    let composing = false;
+    input.addEventListener("compositionstart", () => (composing = true));
+    input.addEventListener("compositionend", () => (composing = false));
+
+    let busy = false;
+
+    form.addEventListener("submit", async e => {
+      e.preventDefault();
+      if (composing || busy) return;
+
+      const answer = normalize(input.value);
+      if (!answer) {
+        showError("请先填写答案。");
+        return;
+      }
+
+      // PBKDF2 迭代 25 万次要花 1~2 秒，期间必须给出反馈
+      busy = true;
+      error.classList.add("hidden");
+      submit.disabled = true;
+      const label = submit.textContent;
+      submit.textContent = "验证中…";
+
+      try {
+        const plain = await decrypt(gate, answer);
+        sessionStorage.setItem(STORAGE_KEY, answer);
+        reveal(gate, plain);
+      } catch {
+        showError("答案不对，再想想。");
+        input.select();
+      } finally {
+        busy = false;
+        submit.disabled = false;
+        submit.textContent = label;
+      }
+    });
+  }
+
+  function initAll() {
+    document
+      .querySelectorAll<HTMLElement>(".diary-gate")
+      .forEach(gate => initGate(gate));
+  }
+
+  initAll();
+  document.addEventListener("astro:page-load", initAll);
+</script>
+
+<style>
+  .diary-gate :global(.diary-list) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>

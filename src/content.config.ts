@@ -27,6 +27,9 @@ const posts = defineCollection({
     }),
 });
 
+// 私人日记不在这里：明文放 diary-src/（已 gitignore），
+// 由 scripts/encrypt-diary.mjs 加密成 src/data/diary/ 下的密文后提交。
+
 const pages = defineCollection({
   loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/content/pages" }),
   schema: z.object({

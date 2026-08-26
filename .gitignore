@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # pagefind 搜索索引由 npm run build 生成，不入库
 public/pagefind/
+
+# 私人日记明文只留本地，仓库里只提交 src/data/diary/ 下的密文
+diary-src/

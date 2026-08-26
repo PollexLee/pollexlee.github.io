@@ -1,0 +1,27 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import DiaryGate from "@/components/DiaryGate.astro";
+import type { EncryptedPayload } from "@/components/DiaryGate.astro";
+import config from "@/config";
+
+// 密文由 scripts/encrypt-diary.mjs 在本地生成后提交，
+// 构建过程不需要知道答案（明文不在仓库里）。
+const listing = await import("@/data/diary/_index.json");
+const payload = listing.default as EncryptedPayload;
+---
+
+<Layout title={`日记 | ${config.site.title}`} description="私人记录，需要验证。">
+  <Header />
+
+  <Breadcrumb />
+
+  <Main pageTitle="日记" pageDesc="写给家人的私人记录。">
+    <DiaryGate {payload} format="list" />
+  </Main>
+
+  <Footer />
+</Layout>

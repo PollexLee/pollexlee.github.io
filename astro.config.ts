@@ -32,10 +32,13 @@ const legacyRedirects = {
   "/posts/flutter/2月14日": "/posts/2月14日/",
   "/2月17日": "/posts/2月17日/",
   "/test/2月16日": "/posts/从产品和运营的角度来看待技术转变/",
-  "/daily/2021-4-28": "/posts/daily/2021-04-28/",
-  "/daily/2021-5-20": "/posts/daily/2021-05-20/",
+  // 日记已独立到 /diary/ 并加密，下面两组是旧站地址与上一版短暂上线过的地址
+  "/daily/2021-4-28": "/diary/2021-04-28/",
+  "/daily/2021-5-20": "/diary/2021-05-20/",
+  "/posts/daily/2021-04-28": "/diary/2021-04-28/",
+  "/posts/daily/2021-05-20": "/diary/2021-05-20/",
   "/test": "/posts/",
-  "/daily": "/posts/",
+  "/daily": "/diary/",
   "/readme": "/about/",
   "/page/1": "/",
   "/page/2": "/posts/",
@@ -54,8 +57,8 @@ export default defineConfig({
       filter: page =>
         (config.features?.showArchives !== false ||
           !page.endsWith("/archives/")) &&
-        // /daily/ 下是私人日记，页面可直接访问但不主动提交给搜索引擎
-        !page.includes("/posts/daily/"),
+        // /diary/ 是加密的私人日记，不提交给搜索引擎
+        !page.includes("/diary/"),
     }),
   ],
   i18n: {
