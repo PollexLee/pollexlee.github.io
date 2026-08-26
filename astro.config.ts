@@ -52,7 +52,10 @@ export default defineConfig({
     mdx(),
     sitemap({
       filter: page =>
-        config.features?.showArchives !== false || !page.endsWith("/archives/"),
+        (config.features?.showArchives !== false ||
+          !page.endsWith("/archives/")) &&
+        // /daily/ 下是私人日记，页面可直接访问但不主动提交给搜索引擎
+        !page.includes("/posts/daily/"),
     }),
   ],
   i18n: {
