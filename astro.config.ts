@@ -50,6 +50,8 @@ const legacyRedirects = {
   "/tags/google-play": "/tags/",
   "/tags/apk签名": "/tags/",
   "/tags/线上问题": "/tags/",
+  // 未完成的部分译文，内容已被英文原文篇完整覆盖
+  "/posts/data_binding文档": "/posts/data-binding-library/",
   "/test": "/posts/",
   "/daily": "/diary/",
   "/readme": "/about/",

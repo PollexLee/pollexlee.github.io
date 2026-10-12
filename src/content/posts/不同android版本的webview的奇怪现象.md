@@ -9,7 +9,7 @@ pubDatetime: 2016-12-19T00:00:00+08:00
 
 ### 一、Android 版本4.4及以下，默认情况下"\_blank"打开新标签页异常
 
-H5通过\_blank 标签打开新标签页的时候，Android5.0及以上会在当前页面直接 load 这个 url，但是 Android 版本4.4及以下，则会在当前的标签里面加载这个新页面！ 查了下资料，发现了能统一的办法。 第一步：设置 WebSettings 的 setSupportMultipleWindows(true)：
+H5通过\_blank 标签打开新标签页的时候，Android5.0及以上会在当前页面直接 load 这个 url，但是 Android 版本4.4及以下，点击后没有任何反应！ 查了下资料，发现了能统一的办法。 第一步：设置 WebSettings 的 setSupportMultipleWindows(true)：
 
 ```java
 // 告诉webkit：你问我多窗口滋不滋次啊，我当然是滋次的！

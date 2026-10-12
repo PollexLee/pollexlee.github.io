@@ -80,7 +80,3 @@ protected void onDestroy() {
 ```
 
 > 注意： 要在`onDestroy()`中调用 mHandler.removeCallbacksAndMessages()方法，否则会出现 handler 内存泄露问题。
-
-### 4. 全局的观察者模式
-
-未完待续
