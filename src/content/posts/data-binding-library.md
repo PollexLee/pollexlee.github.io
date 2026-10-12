@@ -1,9 +1,11 @@
 ---
-title: 'Data Binding Library官方文档'
-description: 'This document explains how to use the Data Binding Library to write declarative'
+title: 'Data Binding Library 官方文档（英文原文，2016）'
+description: 'Android Data Binding Library 官方指南英文原文（2016 版）：布局与表达式、Observable 数据对象、生成的绑定类、BindingAdapter 与转换器。'
 pubDatetime: 2016-05-27T00:00:00+08:00
 tags: ['Data Binding', 'Android', '转载']
 ---
+
+> 原文：[Data Binding Library](https://developer.android.com/topic/libraries/data-binding/)，版权归 Google。本文为 2016 年版快照，部分 API（如 `android.databinding` 包名、`dataBinding { enabled = true }` 写法）已过时，请以官方最新文档为准。
 
 This document explains how to use the Data Binding Library to write declarative layouts and minimize the glue code necessary to bind your application logic and layouts.
 
@@ -19,7 +21,7 @@ To configure your app to use data binding, add the dataBinding element to your b
 
 Use the following code snippet to configure data binding:
 
-```java
+```groovy
 android {
     ....
     dataBinding {
@@ -87,7 +89,7 @@ public class User {
 }
 ```
 
-This type of object has data that never changes. It is common in applications to have data that is read once and never changes thereafter. It is also possible to use a JavaBeans objects:
+This type of object has data that never changes. It is common in applications to have data that is read once and never changes thereafter. It is also possible to use JavaBeans objects:
 
 ```java
 public class User {
@@ -110,7 +112,7 @@ From the perspective of data binding, these two classes are equivalent. The expr
 
 ## Binding Data
 
-By default, a Binding class will be generated based on the name of the layout file, converting it to Pascal case and suffixing “Binding” to it. The above layout file was main\_activity.xml so the generate class was MainActivityBinding. This class holds all the bindings from the layout properties (e.g. the user variable) to the layout’s Views and knows how to assign values for the binding expressions.The easiest means for creating the bindings is to do it while inflating:
+By default, a Binding class will be generated based on the name of the layout file, converting it to Pascal case and suffixing “Binding” to it. The above layout file was main\_activity.xml so the generated class was MainActivityBinding. This class holds all the bindings from the layout properties (e.g. the user variable) to the layout’s Views and knows how to assign values for the binding expressions. The easiest means for creating the bindings is to do it while inflating:
 
 ```java
 @Override
@@ -155,7 +157,7 @@ The binding expression can assign the click listener for a View:
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
    <data>
-       <variable name="handlers" type="com.example.Handlers"/>
+       <variable name="handlers" type="com.example.MyHandlers"/>
        <variable name="user" type="com.example.User"/>
    </data>
    <LinearLayout
@@ -224,6 +226,8 @@ Now, Vista may be used to reference the com.example.real.estate.View and View ma
 ```
 
 > Note: Android Studio does not yet handle imports so the autocomplete for imported variables may not work in your IDE. Your application will still compile fine and you can work around the IDE issue by using fully qualified names in your variable definitions.
+
+Imported types may also be used in casting part of expressions:
 
 ```xml
 <TextView
@@ -301,7 +305,7 @@ In this case, ContactItem is generated in the module package directly. Any packa
 
 Variables may be passed into an included layout's binding from the containing layout by using the application namespace and the variable name in an attribute:
 
-```java
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:bind="http://schemas.android.com/apk/res-auto">
@@ -403,7 +407,7 @@ android:text="@{user.lastName}"
 
 #### Avoiding NullPointerException
 
-Generated data binding code automatically checks for nulls and avoid null pointer exceptions. For example, in the expression @{user.name}, if user is null, user.name will be assigned its default value (null). If you were referencing user.age, where age is an int, then it would default to 0.
+Generated data binding code automatically checks for nulls and avoids null pointer exceptions. For example, in the expression @{user.name}, if user is null, user.name will be assigned its default value (null). If you were referencing user.age, where age is an int, then it would default to 0.
 
 #### Collections
 
@@ -439,7 +443,7 @@ android:text='@{map["firstName"]}'
 It is also possible to use double quotes to surround the attribute value. When doing so, String literals should either use the " or back quote (\`).
 
 ```xml
-android:text="@{map[`firstName`}"
+android:text="@{map[`firstName`]}"
 android:text="@{map[&quot;firstName&quot;]}"
 ```
 
@@ -461,8 +465,10 @@ android:text="@{@plurals/banana(bananaCount)}"
 When a plural takes multiple parameters, all parameters should be passed:
 
 ```xml
-  Have an orange
-  Have %d oranges
+<plurals name="orange">
+  <item quantity="one">Have an orange</item>
+  <item quantity="other">Have %d oranges</item>
+</plurals>
 android:text="@{@plurals/orange(orangeCount, orangeCount)}"
 ```
 
@@ -599,7 +605,7 @@ The generated binding class links the layout variables with the Views within the
 
 ### Creating
 
-The binding should be created soon after inflation to ensure that the View hierarchy is not disturbed prior to binding to the Views with expressions within the layout. There are a few ways to bind to a layout. The most common is to use the static methods on the Binding class.The inflate method inflates the View hierarchy and binds to it all it one step. There is a simpler version that only takes a LayoutInflater and one that takes a ViewGroup as well:
+The binding should be created soon after inflation to ensure that the View hierarchy is not disturbed prior to binding to the Views with expressions within the layout. There are a few ways to bind to a layout. The most common is to use the static methods on the Binding class. The inflate method inflates the View hierarchy and binds to it all in one step. There is a simpler version that only takes a LayoutInflater and one that takes a ViewGroup as well:
 
 ```java
 MyLayoutBinding binding = MyLayoutBinding.inflate(layoutInflater);
@@ -636,11 +642,11 @@ A public final field will be generated for each View with an ID in the layout. T
        <TextView android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="@{user.firstName}"
-   android:id="@+id/firstName"/>
+           android:id="@+id/firstName"/>
        <TextView android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="@{user.lastName}"
-  android:id="@+id/lastName"/>
+           android:id="@+id/lastName"/>
    </LinearLayout>
 </layout>
 ```
@@ -686,7 +692,7 @@ Because the ViewStub essentially disappears from the View hierarchy, the View in
 
 When inflating another layout, a binding must be established for the new layout. Therefore, the ViewStubProxy must listen to the ViewStub's ViewStub.OnInflateListener and establish the binding at that time. Since only one can exist, the ViewStubProxy allows the developer to set an OnInflateListener on it that it will call after establishing the binding.
 
-### Advanced Binding
+## Advanced Binding
 
 #### Dynamic Variables
 
@@ -770,8 +776,8 @@ public static void loadImage(ImageView view, String url, Drawable error) {
 ```
 
 ```xml
-<ImageView app:imageUrl=“@{venue.imageUrl}”
-app:error=“@{@drawable/venueError}”/>
+<ImageView app:imageUrl="@{venue.imageUrl}"
+    app:error="@{@drawable/venueError}"/>
 ```
 
 This adapter will be called if both imageUrl and error are used for an ImageView and imageUrl is a string and error is a drawable.
@@ -872,9 +878,9 @@ public static void setListener(View view, final OnViewDetachedFromWindow detach,
 }
 ```
 
-The above example is slightly more complicated than normal because View uses add and remove for the listener instead of a set method for View.OnAttachStateChangeListener. The android.databinding.adapters.ListenerUtil class helps keep track of the previous listeners so that they may be removed in the Binding Adaper.
+The above example is slightly more complicated than normal because View uses add and remove for the listener instead of a set method for View.OnAttachStateChangeListener. The android.databinding.adapters.ListenerUtil class helps keep track of the previous listeners so that they may be removed in the Binding Adapter.
 
-By annotating the interfaces OnViewDetachedFromWindow and OnViewAttachedToWindow with @TargetApi(VERSION\_CODES.HONEYCOMB\_MR1), the data binding code generator knows that the listener should only be generated when running on Honeycomb MR1 and new devices, the same version supported by addOnAttachStateChangeListener(View.OnAttachStateChangeListener).
+By annotating the interfaces OnViewDetachedFromWindow and OnViewAttachedToWindow with @TargetApi(VERSION\_CODES.HONEYCOMB\_MR1), the data binding code generator knows that the listener should only be generated when running on Honeycomb MR1 and newer devices, the same version supported by addOnAttachStateChangeListener(View.OnAttachStateChangeListener).
 
 ## Converters
 
@@ -922,7 +928,7 @@ Note that conversions only happen at the setter level, so it is not allowed to m
    android:layout_height="wrap_content"/>
 ```
 
-### Android Studio Support for Data Binding
+## Android Studio Support for Data Binding
 
 Android Studio supports many of the code editing features for data binding code. For example, it supports the following features for data binding expressions:
 
@@ -942,5 +948,3 @@ The Preview pane displays default values for data binding expressions if provide
 ```
 
 If you need to display a default value during the design phase of your project, you can also use tools attributes instead of default expression values, as described in Designtime Layout Attributes.
-
-转自：https://developer.android.com/topic/libraries/data-binding/index.html#attribute\_setters
