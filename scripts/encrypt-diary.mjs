@@ -11,6 +11,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+import os from "node:os";
+import { execFileSync } from "node:child_process";
 import { marked } from "marked";
 
 const SRC = "diary-src";
@@ -30,6 +32,53 @@ function readAnswer() {
     /* .env 不存在就算了 */
   }
   return "";
+}
+
+// 日记里的照片同样不能以明文入库，所以把本地图片压缩后转成 data URI 嵌进
+// HTML，随正文一起加密。照片放在 diary-src/ 下（例如 diary-src/images/），
+// 在日记里用相对路径引用：![描述](images/xxx.jpg)
+const IMAGE_MAX_EDGE = 1600;
+const IMAGE_QUALITY = 80;
+const RAW_IMAGE_TYPES = { ".gif": "image/gif", ".svg": "image/svg+xml" };
+
+function imageToDataUri(file) {
+  const ext = path.extname(file).toLowerCase();
+  if (RAW_IMAGE_TYPES[ext]) {
+    // 动图和矢量图转 JPEG 会丢东西，原样嵌入
+    const b64 = fs.readFileSync(file).toString("base64");
+    return `data:${RAW_IMAGE_TYPES[ext]};base64,${b64}`;
+  }
+  // 其余格式（jpg/png/heic…）用 macOS 自带的 sips 缩放并转成 JPEG
+  const tmp = path.join(os.tmpdir(), `diary-${crypto.randomUUID()}.jpg`);
+  try {
+    execFileSync("sips", [
+      "-Z", String(IMAGE_MAX_EDGE),
+      "-s", "format", "jpeg",
+      "-s", "formatOptions", String(IMAGE_QUALITY),
+      file, "--out", tmp,
+    ], { stdio: "ignore" });
+    return `data:image/jpeg;base64,${fs.readFileSync(tmp).toString("base64")}`;
+  } finally {
+    fs.rmSync(tmp, { force: true });
+  }
+}
+
+/** 把 HTML 里指向本地文件的 <img src> 换成 data URI；远程图片保持不动 */
+function inlineImages(html, file) {
+  return html.replace(/(<img\b[^>]*?\ssrc=")([^"]+)(")/g, (m, pre, src, post) => {
+    if (/^(?:[a-z]+:|\/\/|\/)/i.test(src)) {
+      console.warn(`  ⚠ ${file}: ${src} 不是 diary-src/ 下的相对路径，未加密嵌入`);
+      return m;
+    }
+    const abs = path.resolve(SRC, decodeURIComponent(src));
+    if (!abs.startsWith(path.resolve(SRC) + path.sep) || !fs.existsSync(abs)) {
+      console.error(`${file}: 找不到图片 ${src}（应位于 ${SRC}/ 下）。已中止。`);
+      process.exit(1);
+    }
+    const uri = imageToDataUri(abs);
+    console.log(`    嵌入 ${src}（${Math.round((uri.length * 3) / 4 / 1024)} KB）`);
+    return pre + uri + post;
+  });
 }
 
 /** 与构建端/浏览器端一致的答案规范化 */
@@ -70,13 +119,9 @@ if (!fs.existsSync(SRC)) {
   process.exit(1);
 }
 
-fs.mkdirSync(OUT, { recursive: true });
-// 先清掉旧密文，避免删掉某篇日记后残留
-for (const f of fs.readdirSync(OUT)) {
-  if (f.endsWith(".json")) fs.unlinkSync(path.join(OUT, f));
-}
-
 const entries = [];
+// 先全部加密到内存，中途出错（如图片缺失）时不会留下残缺的密文目录
+const outputs = [];
 for (const file of fs.readdirSync(SRC).sort()) {
   if (!file.endsWith(".md")) continue;
   const slug = file.replace(/\.md$/, "");
@@ -89,11 +134,8 @@ for (const file of fs.readdirSync(SRC).sort()) {
   const dateStr = /^pubDatetime:\s*(.*)$/m.exec(meta)?.[1]?.trim();
   const date = dateStr ? new Date(dateStr) : new Date(`${slug}T00:00:00+08:00`);
 
-  const html = marked.parse(body);
-  fs.writeFileSync(
-    path.join(OUT, `${slug}.json`),
-    JSON.stringify(encrypt(html, answer), null, 1)
-  );
+  const html = inlineImages(marked.parse(body), file);
+  outputs.push([`${slug}.json`, encrypt(html, answer)]);
   entries.push({ slug, title, date });
   console.log(`  加密 ${file} -> ${OUT}/${slug}.json`);
 }
@@ -110,10 +152,16 @@ const listing = entries.map(e => ({
     timeZone: "Asia/Shanghai",
   }),
 }));
-fs.writeFileSync(
-  path.join(OUT, "_index.json"),
-  JSON.stringify(encrypt(JSON.stringify(listing), answer), null, 1)
-);
+outputs.push(["_index.json", encrypt(JSON.stringify(listing), answer)]);
+
+fs.mkdirSync(OUT, { recursive: true });
+// 清掉旧密文，避免删掉某篇日记后残留
+for (const f of fs.readdirSync(OUT)) {
+  if (f.endsWith(".json")) fs.unlinkSync(path.join(OUT, f));
+}
+for (const [name, payload] of outputs) {
+  fs.writeFileSync(path.join(OUT, name), JSON.stringify(payload, null, 1));
+}
 
 console.log(`\n完成：${entries.length} 篇日记 + 列表，已写入 ${OUT}/`);
 console.log("请提交 src/data/diary/ 的变更（明文不会入库）。");
