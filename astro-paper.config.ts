@@ -2,7 +2,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://pollexlee.github.io/",
+    url: "https://blog.pollex.top/",
     title: "Pollex's blog",
     description: "移动端、工程实践与技术管理的记录。",
     author: "PollexLee",

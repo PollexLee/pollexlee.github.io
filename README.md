@@ -1,7 +1,7 @@
 # Pollex's blog
 
 基于 [AstroPaper](https://github.com/satnaing/astro-paper) 主题的静态博客，
-由 GitHub Actions 自动部署到 <https://pollexlee.github.io/>。
+由 GitHub Actions 自动部署到 <https://blog.pollex.top/>。
 
 ## 写一篇新文章
 
