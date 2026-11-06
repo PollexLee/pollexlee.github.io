@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "name": "Pollex's World",
+  "url": "https://blog.pollex.top/craft/",
+  "logo": "assets/favicon.png",
+  "intro": "Pollex 的 3D 方块世界，记录移动端开发、工程实践与技术管理。",
+  "lang": ["zh", "en"],
+  "homecraft": true
+}

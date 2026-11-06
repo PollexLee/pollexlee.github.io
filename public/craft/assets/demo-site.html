@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>个人主页 / Website</title>
+<style>
+:root { color-scheme: light; color: #24211d; background: #fbf9f5; font: 16px/1.75 -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; }
+body { margin: 0; } main { max-width: 640px; margin: auto; padding: 40px 24px; } h1 { font-size: 26px; margin: 0 0 16px; } p { overflow-wrap: anywhere; } code { font-size: 14px; }
+:root:lang(zh-CN) [lang="en"], :root:lang(en) [lang="zh-CN"] { display: none; }
+</style>
+</head>
+<body>
+<main>
+<div lang="zh-CN"><h1>你的个人主页</h1><p>内嵌原有的个人网站或博客。</p><p>在 <code>index.html</code> 的 <code>data-station="blog"</code> 卡片里，把 <code>data-embed</code> 和正文链接换成同一个网址，再刷新即可。</p></div>
+<div lang="en"><h1>Your website</h1><p>Your existing website or blog appears here, as it is.</p><p>In <code>index.html</code>, find the <code>data-station="blog"</code> card. Set its <code>data-embed</code> and text link to your website URL, then refresh.</p></div>
+</main>
+<script>
+let language = navigator.language;
+try { if (parent !== window) language = parent.document.documentElement.lang; } catch {}
+document.documentElement.lang = language.toLowerCase().startsWith('zh') ? 'zh-CN' : 'en';
+</script>
+</body>
+</html>

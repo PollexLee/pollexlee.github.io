@@ -21,10 +21,18 @@ const currentYear = new Date().getFullYear();
     class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"
   >
     <Socials />
-    <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
-      <span>{t.footer.copyright} &#169; {currentYear}</span>
-      <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
-      <span>{t.footer.allRightsReserved}</span>
+    <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row gap-2">
+      <div class="flex items-center">
+        <span>{t.footer.copyright} &#169; {currentYear}</span>
+        <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
+        <span>{t.footer.allRightsReserved}</span>
+      </div>
+      <div class="flex items-center text-xs text-muted-foreground">
+        <span class="hidden sm:inline">·</span>
+        <a href="/craft/" class="ms-2 inline-flex items-center gap-1 hover:text-accent underline decoration-dotted">
+          <span>🎮 3D 我的世界</span>
+        </a>
+      </div>
     </div>
   </div>
 </footer>

@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#7fb2e8">
+<!-- The world draws its own day and night. -->
+<meta name="color-scheme" content="only light">
+<meta name="darkreader-lock">
+<meta name="description" content="PollexLee 的 3D 我的世界个人主页，记录移动端、工程实践与技术管理。">
+<title>Pollex's World · 我的世界</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pollex's World">
+<meta property="og:description" content="Pollex 的 3D 我的世界个人网站。">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="stylesheet" href="engine/style.css">
+<style>
+  /* 顶部返回 2D 博客的快捷悬浮按钮 */
+  .switch-2d-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 100;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: var(--gui);
+    color: var(--ink);
+    border-image: var(--mc-frame) 3 fill / 3px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform .15s ease, filter .15s ease;
+  }
+  .switch-2d-btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+  }
+  .switch-2d-btn:active {
+    transform: translateY(1px);
+  }
+
+  /* 文章列表卡片样式优化 */
+  .post-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .post-item {
+    background: var(--slot);
+    padding: 10px 14px;
+    border-radius: 4px;
+    border-left: 4px solid var(--accent);
+    transition: background .15s ease;
+  }
+  .post-item:hover {
+    background: var(--slot-on);
+  }
+  .post-item h4 {
+    margin: 0 0 4px 0;
+    font-size: 15px;
+  }
+  .post-item h4 a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .post-item h4 a:hover {
+    text-decoration: underline;
+  }
+  .post-item p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+  .post-tag {
+    display: inline-block;
+    font-size: 10px;
+    padding: 1px 6px;
+    margin-right: 6px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 2px;
+  }
+
+  /* ------------------- 日记宝箱与信件样式 ------------------- */
+  .chest-container {
+    margin-top: 10px;
+  }
+  .chest-lock-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--gold);
+    background: rgba(0,0,0,0.25);
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 12px;
+  }
+  .chest-riddle-box {
+    background: var(--slot);
+    padding: 12px 14px;
+    border-left: 4px solid var(--gold);
+    margin-bottom: 16px;
+    border-radius: 2px;
+  }
+  .chest-riddle-box p {
+    margin: 4px 0;
+    font-size: 13px;
+  }
+  .chest-question-text {
+    font-weight: 600;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    word-break: break-all;
+    color: var(--ink);
+    font-size: 13px !important;
+  }
+  .chest-hint-text {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    word-break: break-all;
+    color: var(--ink-soft);
+    font-size: 12px !important;
+  }
+  .chest-pw-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 12px;
+  }
+  .chest-pw-input {
+    flex: 1;
+    min-width: 160px;
+    padding: 8px 12px;
+    background: var(--field);
+    border: 2px solid var(--field-edge);
+    color: var(--ink);
+    font-size: 14px;
+    font-family: inherit;
+    border-radius: 2px;
+  }
+  .chest-pw-input:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+  .chest-error-msg {
+    color: #d23c3c;
+    font-size: 12px;
+    margin-top: 8px;
+    font-weight: 500;
+  }
+
+  /* 解锁后信件列表 */
+  .chest-unlocked-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 2px dashed var(--slot);
+    margin-bottom: 14px;
+  }
+  .chest-letters-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .letter-card-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    background: var(--slot);
+    border: 1px solid var(--gui-shade);
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform .15s ease, background .15s ease;
+  }
+  .letter-card-item:hover {
+    transform: translateY(-2px);
+    background: var(--slot-on);
+  }
+  .letter-stamp {
+    font-size: 24px;
+    line-height: 1;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+  }
+  .letter-info {
+    flex: 1;
+  }
+  .letter-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .letter-meta {
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+  .letter-open-btn {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  /* 信件展开正文 */
+  .chest-letter-detail {
+    background: #fbf9f4;
+    color: #2b2825;
+    padding: 18px 20px;
+    border-radius: 4px;
+    border: 1px solid #d4cfc5;
+    box-shadow: inset 0 0 16px rgba(0,0,0,0.04);
+  }
+  body.night .chest-letter-detail {
+    background: #252422;
+    color: #ded9d0;
+    border-color: #45423d;
+  }
+  .letter-view-header {
+    border-bottom: 1px dashed #c0b8ac;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+  .letter-view-title {
+    margin: 8px 0 4px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: inherit;
+  }
+  .letter-view-date {
+    font-size: 12px;
+    opacity: 0.75;
+  }
+  .letter-view-content {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .letter-view-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 10px 0;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  }
+  .letter-loading {
+    padding: 24px;
+    text-align: center;
+    color: var(--ink-soft);
+  }
+</style>
+<script type="importmap">{"imports":{
+  "three":"./vendor/three/three.module.min.js",
+  "@engine/":"./engine/",
+  "@world/":"./world/",
+  "@config":"./home.config.js"
+}}</script>
+</head>
+<body>
+<main id="world" aria-label="Pollex's World"></main>
+
+<!-- 顶部返回 2D 博客按钮 -->
+<a href="/" class="switch-2d-btn" title="切换回 2D 传统博客模式">
+  <span>📖 返回 2D 博客</span>
+</a>
+
+<div id="loading"><div class="bar"><i></i></div></div>
+
+<section id="pages">
+  <h1 class="plain-title">Pollex's World</h1>
+
+  <!-- 博客 / 书房 Station -->
+  <article class="page" data-station="blog" data-icon="blog">
+    <h2 data-en="Blog & Notes">博客文章 & 技术笔记</h2>
+    <p>这里记录移动端开发、工程实践与技术管理相关的内容，主要是 Android、Flutter 与团队思考。</p>
+    
+    <div style="margin: 10px 0 16px 0;">
+      <a class="mc-button" href="/" target="_blank" rel="noopener" style="display: inline-block; text-align: center;">
+        📖 进入 2D 完整博客 (共50+篇 & 全文检索)
+      </a>
+    </div>
+
+    <ul class="post-list">
+      <li class="post-item">
+        <h4>
+          <span class="post-tag">Flutter</span>
+          <a href="/posts/2月10日/" target="_blank">最好的移动软件开发方案</a>
+        </h4>
+        <p>热重载、声明式 UI 与自绘引擎如何解决移动开发贵、慢、难的问题。</p>
+      </li>
+      <li class="post-item">
+        <h4>
+          <span class="post-tag">Flutter</span>
+          <a href="/posts/2月11日/" target="_blank">好奇心 + 懒惰是工程师最大的美德</a>
+        </h4>
+        <p>闲鱼 Flutter 实践：Flutter Boost 混合栈、Fish-Redux 与研发智能化。</p>
+      </li>
+      <li class="post-item">
+        <h4>
+          <span class="post-tag">Android</span>
+          <a href="/posts/2月19日/" target="_blank">基于 AAB 的插件化方案：Qigsaw</a>
+        </h4>
+        <p>爱奇艺基于 Android App Bundle 的插件化方案 Qigsaw 原理与工程落地。</p>
+      </li>
+      <li class="post-item">
+        <h4>
+          <span class="post-tag">管理</span>
+          <a href="/posts/management/3月8日/" target="_blank">从"996ICU"引发的技术团队建设问题</a>
+        </h4>
+        <p>从企业生命周期看加班与效能的成因与管理解法。</p>
+      </li>
+      <li class="post-item">
+        <h4>
+          <span class="post-tag">团队</span>
+          <a href="/posts/team_construction/2月28日/" target="_blank">怎样做好 Tech Leader</a>
+        </h4>
+        <p>从技术规范制定与团队管理两个核心维度看 Tech Leader 的职责演进。</p>
+      </li>
+    </ul>
+  </article>
+
+  <!-- 3D 宝箱 · 私人日记信箱 Station -->
+  <article class="page" id="chest" data-station="chest" data-icon="chest">
+    <h2 data-en="Secret Chest">神秘宝箱 · 私人日记</h2>
+    <div id="diary-chest-container" class="chest-container">
+      
+      <!-- 状态一：上锁状态（输入密码解锁） -->
+      <div class="chest-locked-view">
+        <div class="chest-lock-badge">
+          <span>🔒 机关密锁锁定中</span>
+        </div>
+        <p style="margin: 4px 0 12px 0; font-size: 13px;">
+          这是一个用密码机关保护的私人日记宝箱。解开密码后，箱盖将自动掀开，呈现出封存的一封封信件。
+        </p>
+        <div class="chest-riddle-box">
+          <p class="chest-question-text">5oiR5aWz5YS/55qE5ZCN5a2X77yf</p>
+          <p class="chest-hint-text">562U5qGI5piv5Lik5Liq5a2X77yM55u05o6l6L6T5YWl5Lit5paH</p>
+        </div>
+        <form id="chest-password-form" onsubmit="return false;">
+          <div class="chest-pw-row">
+            <input
+              id="chest-password-input"
+              type="password"
+              class="chest-pw-input"
+              autocomplete="off"
+              placeholder="请输入日记密码"
+              required
+            />
+            <button id="chest-unlock-btn" type="button" class="mc-button chest-unlock-btn">
+              🔓 开启宝箱
+            </button>
+          </div>
+          <div class="chest-error-msg" style="display: none;"></div>
+        </form>
+      </div>
+
+      <!-- 状态二：已解锁状态（展示信件堆） -->
+      <div class="chest-unlocked-view" style="display: none;">
+        <div class="chest-unlocked-header">
+          <span style="font-weight: 600; font-size: 14px;">📦 宝箱中的日记信件</span>
+          <button id="chest-relock-btn" class="mc-button" style="font-size: 11px; padding: 2px 8px;">
+            🔒 重新上锁
+          </button>
+        </div>
+        <ul class="chest-letters-list">
+          <!-- 信件卡片列表由 JS 动态生成 -->
+        </ul>
+      </div>
+
+      <!-- 状态三：信件阅读正文视图 -->
+      <div class="chest-letter-detail" style="display: none;">
+        <div style="margin-bottom: 12px;">
+          <button id="chest-back-to-list" class="mc-button" style="font-size: 12px; padding: 3px 10px;">
+            ← 折叠信件返回宝箱
+          </button>
+        </div>
+        <div class="letter-view-header">
+          <h3 class="letter-view-title"></h3>
+          <div class="letter-view-date"></div>
+        </div>
+        <div class="letter-view-content"></div>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- 关于我 Station -->
+  <article class="page" data-station="about">
+    <h2 data-en="About Me">关于 Pollex</h2>
+    <div class="about">
+      <div class="about-text" lang="zh-CN">
+        <p>你好，我是 <strong>PollexLee</strong>。</p>
+        <p>一名深耕移动端技术领域多年的工程师与管理者。专注于 Android 现代化架构、Flutter 跨平台体系建设、移动工程效能（CI/CD、动态化）以及技术团队管理与培养。</p>
+        <p>欢迎在方块世界里四处转转，到书架看文章、去工作台看项目，或者通过传送门去其他伙伴的世界串门！</p>
+        <div class="about-foot">
+          <a class="mc-button" href="#contact" data-open="phone">关注联系</a>
+          <a class="mc-button" href="#mailbox" data-open="mailbox">发送留言</a>
+          <a class="mc-button" href="/" target="_blank">2D 博客</a>
+        </div>
+      </div>
+      <div class="about-text" lang="en">
+        <p>Hi, I am <strong>PollexLee</strong>.</p>
+        <p>Mobile Engineer & Tech Lead focusing on Android Architecture, Flutter Cross-platform, and Engineering Management.</p>
+        <div class="about-foot">
+          <a class="mc-button" href="#contact" data-open="phone">Follow</a>
+          <a class="mc-button" href="#mailbox" data-open="mailbox">Mailbox</a>
+          <a class="mc-button" href="/" target="_blank">2D Blog</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 工作台 / 作品 Station -->
+  <article class="page" data-station="works">
+    <h2 data-en="Workbench">工作台 · 项目与作品</h2>
+    <p>日常沉淀的移动端架构实践、工具链与个人项目：</p>
+    <ul class="store">
+      <li data-work="android">
+        <div class="listing">
+          <img src="assets/favicon.png" alt="" width="64" height="64">
+          <div>
+            <h3>pollex-android</h3>
+            <p data-en="Android Architecture & Practice">Android 原生工程最佳实践与脚手架</p>
+          </div>
+          <a class="mc-button get" href="https://github.com/PollexLee" target="_blank" rel="noopener" data-en="Code">源码</a>
+        </div>
+      </li>
+      <li data-work="v2ex">
+        <div class="listing">
+          <img src="assets/favicon.png" alt="" width="64" height="64">
+          <div>
+            <h3>v2ex-android</h3>
+            <p data-en="Modern V2EX Android Client">现代化 Material 风格的 V2EX 客户端</p>
+          </div>
+          <a class="mc-button get" href="https://github.com/PollexLee" target="_blank" rel="noopener" data-en="Code">源码</a>
+        </div>
+      </li>
+      <li data-work="independent">
+        <div class="listing">
+          <img src="assets/favicon.png" alt="" width="64" height="64">
+          <div>
+            <h3>Clan / GoMate / Text2Image</h3>
+            <p data-en="Independent Tools & Apps">跨端应用探索与独立小工具矩阵</p>
+          </div>
+          <a class="mc-button get" href="https://github.com/PollexLee" target="_blank" rel="noopener" data-en="More">了解</a>
+        </div>
+      </li>
+    </ul>
+  </article>
+
+  <!-- 关注 / 联系方式 Station -->
+  <article class="page" id="contact" data-station="contact">
+    <h2 data-en="Follow">关注与社交</h2>
+    <ul class="contact">
+      <li data-app="github">
+        <span>GitHub</span>
+        <a href="https://github.com/PollexLee" target="_blank" rel="noopener">@PollexLee</a>
+        <p data-en="Code and side projects">开源项目与工程实践</p>
+      </li>
+      <li data-app="mail">
+        <span data-en="Email">邮件</span>
+        <a href="mailto:l6376751@gmail.com">l6376751@gmail.com</a>
+        <p data-en="Say hi">技术探讨与交流</p>
+      </li>
+      <li data-app="blog">
+        <span data-en="Website">博客</span>
+        <a href="/">https://blog.pollex.top/</a>
+        <p data-en="2D Reading Experience">2D 经典阅读模式</p>
+      </li>
+    </ul>
+  </article>
+
+  <!-- 留言板 Station -->
+  <article class="page" id="mailbox" data-station="mailbox">
+    <h2 data-en="Mailbox">留言信箱</h2>
+    <form class="mailbox" action="mailto:l6376751@gmail.com" method="post" enctype="text/plain">
+      <input name="subject" maxlength="80" required placeholder="主题" aria-label="主题，必填" data-en-placeholder="Subject" data-en-label="Subject (required)">
+      <textarea name="message" rows="6" maxlength="1000" required placeholder="给 Pollex 留言..." aria-label="输入文字" data-en-placeholder="Write something" data-en-label="Write something"></textarea>
+      <input name="contact" maxlength="120" required autocomplete="email" placeholder="你的联系方式（邮箱/微信）" aria-label="联系方式，必填" data-en-placeholder="Email or other contact (required)" data-en-label="How to reach you (required)">
+      <input class="trap" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="mailbox-foot"><button class="mc-button" type="submit" data-en="Send">发送邮件</button></div>
+      <p class="mailbox-status" role="status" aria-live="polite"></p>
+    </form>
+  </article>
+
+</section>
+
+<!-- file:// cannot load the world modules. -->
+<script>
+if (location.protocol === 'file:') {
+  const zh = /^zh/i.test(navigator.language), note = document.createElement('aside');
+  note.id = 'startupNotice';
+  note.innerHTML = zh
+    ? '<h2>请用本地服务器打开</h2><p>直接双击打开时，浏览器不会加载 3D 世界。请通过 <code>npm run dev</code> 或 <code>python3 tools/serve.py</code> 预览。</p>'
+    : '<h2>Open it through a local server</h2><p>Browsers don’t load the 3D world from a double-clicked file.</p>';
+  document.getElementById('pages').before(note);
+  document.getElementById('loading')?.remove();
+  document.body.classList.add('plain');
+}
+</script>
+<noscript><style>#world,#hud,#loading{display:none}#pages{display:block}</style></noscript>
+<script type="module" src="engine/main.js"></script>
+<script type="module">
+  import { initDiaryChest } from './diary-chest.js';
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDiaryChest);
+  } else {
+    initDiaryChest();
+  }
+</script>
+</body>
+</html>

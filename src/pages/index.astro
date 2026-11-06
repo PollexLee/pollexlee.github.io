@@ -73,6 +73,27 @@ const homePath = getRelativeLocaleUrl(locale, "");
         </LinkButton>{" "}
         浏览。
       </p>
+
+      <!-- 3D 我的世界 (Homecraft) 入口卡片 -->
+      <div class="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-lg border border-dashed border-emerald-500/40 bg-emerald-500/5 p-4 transition hover:bg-emerald-500/10 dark:border-emerald-500/30">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xl">🏝️</span>
+            <span class="font-bold text-emerald-800 dark:text-emerald-300">Pollex 的 3D 方块小岛 (Homecraft)</span>
+            <span class="rounded bg-emerald-500/20 px-1.5 py-0.5 text-xs font-medium text-emerald-700 dark:text-emerald-300">全新体验</span>
+          </div>
+          <p class="mt-1 text-sm text-foreground/80">
+            受“我的世界”启发构建的三维空间，你可以自由漫游、去书房翻笔记、在工作台看项目，或者通过传送门串门。
+          </p>
+        </div>
+        <a
+          href="/craft/"
+          class="inline-flex shrink-0 items-center gap-1.5 rounded-md bg-emerald-600 px-3.5 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-emerald-500 hover:shadow"
+        >
+          <span>进入 3D 漫游</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
       {
         socials.length > 0 && (
           <div class="mt-4 flex max-sm:flex-col sm:items-center">
