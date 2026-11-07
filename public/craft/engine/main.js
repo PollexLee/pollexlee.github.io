@@ -9,7 +9,7 @@ import { config } from './config.js';
 import { createStage, detectQuality } from './world/stage.js';
 import { createWorld } from './world/world.js';
 import { createNav } from './world/nav.js';
-import { createAvatar, readFace, createCat, createDog } from './world/avatar.js';
+import { createAvatar, readFace, createCat, createDog } from './world/avatar.js?v=20261107-pets';
 import { createPetLife } from './world/pets.js';
 import { createAtmosphere } from './world/atmosphere.js';
 import { createWeatherFx } from './world/weather-fx.js';

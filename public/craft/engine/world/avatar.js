@@ -254,6 +254,7 @@ function petRig() {
     const mesh = new THREE.InstancedMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshLambertMaterial(), parts.length);
     mesh.name = name; mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage); mesh.boundingSphere = sphere;
     parts.forEach((p, i) => mesh.setColorAt(i, new THREE.Color(p.color)));
+    if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
     const shadow = new THREE.Mesh(new THREE.CircleGeometry(blob.radius, 16), new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: blob.opacity, depthWrite: false }));
     shadow.rotation.x = -Math.PI / 2; shadow.position.y = blob.y; shadow.scale.set(blob.sx, blob.sz, 1);
     root.add(mesh, shadow);
