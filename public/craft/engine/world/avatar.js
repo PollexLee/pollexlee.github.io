@@ -309,38 +309,55 @@ const CAT_POSES = {
   sleep: { by: -0.15, bz: 0, pitch: 0, roll: 0.32, hy: 0.36, hp: 0.45, yaw: 0.85, front: 1.5, hind: -1.5, tx: -0.45, ty: 1.6 },
 };
 
+// Siamese (seal point / 挖煤工): pale ivory fawn coat with dark seal brown points and sapphire blue eyes.
+const SIAMESE = {
+  body: '#ede5d8',
+  bodyDark: '#ded3c1',
+  belly: '#f6f2ea',
+  seal: '#34231b',
+  sealDark: '#231611',
+  innerEar: '#4d3428',
+  nose: '#1a120e',
+  eye: '#3884f4',
+  pupil: '#0e1726',
+};
+
 export function createCat() {
   const { body, group, box, build } = petRig();
   const torso = group(body, 0, 0.28, 0);
-  box(0.32, 0.26, 0.52, CAT.cream, 0, 0, 0, torso);
-  box(0.27, 0.12, 0.47, CAT.white, 0, -0.1, 0.03, torso);
-  box(0.3, 0.2, 0.1, CAT.white, 0, -0.03, 0.26, torso);
-  box(0.24, 0.055, 0.42, CAT.cream, 0, 0.15, -0.02, torso);
+  box(0.32, 0.26, 0.52, SIAMESE.body, 0, 0, 0, torso);
+  box(0.27, 0.12, 0.47, SIAMESE.belly, 0, -0.1, 0.03, torso);
+  box(0.3, 0.2, 0.1, SIAMESE.body, 0, -0.03, 0.26, torso);
+  box(0.24, 0.055, 0.42, SIAMESE.bodyDark, 0, 0.15, -0.02, torso);
   const head = group(body, 0, 0.43, 0.28);
-  box(0.34, 0.27, 0.27, CAT.cream, 0, 0, 0, head);
-  box(0.3, 0.12, 0.06, CAT.white, 0, -0.07, 0.14, head);
-  box(0.075, 0.18, 0.016, CAT.white, 0, 0.035, 0.142, head);
-  box(0.06, 0.035, 0.025, CAT.nose, 0, -0.045, 0.18, head);
+  box(0.34, 0.27, 0.27, SIAMESE.body, 0, 0, 0, head);
+  // Siamese seal mask ("挖煤脸" 面具)
+  box(0.3, 0.13, 0.065, SIAMESE.seal, 0, -0.07, 0.14, head);
+  box(0.12, 0.18, 0.018, SIAMESE.seal, 0, 0.035, 0.142, head);
+  box(0.06, 0.035, 0.025, SIAMESE.nose, 0, -0.045, 0.18, head);
   for (const s of [-1, 1]) {
-    box(0.066, 0.06, 0.012, CAT.eye, s * 0.09, 0.014, 0.143, head, 'hide');
-    box(0.039, 0.048, 0.014, CAT.pupil, s * 0.09, 0.014, 0.15, head, [0.07, 0.012]);
-    box(0.011, 0.012, 0.015, CAT.white, s * 0.09 - 0.01, 0.03, 0.156, head, 'hide');
-    box(0.09, 0.095, 0.07, CAT.cream, s * 0.115, 0.17, -0.02, head);
-    box(0.058, 0.06, 0.014, CAT.inner, s * 0.115, 0.17, 0.02, head);
-    box(0.021, 0.052, 0.012, CAT.creamDark, s * 0.15, 0.07, 0.14, head);
+    // Sapphire blue eyes
+    box(0.066, 0.06, 0.012, SIAMESE.eye, s * 0.09, 0.014, 0.143, head, 'hide');
+    box(0.039, 0.048, 0.014, SIAMESE.pupil, s * 0.09, 0.014, 0.15, head, [0.07, 0.012]);
+    box(0.011, 0.012, 0.015, '#ffffff', s * 0.09 - 0.01, 0.03, 0.156, head, 'hide');
+    // Dark brown ears
+    box(0.09, 0.095, 0.07, SIAMESE.seal, s * 0.115, 0.17, -0.02, head);
+    box(0.058, 0.06, 0.014, SIAMESE.innerEar, s * 0.115, 0.17, 0.02, head);
+    box(0.021, 0.052, 0.012, SIAMESE.seal, s * 0.15, 0.07, 0.14, head);
   }
   const legs = [];
   for (const [x, z] of [[-0.1, 0.19], [0.1, 0.19], [-0.1, -0.18], [0.1, -0.18]]) {
     const pivot = group(body, x, 0.19, z);
-    box(0.09, 0.17, 0.1, CAT.white, 0, -0.07, 0, pivot);
-    box(0.105, 0.055, 0.14, CAT.white, 0, -0.16, 0.025, pivot);
+    // Seal point dark stockings & paws
+    box(0.09, 0.17, 0.1, SIAMESE.seal, 0, -0.07, 0, pivot);
+    box(0.105, 0.055, 0.14, SIAMESE.sealDark, 0, -0.16, 0.025, pivot);
     legs.push(pivot);
   }
-  // Pitch first, then swing sideways, so a lowered tail can curl along the floor.
+  // Seal point dark tail
   const tail = group(body, 0, 0.32, -0.28); tail.rotation.order = 'YXZ';
-  box(0.075, 0.075, 0.34, CAT.cream, 0, 0, -0.16, tail);
-  for (const z of [-0.09, -0.19, -0.29]) box(0.078, 0.078, 0.035, CAT.creamDark, 0, 0, z, tail);
-  const { root, mesh, upload } = build('ginger-white-cat', new THREE.Sphere(new THREE.Vector3(0, 0.3, 0), 0.85), { radius: 0.32, opacity: 0.25, y: 0.011, sx: 0.8, sz: 1.2 });
+  box(0.075, 0.075, 0.34, SIAMESE.seal, 0, 0, -0.16, tail);
+  for (const z of [-0.09, -0.19, -0.29]) box(0.078, 0.078, 0.035, SIAMESE.sealDark, 0, 0, z, tail);
+  const { root, mesh, upload } = build('siamese-cat', new THREE.Sphere(new THREE.Vector3(0, 0.3, 0), 0.85), { radius: 0.32, opacity: 0.25, y: 0.011, sx: 0.8, sz: 1.2 });
   const pose = { ...CAT_POSES.sleep }, blink = blinker(true);
   let t = 0;
   function update(dt, { moving = false, sleeping = false, rest = 'loaf', look = 0, near = false } = {}) {
@@ -379,34 +396,59 @@ const DOG_POSES = {
 
 export function createDog() {
   const { body, group, box, build } = petRig();
-  const black = 0x343b39, rust = 0x95623e, nose = 0x141a19;
+  // Border Collie color palette: jet black, warm white, black nose, amber-brown eye
+  const black = 0x242629, white = 0xf5f4ee, nose = 0x141517, eye = 0x5a3e28;
   const torso = group(body, 0, .73, 0);
   box(.34, .34, .95, black, 0, 0, 0, torso);
-  box(.29, .35, .3, black, 0, -.09, .36, torso); box(.19, .24, .03, rust, 0, -.09, .52, torso);
+  box(.29, .35, .3, black, 0, -.09, .36, torso);
+  // White chest & neck ruff
+  box(.21, .26, .05, white, 0, -.09, .52, torso);
+  // White underbelly
+  box(.20, .05, .45, white, 0, -.17, .15, torso);
+
   const head = group(body, 0, .99, .54);
   box(.24, .26, .25, black, 0, -.1, -.14, head);
   box(.27, .27, .31, black, 0, .08, 0, head);
-  box(.18, .14, .3, rust, 0, .015, .24, head);
-  box(.18, .07, .31, black, 0, .08, .24, head);
-  box(.17, .1, .06, nose, 0, .055, .415, head);
+  // White muzzle (lower jaw & chin)
+  box(.18, .14, .3, white, 0, .015, .24, head);
+  // Center white blaze along snout
+  box(.08, .071, .31, white, 0, .08, .24, head);
+  // Black muzzle sides
   for (const s of [-1, 1]) {
-    box(.045, .04, .02, rust, s * .12, .13, .14, head);
-    box(.035, .025, .02, nose, s * .115, .105, .16, head, [.04, .008]);
-    box(.01, .01, .015, 0xc8b691, s * .115, .11, .176, head, 'hide');
+    box(.05, .07, .31, black, s * .065, .08, .24, head);
+  }
+  // White blaze between eyes extending up the forehead
+  box(.07, .18, .02, white, 0, .14, .16, head);
+  // Black nose
+  box(.17, .1, .06, nose, 0, .055, .415, head);
+
+  for (const s of [-1, 1]) {
+    box(.045, .04, .02, black, s * .12, .13, .14, head);
+    box(.035, .025, .02, eye, s * .115, .105, .16, head, [.04, .008]);
+    box(.01, .01, .015, 0xffffff, s * .115, .11, .176, head, 'hide');
     box(.105, .23, .1, black, s * .175, .055, -.07, head);
   }
+
   const legs = [];
   for (const [x, z] of [[-.14, .34], [.14, .34], [-.14, -.36], [.14, -.36]]) {
+    const front = z > 0;
     const hip = group(body, x, .62, z), knee = group(hip, 0, -.4, 0), wrist = group(knee, 0, -.155, 0);
+    // Upper legs / hips are black
     box(.085, .42, .11, black, 0, -.2, 0, hip);
-    box(.095, .22, .13, rust, 0, -.08, .015, knee);
-    box(.1, .07, .2, rust, 0, -.03, .05, wrist);
-    legs.push({ hip, knee, wrist, front: z > 0 });
+    // Forelegs have long white socks; hind legs have black hocks
+    box(.095, .22, .13, front ? white : black, 0, -.08, .015, knee);
+    // All four paws are white ("four white socks")
+    box(.1, .07, .2, white, 0, -.03, .05, wrist);
+    legs.push({ hip, knee, wrist, front });
   }
+
   const tail = group(body, 0, .77, -.49); tail.rotation.order = 'YXZ';
+  // Black bushy tail base
   box(.055, .06, .43, black, 0, .04, -.21, tail);
-  box(.045, .06, .17, black, 0, .13, -.45, tail);
-  const { root, mesh, upload } = build('doberman', new THREE.Sphere(new THREE.Vector3(0, .5, 0), 1.25), { radius: .47, opacity: .22, y: .013, sx: .8, sz: 1.7 }, { grounded: true });
+  // Iconic Border Collie white tail tip ("meteor tail")
+  box(.048, .062, .17, white, 0, .13, -.45, tail);
+
+  const { root, mesh, upload } = build('border-collie', new THREE.Sphere(new THREE.Vector3(0, .5, 0), 1.25), { radius: .47, opacity: .22, y: .013, sx: .8, sz: 1.7 }, { grounded: true });
   const pose = { ...DOG_POSES.sleep }, blink = blinker(false);
   let t = 0;
   function update(dt, { moving = false, sleeping = false, rest = 'sphinx', look = 0, near = false } = {}) {
